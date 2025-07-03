@@ -21,8 +21,6 @@ const Contact = () => {
     nachricht: '',
   })
 
-  
-
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
@@ -62,10 +60,7 @@ const Contact = () => {
           toast.error(`${field}: ${message}`)
         })
       } else {
-        toast.error(
-          errorData?.message || 'Ein Fehler ist aufgetreten',
-         
-        )
+        toast.error(errorData?.message || 'Ein Fehler ist aufgetreten')
       }
     }
   }
@@ -140,16 +135,17 @@ const Contact = () => {
         className="mb-16 text-center"
       >
         <h2 className="text-lg md:text-xl font-semibold text-sky-400 tracking-wide mb-3">
-          KONTAKT
+          CONTACT
         </h2>
         <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
-          Ich suche neue{' '}
+          I am seeking new{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-             Herausforderungen
+            challenges
           </span>
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-           Ich freue mich auf Ihre Nachricht und darauf, gemeinsam spannende Projekte umzusetzen.
+          I look forward to hearing from you and working together on exciting
+          projects.
         </p>
       </motion.div>
 
