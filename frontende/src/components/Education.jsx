@@ -110,20 +110,20 @@ const Education = () => {
       </div>
 
       {/* Additional info section */}
-      <div className="mt-16 p-8 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-all duration-300">
+      <div className="mt-16 p-8  backdrop-blur-sm rounded-2xl border border-gray-700/80 shadow-sm hover:shadow-md transition-all duration-300">
         <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-3">Continuous Growth</h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
           Committed to lifelong learning through courses, certifications, and building innovative projects.
         </p>
         <div className="flex flex-wrap gap-2">
           <span className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
-            Currently learning: AWS
+            Currently learning: MERN
           </span>
           <span className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
             Exploring: Three.js
           </span>
           <span className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
-            Next Goal: GraphQL
+            Next Goal: Django
           </span>
         </div>
       </div>
