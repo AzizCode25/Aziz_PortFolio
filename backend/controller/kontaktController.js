@@ -3,23 +3,23 @@ import { kontaktConfirmation } from '../utils/kontaktComfirmation.js';
 import { sendAdminNotification } from '../utils/sendAdminNotification.js';  // Pfad anpassen!
 
 export const sendeKontakt = async (req, res) => {
-  const { name, email, telefon, nachricht } = req.body;
+  const { name, nachName, email, telefon, nachricht } = req.body;
 
   try {
-    if (!name || !email || !telefon || !nachricht) {
+    if (!name || !nachName || !email || !telefon || !nachricht) {
       return res.status(400).json({
         success: false,
         message: "Alle Felder sind erforderlich!",
       });
     }
 
-    await Kontakt.create({ name, email, telefon, nachricht });
+    await Kontakt.create({ name, nachName, email, telefon, nachricht });
 
     // Bestätigung an Kunde
-    await kontaktConfirmation(name, email);
+    await kontaktConfirmation(nachName, email);
 
     // Benachrichtigung an dich
-    await sendAdminNotification({ name, email, telefon, nachricht });
+    await sendAdminNotification({ name, nachName, email, telefon, nachricht });
 
     return res.status(200).json({
       success: true,
@@ -32,6 +32,9 @@ export const sendeKontakt = async (req, res) => {
       let errorMessage = "";
       if(error.errors.name){
         errorMessage += error.errors.name.message
+      }
+      if(error.errors.nachName){
+        errorMessage += error.errors.nachName.message
       }
        if(error.errors.email){
         errorMessage += error.errors.email.message

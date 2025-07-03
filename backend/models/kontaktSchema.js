@@ -8,6 +8,12 @@ const kontaktSchema = new mongoose.Schema({
     minlength: [3, 'Der Name muss mindestens 3 Zeichen lang sein.'],
     trim: true, // entfernt führende und nachfolgende Leerzeichen
   },
+   nachName: {
+    type: String,
+    required: [true, 'Nachname ist erforderlich!'],
+    minlength: [3, 'Der Name muss mindestens 3 Zeichen lang sein.'],
+    trim: true, // entfernt führende und nachfolgende Leerzeichen
+  },
   email: {
     type: String,
     required: [true, 'E-Mail ist erforderlich!'],

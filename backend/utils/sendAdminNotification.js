@@ -13,21 +13,22 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-export const sendAdminNotification = async ({ name, email, telefon, nachricht }) => {
+export const sendAdminNotification = async ({ name, nachName, email, telefon, nachricht }) => {
   const adminEmailContent = `
     <html>
       <body>
         <h2>Neue Kontaktanfrage</h2>
         <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Name:</strong> ${nachName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Telefon:</strong> ${telefon}</p>
-        <p><strong>Nachricht:</strong>${nachricht}</p>
+        <p><strong>Nachricht:</strong> ${nachricht}</p>
       </body>
     </html>
   `;
 
   await transporter.sendMail({
-    from: `"Radik Support" <${process.env.EMAIL_USER}>`,
+    from: `"Aziz" <${process.env.EMAIL_USER}>`,
     to: process.env.EMAIL_USER,
     subject: 'Neue Kontaktanfrage eingegangen',
     html: adminEmailContent,

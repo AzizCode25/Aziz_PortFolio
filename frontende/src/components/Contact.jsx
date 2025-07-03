@@ -9,11 +9,26 @@ import earth from "../assets/videos/earth.mp4";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
+    nachName: "",
     email: "",
     telefon: "",
     nachricht: ""
   });
+  const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = "Vorname ist erforderlich";
+    if (!formData.nachName.trim()) newErrors.nachName = "Nachname ist erforderlich";
+    if (!formData.email.trim()) {
+      newErrors.email = "E-Mail ist erforderlich";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = "Ungültige E-Mail-Adresse";
+    }
+    if (!formData.nachricht.trim()) newErrors.nachricht = "Nachricht ist erforderlich";
+    return newErrors;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,10 +36,20 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+    // Clear error when user types
+    if (errors[name]) {
+      setErrors(prev => ({ ...prev, [name]: "" }));
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
@@ -51,10 +76,12 @@ const Contact = () => {
       
       setFormData({
         name: "",
+        nachName: "",
         email: "",
         telefon: "",
         nachricht: ""
       });
+      setErrors({});
     } catch (error) {
       toast.error(error.response?.data?.message || "Ein Fehler ist aufgetreten", {
         style: {
@@ -99,6 +126,40 @@ const Contact = () => {
     hidden: { opacity: 0, x: -20 },
     visible: { opacity: 1, x: 0 }
   };
+
+  const contactInfo = [
+    {
+      icon: <FaMapMarkerAlt className="text-sky-400 text-xl" />,
+      title: "Adresse",
+      content: "Rampe 12\n21217 Seevetal"
+    },
+    {
+      icon: <FaPhone className="text-sky-400 text-xl" />,
+      title: "Telefon",
+      content: "+49 40 12345678",
+      extra: (
+        <a 
+          href="https://wa.me/49123456789" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="inline-flex items-center mt-2 text-sky-400 hover:text-sky-300 transition-colors"
+        >
+          <SiWhatsapp className="mr-2" /> WhatsApp Chat
+        </a>
+      )
+    },
+    {
+      icon: <FaEnvelope className="text-sky-400 text-xl" />,
+      title: "E-Mail",
+      content: "info@example.com",
+      isLink: true
+    },
+    {
+      icon: <FaClock className="text-sky-400 text-xl" />,
+      title: "Öffnungszeiten",
+      content: "Mo-Fr: 09:00 - 18:00 Uhr\nSa-So: Geschlossen"
+    }
+  ];
 
   return (
     <section id="contact" className="max-w-7xl mx-auto py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-900 to-gray-950">
@@ -147,39 +208,7 @@ const Contact = () => {
                 variants={staggerContainer}
                 className="space-y-6 bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50"
               >
-                {[
-                  {
-                    icon: <FaMapMarkerAlt className="text-sky-400 text-xl" />,
-                    title: "Adresse",
-                    content: "Rampe 12\n21217 Seevetal"
-                  },
-                  {
-                    icon: <FaPhone className="text-sky-400 text-xl" />,
-                    title: "Telefon",
-                    content: "+49 40 12345678",
-                    extra: (
-                      <a 
-                        href="https://wa.me/49123456789" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center mt-2 text-sky-400 hover:text-sky-300 transition-colors"
-                      >
-                        <SiWhatsapp className="mr-2" /> WhatsApp Chat
-                      </a>
-                    )
-                  },
-                  {
-                    icon: <FaEnvelope className="text-sky-400 text-xl" />,
-                    title: "E-Mail",
-                    content: "info@example.com",
-                    isLink: true
-                  },
-                  {
-                    icon: <FaClock className="text-sky-400 text-xl" />,
-                    title: "Öffnungszeiten",
-                    content: "Mo-Fr: 09:00 - 18:00 Uhr\nSa-So: Geschlossen"
-                  }
-                ].map((item, index) => (
+                {contactInfo.map((item, index) => (
                   <motion.div
                     key={index}
                     variants={contactItem}
@@ -222,36 +251,45 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-white mb-6">Senden Sie uns eine Nachricht</h3>
           
           <div className="space-y-5">
-            <motion.div
-              variants={contactItem}
-            >
-              <label
-                htmlFor="name"
-                className="block text-sm font-medium text-gray-300 mb-2"
-              >
-                Vollständiger Name *
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
-                placeholder="Max Mustermann"
-                required
-              />
-            </motion.div>
-
-            <motion.div 
-              className="grid md:grid-cols-2 gap-5"
-              variants={staggerContainer}
-            >
+            <div className="grid md:grid-cols-2 gap-5">
               <motion.div variants={contactItem}>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
+                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  Vorname *
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-3 bg-gray-700/50 border ${errors.name ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all`}
+                  placeholder="Max"
+                  required
+                />
+                {errors.name && <p className="mt-1 text-sm text-red-400">{errors.name}</p>}
+              </motion.div>
+
+              <motion.div variants={contactItem}>
+                <label htmlFor="nachName" className="block text-sm font-medium text-gray-300 mb-2">
+                  Nachname *
+                </label>
+                <input
+                  type="text"
+                  id="nachName"
+                  name="nachName"
+                  value={formData.nachName}
+                  onChange={handleChange}
+                  className={`w-full px-4 py-3 bg-gray-700/50 border ${errors.nachName ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all`}
+                  placeholder="Mustermann"
+                  required
+                />
+                {errors.nachName && <p className="mt-1 text-sm text-red-400">{errors.nachName}</p>}
+              </motion.div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-5">
+              <motion.div variants={contactItem}>
+                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
                   E-Mail Adresse *
                 </label>
                 <input
@@ -260,17 +298,15 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
+                  className={`w-full px-4 py-3 bg-gray-700/50 border ${errors.email ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all`}
                   placeholder="max@example.com"
                   required
                 />
+                {errors.email && <p className="mt-1 text-sm text-red-400">{errors.email}</p>}
               </motion.div>
 
               <motion.div variants={contactItem}>
-                <label
-                  htmlFor="telefon"
-                  className="block text-sm font-medium text-gray-300 mb-2"
-                >
+                <label htmlFor="telefon" className="block text-sm font-medium text-gray-300 mb-2">
                   Telefonnummer
                 </label>
                 <input
@@ -283,13 +319,10 @@ const Contact = () => {
                   placeholder="+49 123 456789"
                 />
               </motion.div>
-            </motion.div>
+            </div>
 
             <motion.div variants={contactItem}>
-              <label
-                htmlFor="nachricht"
-                className="block text-sm font-medium text-gray-300 mb-2"
-              >
+              <label htmlFor="nachricht" className="block text-sm font-medium text-gray-300 mb-2">
                 Ihre Nachricht *
               </label>
               <textarea
@@ -298,10 +331,11 @@ const Contact = () => {
                 value={formData.nachricht}
                 onChange={handleChange}
                 rows="5"
-                className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
+                className={`w-full px-4 py-3 bg-gray-700/50 border ${errors.nachricht ? 'border-red-500' : 'border-gray-600'} rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all`}
                 placeholder="Wie können wir Ihnen helfen?"
                 required
               ></textarea>
+              {errors.nachricht && <p className="mt-1 text-sm text-red-400">{errors.nachricht}</p>}
             </motion.div>
 
             <motion.div variants={contactItem}>
