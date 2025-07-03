@@ -1,9 +1,10 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiTypescript, SiMongodb, SiExpress, SiNodedotjs } from "react-icons/si";
+import { SiTailwindcss, SiTypescript, SiMongodb, SiExpress, SiNodedotjs } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 import main from "../assets/videos/main.mp4";
 import AnimationContainer from "./AnimationContainer";
+
 
 const Home = () => {
   const socialLinks = [
@@ -19,7 +20,7 @@ const Home = () => {
       color: "hover:bg-gray-100 dark:hover:bg-gray-800", 
       hoverColor: "group-hover:text-gray-800 dark:group-hover:text-gray-200",
       name: "Github", 
-      url: "https://github.com/yourusername" 
+      url: "https://github.com/PushUpDev" 
     }
   ];
 
@@ -28,7 +29,6 @@ const Home = () => {
     { icon: <SiExpress size={24} />, color: "text-gray-800 dark:text-gray-200", name: "Express.js" },
     { icon: <FaReact size={24} />, color: "text-blue-400", name: "React" },
     { icon: <SiNodedotjs size={24} />, color: "text-green-600", name: "Node.js" },
-    { icon: <SiNextdotjs size={24} />, color: "text-black dark:text-white", name: "Next.js" },
     { icon: <SiTailwindcss size={24} />, color: "text-cyan-500", name: "Tailwind" },
     { icon: <SiTypescript size={24} />, color: "text-blue-600", name: "TypeScript" }
   ];

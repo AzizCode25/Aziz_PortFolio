@@ -1,0 +1,139 @@
+{
+  "educationData": [
+    {
+      "id": 1,
+      "degree": "6-month Internship as Frontend Developer",
+      "institution": "Grassau GmbH",
+      "year": "2024",
+      "highlights": [
+        "Developed responsive UIs with React.js",
+        "Collaborated with design team on component library",
+        "Optimized web performance (Lighthouse score +40%)"
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Vocational Training - Application Development",
+      "institution": "CBW Berlin",
+      "year": "2022–2024",
+      "highlights": [
+        "Specialized in modern JavaScript frameworks",
+        "Final project: E-commerce dashboard with React/Node"
+      ]
+    },
+    {
+      "id": 3,
+      "degree": "Advanced React & Next.js Course",
+      "institution": "Udemy",
+      "year": "2023",
+      "highlights": [
+        "State management with Context API & Redux",
+        "Server-side rendering with Next.js"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend Expertise",
+      "items": [
+        { "name": "React", "level": 90 },
+        { "name": "MongoDB", "level": 60 },
+        { "name": "Express.js", "level": 75 },
+        { "name": "Nodejs", "level": 65 },
+        { "name": "Tailwindcss", "level": 70 },
+        { "name": "CSS", "level": 75 }
+      ],
+      "icon": "💻"
+    },
+    {
+      "category": "Development Tools",
+      "items": [
+        { "name": "Git/GitHub", "level": 85 },
+        { "name": "VS Code", "level": 95 },
+        { "name": "Postman", "level": 70 },
+        { "name": "Thunder Client", "level": 75 }
+      ],
+      "icon": "🛠️"
+    },
+    {
+      "category": "Core Skills",
+      "items": [
+        { "name": "Responsive Design", "level": 90 },
+        { "name": "UI/UX Principles", "level": 80 },
+        { "name": "Performance Optimization", "level": 85 },
+        { "name": "Agile Development", "level": 80 }
+      ],
+      "icon": "🚀"
+    }
+  ],
+  "navbarLinks": [
+    {
+      "id": 1,
+      "title": "HOME",
+      "link": "home"
+    },
+    {
+      "id": 2,
+      "title": "ABOUT US",
+      "link": "about"
+    },
+    {
+      "id": 3,
+      "title": "Projects",
+      "link": "projects"
+    },
+    {
+      "id": 4,
+      "title": "Skills",
+      "link": "skills"
+    },
+    {
+      "id": 5,
+      "title": "Contact",
+      "link": "contact"
+    }
+  ], "expert": [
+    {
+      "id": 1,
+      "logo": "project",
+      "name": "Java",
+      "years": "2+ years",
+      "proficiency": "Advanced"
+    },
+    {
+      "id": 2,
+      "logo": "mySql",
+      "name": "MySQL",
+      "years": "2 years",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 3,
+      "logo": "python",
+      "name": "Python",
+      "years": "1.5 years",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 4,
+      "logo": "javascript",
+      "name": "JavaScript",
+      "years": "2 years",
+      "proficiency": "Advanced"
+    },
+    {
+      "id": 5,
+      "logo": "react",
+      "name": "React",
+      "years": "1.5 years",
+      "proficiency": "Intermediate"
+    },
+    {
+      "id": 6,
+      "logo": "MERN",
+      "name": "MERN Stack",
+      "years": "1 year",
+      "proficiency": "Intermediate"
+    }
+  ]
+}
