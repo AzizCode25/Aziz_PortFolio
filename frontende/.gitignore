@@ -24,5 +24,8 @@ dist-ssr
 *.sw?
 
 .env
+
+
 .rest.Api.json
-data
+
+
