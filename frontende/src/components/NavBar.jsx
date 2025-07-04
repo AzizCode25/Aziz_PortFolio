@@ -1,6 +1,6 @@
 import { useState } from "react";
 import data  from "../../restApi.json";
-import aziz from "../assets/images/skill-photo/aziz.png";
+import aziz from "/images/aziz.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { Link as ScrollLink } from 'react-scroll';

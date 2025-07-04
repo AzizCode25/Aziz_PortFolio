@@ -1,9 +1,9 @@
-import project from "../assets/images/skill-photo/java.png";
-import mySql from "../assets/images/skill-photo/mySql.png";
-import python from "../assets/images/skill-photo/python.webp";
-import javascript from "../assets/images/skill-photo/javascript.png";
-import react from "../assets/images/skill-photo/reactjs.png";
-import MERN from "../assets/images/skill-photo/MERN.png";
+import project from "/images/aziz.png";
+import mySql from "/images/aziz.png";
+import python from "/images/aziz.png";
+import javascript from "/images/aziz.png";
+import react from "/images/aziz.png";
+import MERN from "/images/aziz.png";
 
 const Education = () => {
   const skills = [
