@@ -1,55 +1,8 @@
-import project from "/images/aziz.png";
-import mySql from "/images/aziz.png";
-import python from "/images/aziz.png";
-import javascript from "/images/aziz.png";
-import react from "/images/aziz.png";
-import MERN from "/images/aziz.png";
+import data from "../../data/restApi.json"
+import { TbBrandReactNative } from "react-icons/tb";
 
 const Education = () => {
-  const skills = [
-    {
-      id: 1,
-      logo: project,
-      name: "Java",
-      years: "2+ years",
-      proficiency: "Advanced"
-    },
-    {
-      id: 2,
-      logo: mySql,
-      name: "MySQL",
-      years: "2 years",
-      proficiency: "Intermediate"
-    },
-    {
-      id: 3,
-      logo: python,
-      name: "Python",
-      years: "1.5 years",
-      proficiency: "Intermediate"
-    },
-    {
-      id: 4,
-      logo: javascript,
-      name: "JavaScript",
-      years: "2 years",
-      proficiency: "Advanced"
-    },
-    {
-      id: 5,
-      logo: react,
-      name: "React",
-      years: "1.5 years",
-      proficiency: "Intermediate"
-    },
-    {
-      id: 6,
-      logo: MERN,
-      name: "MERN Stack",
-      years: "1 year",
-      proficiency: "Intermediate"
-    },
-  ];
+
 
   return (
     <section id="skills" className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 py-16 md:py-28">
@@ -63,7 +16,7 @@ const Education = () => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8">
-        {skills.map((skill) => (
+        {data.expert.map((skill) => (
           <div 
             key={skill.id}
             className="group relative flex flex-col items-center p-6 rounded-2xl overflow-hidden border border-gray-200/80 dark:border-gray-700/50 transition-all duration-500 hover:border-transparent hover:shadow-xl hover:bg-gradient-to-br from-purple-600/10 via-blue-600/10 to-pink-600/10 dark:from-purple-600/5 dark:via-blue-600/5 dark:to-pink-600/5"
@@ -74,7 +27,7 @@ const Education = () => {
                 <img 
                   src={skill.logo} 
                   alt={skill.name} 
-                  className="w-16 h-16 md:w-20 md:h-20 object-contain transition-transform duration-500 group-hover:scale-110"
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-full object-contain transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
             </div>
@@ -84,21 +37,8 @@ const Education = () => {
               <h3 className="text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600">
                 {skill.name}
               </h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                {skill.years}
-              </p>
-              <div className="w-full bg-gray-200/50 dark:bg-gray-700/50 rounded-full h-2 mt-3">
-                <div 
-                  className={`h-2 rounded-full ${
-                    skill.proficiency === 'Advanced' ? 'bg-gradient-to-r from-purple-600 to-blue-600 w-full' : 
-                    skill.proficiency === 'Intermediate' ? 'bg-gradient-to-r from-blue-500 to-cyan-500 w-3/4' :
-                    'bg-gradient-to-r from-gray-400 to-gray-500 w-1/2'
-                  }`}
-                ></div>
-              </div>
-              <span className="text-xs font-medium text-gray-500 dark:text-gray-400 mt-2 block group-hover:text-blue-500 dark:group-hover:text-cyan-400">
-                {skill.proficiency}
-              </span>
+        
+             
             </div>
 
             {/* Glow effect */}
@@ -116,15 +56,12 @@ const Education = () => {
           Committed to lifelong learning through courses, certifications, and building innovative projects.
         </p>
         <div className="flex flex-wrap gap-2">
-          <span className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
-            Currently learning: MERN
+          {data.ContinuousGrowth.map((element)=>(
+          <span key={element.id} className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
+            {element.title} 
           </span>
-          <span className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
-            Exploring: Three.js
-          </span>
-          <span className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
-            Next Goal: Django
-          </span>
+         
+          ))}
         </div>
       </div>
     </section>
