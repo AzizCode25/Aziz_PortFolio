@@ -1,15 +1,8 @@
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import {
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope,
-  FaClock,
-  FaPaperPlane,
-} from 'react-icons/fa'
-import { SiWhatsapp } from 'react-icons/si'
+import {  FaPaperPlane } from 'react-icons/fa'
+import data from '../../data/restApi.json'
 import earth from '../assets/videos/earth.mp4'
 
 const Contact = () => {
@@ -65,75 +58,13 @@ const Contact = () => {
     }
   }
 
-  const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { type: 'spring', stiffness: 100, damping: 10 },
-    },
-  }
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 },
-    },
-  }
-
-  const contactItem = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 },
-  }
-
-  const contactInfo = [
-    {
-      icon: <FaMapMarkerAlt className="text-sky-400 text-xl" />,
-      title: 'Adresse',
-      content: 'Rampe 12\n21217 Seevetal',
-    },
-    {
-      icon: <FaPhone className="text-sky-400 text-xl" />,
-      title: 'Telefon',
-      content: '+49 40 12345678',
-      extra: (
-        <a
-          href="https://wa.me/49123456789"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center mt-2 text-sky-400 hover:text-sky-300 transition-colors"
-        >
-          <SiWhatsapp className="mr-2" /> WhatsApp Chat
-        </a>
-      ),
-    },
-    {
-      icon: <FaEnvelope className="text-sky-400 text-xl" />,
-      title: 'E-Mail',
-      content: 'info@example.com',
-      isLink: true,
-    },
-    {
-      icon: <FaClock className="text-sky-400 text-xl" />,
-      title: 'Öffnungszeiten',
-      content: 'Mo-Fr: 09:00 - 18:00 Uhr\nSa-So: Geschlossen',
-    },
-  ]
-
   return (
     <section
       id="contact"
       className="max-w-7xl mx-auto py-20 md:py-28 px-4 sm:px-6 lg:px-8 "
     >
       {/* Header Section */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: '-100px' }}
-        variants={fadeIn}
-        className="mb-16 text-center"
-      >
+      <div className="mb-16 text-center">
         <h2 className="text-lg md:text-xl font-semibold text-sky-400 tracking-wide mb-3">
           CONTACT
         </h2>
@@ -147,15 +78,14 @@ const Contact = () => {
           I look forward to hearing from you and working together on exciting
           projects.
         </p>
-      </motion.div>
+      </div>
 
-      <div className="grid lg:grid-cols-2 gap-12">
+      <div className="grid lg:grid-cols-2 gap-12 cursor-pointer">
         {/* Contact Info & Video */}
-        <motion.div
+        <div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={staggerContainer}
           className="space-y-8"
         >
           <div className="relative h-80 lg:h-full rounded-xl overflow-hidden border border-gray-700/50 shadow-2xl group">
@@ -171,23 +101,17 @@ const Contact = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
             <div className="relative z-10 p-8 h-full flex flex-col justify-end">
-              <motion.div
-                variants={staggerContainer}
-                className="space-y-6 bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50"
-              >
-                {contactInfo.map((item, index) => (
-                  <motion.div
-                    key={index}
-                    variants={contactItem}
-                    className="flex items-start space-x-4"
-                  >
-                    <div className="p-3 bg-sky-500/10 rounded-lg shadow-sm">
+              <div className="space-y-6 bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
+                {data.contactInfo.map((item) => (
+                  <div key={item.id} className="flex items-start space-x-4">
+                    <div className="p-3 bg-sky-500/10 rounded-lg shadow-sm text-2xl hover:bg-blue-300/50">
                       {item.icon}
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-1">
                         {item.title}
                       </h3>
+
                       {item.isLink ? (
                         <a
                           href={`mailto:${item.content}`}
@@ -200,22 +124,26 @@ const Contact = () => {
                           {item.content}
                         </p>
                       )}
-                      {item.extra}
+
+                      {item.extra && (
+                        <div
+                          className="text-sm text-sky-400 mt-1"
+                          dangerouslySetInnerHTML={{ __html: item.extra }}
+                        />
+                      )}
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Contact Form */}
-        <motion.form
+        <form
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ delay: 0.2 }}
           onSubmit={handleSubmit}
           className=" rounded-xl shadow-2xl p-6 sm:p-8 border border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
         >
@@ -225,7 +153,7 @@ const Contact = () => {
 
           <div className="space-y-5">
             <div className="grid md:grid-cols-2 gap-5">
-              <motion.div variants={contactItem}>
+              <div>
                 <label
                   htmlFor="name"
                   className="block text-sm font-medium text-gray-300 mb-2"
@@ -242,9 +170,9 @@ const Contact = () => {
                   placeholder="Max"
                   required
                 />
-              </motion.div>
+              </div>
 
-              <motion.div variants={contactItem}>
+              <div>
                 <label
                   htmlFor="nachName"
                   className="block text-sm font-medium text-gray-300 mb-2"
@@ -261,11 +189,11 @@ const Contact = () => {
                   placeholder="Mustermann"
                   required
                 />
-              </motion.div>
+              </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-5">
-              <motion.div variants={contactItem}>
+              <div>
                 <label
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2"
@@ -282,9 +210,9 @@ const Contact = () => {
                   placeholder="max@example.com"
                   required
                 />
-              </motion.div>
+              </div>
 
-              <motion.div variants={contactItem}>
+              <div>
                 <label
                   htmlFor="telefon"
                   className="block text-sm font-medium text-gray-300 mb-2"
@@ -300,10 +228,10 @@ const Contact = () => {
                   className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
                   placeholder="+49 123 456789"
                 />
-              </motion.div>
+              </div>
             </div>
 
-            <motion.div variants={contactItem}>
+            <div>
               <label
                 htmlFor="nachricht"
                 className="block text-sm font-medium text-gray-300 mb-2"
@@ -320,9 +248,9 @@ const Contact = () => {
                 placeholder="Ihre Nachricht"
                 required
               ></textarea>
-            </motion.div>
+            </div>
 
-            <motion.div variants={contactItem}>
+            <div>
               <button
                 type="submit"
                 className="w-full flex items-center justify-center px-6 py-3.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20"
@@ -333,9 +261,9 @@ const Contact = () => {
                   <FaPaperPlane className="mr-2" /> Nachricht senden
                 </span>
               </button>
-            </motion.div>
+            </div>
           </div>
-        </motion.form>
+        </form>
       </div>
     </section>
   )
