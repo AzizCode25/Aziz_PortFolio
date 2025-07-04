@@ -13,67 +13,44 @@ const AnimationContainer = () => {
       className="w-full h-full absolute translate-z-0"
       init={particlesInit}
       options={{
-        fullScreen: { enable: false },
         background: { color: "transparent" },
-        fpsLimit: 100,
-        
+        fpsLimit: 0, // Reduziert für bessere Performance
         interactivity: {
           events: {
-            onClick: { enable: false },
             onHover: {
               enable: true,
-              mode: "repulse",
-              parallax: { enable: false }
-            },
-            resize: true,
-          },
-          modes: {
-            repulse: {
-              distance: 100,
-              duration: 0.4
+              mode: "repulse"
             }
           },
+          modes: {
+            repulse: { distance: 100 }
+          }
         },
-        
         particles: {
-          color: { 
-            value: "#de9168 ", // Hauptfarbe Orange
-          },
+          color: { value: "#de9168" }, // Einfache Farbe
           links: {
-            color: "#d8bc97", // Warmes Gold/Orange für Links
-            distance: 150, 
+            color: "#d8bc97",
+            distance: 120,
             enable: true,
-            opacity: 0.8, // Realistischer Opacity-Wert (0-1)
-            width: 1
+            opacity: 0.4
           },
           move: {
             enable: true,
-            speed: 0.5,
-            direction: "none",
-            outModes: "bounce",
-            random: false,
-            straight: false
+            speed: 0.5, // Langsamere Bewegung
+            outModes: "bounce"
           },
           number: {
-            density: { enable: true, area: 1000 },
-            value: 80
+            density: { enable: true, area: 800 },
+            value: 80 // Weniger Partikel
           },
           opacity: {
-            value: 1.8, // Korrigierter Opacity-Wert (0-1)
-            animation: {
-              enable: true,
-              speed: 0.1,
-              minimumValue: 1
-            }
+            value: { min: 0.3, max: 0.6 } // Einfacheres Opacity
           },
-          shape: { type: "circle" },
           size: {
-            value: { min: 2, max: 6 }, // Leichte Variation für Natürlichkeit
+            value: { min: 1, max: 3 } // Kleinere Partikel
           }
         },
-        detectRetina: false,
-        smooth: false,
-        motion: { reduce: true }
+        detectRetina: true
       }}
     />
   );

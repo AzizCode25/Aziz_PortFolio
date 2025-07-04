@@ -105,33 +105,19 @@ const About = () => {
           Why Choose Me As Your Frontend Developer?
         </h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-xl border border-gray-100 dark:border-gray-700">
-            <h4 className="font-bold text-lg mb-3 text-sky-600 dark:text-sky-400">
-              UI/UX Focused
-            </h4>
-            <p className="text-gray-600 dark:text-gray-300">
-              I build interfaces with attention to accessibility, responsive
-              design, and smooth animations.
-            </p>
-          </div>
-          <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-xl border border-gray-100 dark:border-gray-700">
-            <h4 className="font-bold text-lg mb-3 text-sky-600 dark:text-sky-400">
-              Modern Stack
-            </h4>
-            <p className="text-gray-600 dark:text-gray-300">
-              Proficient in React ecosystem (Hooks, Context, Redux) and Next.js
-              for optimized applications.
-            </p>
-          </div>
-          <div className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-xl border border-gray-100 dark:border-gray-700">
-            <h4 className="font-bold text-lg mb-3 text-sky-600 dark:text-sky-400">
-              Clean Code
-            </h4>
-            <p className="text-gray-600 dark:text-gray-300">
-              I write maintainable, well-documented code following best
-              practices and design patterns.
-            </p>
-          </div>
+          {data.WhyChoose.map((element) => (
+            <div
+              key={element.id}
+              className="bg-white/80 dark:bg-gray-800/80 p-6 rounded-xl border border-gray-100 dark:border-gray-700"
+            >
+              <h4 className="font-bold text-lg mb-3 text-sky-600 dark:text-sky-400">
+                {element.title}
+              </h4>
+              <p className="text-gray-600 dark:text-gray-300">
+                {element.context}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

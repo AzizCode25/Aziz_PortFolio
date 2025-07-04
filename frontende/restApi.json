@@ -66,6 +66,23 @@
       "icon": "🚀"
     }
   ],
+  "WhyChoose": [
+    {
+      "id": 1,
+      "title": "UI/UX Focused",
+      "context": "I build interfaces with attention to accessibility, responsive design, and smooth animations."
+    },
+    {
+      "id": 2,
+      "title": "Modern Stack",
+      "context": "Proficient in React ecosystem (Hooks, Context, Redux) for optimized applications."
+    },
+    {
+      "id": 3,
+      "title": "Clean Code",
+      "context": "I write maintainable, well-documented code following best practices and design patterns."
+    }
+  ],
   "navbarLinks": [
     {
       "id": 1,
@@ -92,7 +109,8 @@
       "title": "Contact",
       "link": "contact"
     }
-  ], "expert": [
+  ],
+  "expert": [
     {
       "id": 1,
       "logo": "project",
