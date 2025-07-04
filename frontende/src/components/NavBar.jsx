@@ -1,5 +1,5 @@
 import { useState } from "react";
-import data  from "../../restApi.json";
+import data  from "../../data/restApi.json"
 import aziz from "/images/aziz.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeFill } from "react-icons/ri";

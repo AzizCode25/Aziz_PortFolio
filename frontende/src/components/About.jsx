@@ -1,4 +1,4 @@
-import data from '../../restApi.json'
+import data from "../../data/restApi.json"
 
 const About = () => {
   return (
