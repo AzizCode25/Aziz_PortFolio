@@ -25,7 +25,5 @@ dist-ssr
 
 .env
 
-
-.rest.Api.json
-
-
+data
+rest.Api.json
