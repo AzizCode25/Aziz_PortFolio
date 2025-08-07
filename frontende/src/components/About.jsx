@@ -52,7 +52,9 @@ const About = () => {
                     {item.highlights.map((highlight, i) => (
                       <li key={i} className="leading-relaxed">
                         {highlight}
+                 
                       </li>
+                      
                     ))}
                   </ul>
                 </div>

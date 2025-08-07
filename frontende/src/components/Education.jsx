@@ -57,7 +57,7 @@ const Education = () => {
         </p>
         <div className="flex flex-wrap gap-2">
           {data.ContinuousGrowth.map((element)=>(
-          <span key={element.id} className="px-3 py-1 bg-white dark:bg-gray-800 text-xs font-medium text-gray-800 dark:text-gray-200 rounded-full border border-gray-200 dark:border-gray-700 shadow-xs">
+          <span key={element.id} className="px-6 py-1 bg-white dark:bg-gray-800 text-[12px] font-medium text-gray-800 dark:text-gray-200 rounded-full  border border-gray-200 dark:border-gray-700 shadow-xs hover:bg-blue-500 hover:text-black">
             {element.title} 
           </span>
          

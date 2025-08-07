@@ -92,11 +92,13 @@ const Project = () => {
 
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none overflow-hidden">
-                  <div className="absolute -inset-8 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-purple-600/20 rounded-2xl blur-xl"></div>
+                  <div className="absolute -inset-8 bg-gradient-to-r from-purple-900/30 via-pink-900/30 to-purple-900/0 rounded-2xl blur-xl"></div>
                 </div>
               </div>
             ))}
           </div>
+
+          
         </div>
       )}
 
@@ -107,7 +109,7 @@ const Project = () => {
           Other Projects
         </h3>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {otherProjects.map((project) => (
             <div
               key={project.id}
@@ -126,7 +128,12 @@ const Project = () => {
                 <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-300">
                   {project.name}
                 </h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{project.description}</p>
+                {/* <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{project.description}</p> */}
+                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      {project.description}
+                    </p>
+                  </div>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.slice(0, 3).map((tag, index) => (
@@ -164,7 +171,11 @@ const Project = () => {
                   </a>
                 </div>
               </div>
+               <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none overflow-hidden">
+                  <div className="absolute -inset-8 bg-gradient-to-r from-purple-900/10 via-pink-900/30 to-purple-900/0 rounded-2xl blur-xl"></div>
+                </div>
             </div>
+            
           ))}
         </div>
       </div>
