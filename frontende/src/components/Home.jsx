@@ -1,8 +1,8 @@
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiTailwindcss, SiTypescript, SiMongodb, SiExpress, SiNodedotjs } from "react-icons/si";
+import { SiTailwindcss, SiTypescript, SiMongodb, SiExpress, SiNodedotjs, SiSpringboot  } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
-import main from "../assets/videos/main.mp4";
+import main from "../assets/videos/icon-software.mp4";
 import AnimationContainer from "./AnimationContainer";
 
 
@@ -13,7 +13,7 @@ const Home = () => {
       color: "hover:bg-blue-100 dark:hover:bg-blue-900/30", 
       hoverColor: "group-hover:text-blue-600 dark:group-hover:text-blue-400",
       name: "LinkedIn", 
-      url: "https://www.linkedin.com/in/yourprofile" 
+      url: "https://www.linkedin.com/in/aziz-7a24a0283/" 
     },
     { 
       icon: <FaGithub size={20} />, 
@@ -30,7 +30,8 @@ const Home = () => {
     { icon: <FaReact size={24} />, color: "text-blue-400", name: "React" },
     { icon: <SiNodedotjs size={24} />, color: "text-green-600", name: "Node.js" },
     { icon: <SiTailwindcss size={24} />, color: "text-cyan-500", name: "Tailwind" },
-    { icon: <SiTypescript size={24} />, color: "text-blue-600", name: "TypeScript" }
+    { icon: <SiTypescript size={24} />, color: "text-blue-600", name: "TypeScript" },
+    { icon: <SiSpringboot size={24} />, color: "text-green-600", name: "TypeScript" }
   ];
 
   return ( 

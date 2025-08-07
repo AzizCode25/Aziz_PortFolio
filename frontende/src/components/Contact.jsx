@@ -3,7 +3,7 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import {  FaPaperPlane } from 'react-icons/fa'
 import data from '../../data/restApi.json'
-import earth from '../assets/videos/earth.mp4'
+import earth from '../assets/videos/glob.mp4'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
