@@ -1,14 +1,14 @@
-import { FiExternalLink } from "react-icons/fi";
-import { FaGithub, FaArrowRight, FaStar } from "react-icons/fa";
-import { RiRocket2Fill } from "react-icons/ri";
-import { BsCodeSlash } from "react-icons/bs";
+import { FiExternalLink } from 'react-icons/fi'
+import { FaGithub, FaArrowRight, FaStar } from 'react-icons/fa'
+import { RiRocket2Fill } from 'react-icons/ri'
+import { BsCodeSlash } from 'react-icons/bs'
 
-import data from "../../data/restApi.json";
+import data from '../../data/restApi.json'
 
 const Project = () => {
-  const projects = data.projects;
-  const featuredProjects = projects.filter((project) => project.featured);
-  const otherProjects = projects.filter((project) => !project.featured);
+  const projects = data.projects
+  const featuredProjects = projects.filter((project) => project.featured)
+  const otherProjects = projects.filter((project) => !project.featured)
 
   return (
     <section
@@ -23,7 +23,8 @@ const Project = () => {
           <RiRocket2Fill className="inline-block text-pink-500 animate-bounce" />
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Here are some of my best works. Each project is unique and solves different problems.
+          Here are some of my best works. Each project is unique and solves
+          different problems.
         </p>
       </div>
 
@@ -43,7 +44,7 @@ const Project = () => {
             {featuredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700 hover:border-purple-200 dark:hover:border-pink-500/50"
+                className="group relative bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700  "
               >
                 <div className="relative h-52 overflow-hidden">
                   <img
@@ -52,8 +53,8 @@ const Project = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                    <p className="text-white/90 text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                    <p className="text-white text-lg font-semibold leading-snug translate-y-4 group-hover:translate-y-0 transition-transform duration-500 px-5 py-3 rounded-xl bg-black/50 backdrop-blur-md border border-white/30">
                       {project.description}
                     </p>
                   </div>
@@ -73,7 +74,10 @@ const Project = () => {
                         aria-label="Live Demo"
                         title="Live Demo"
                       >
-                        <FiExternalLink size={18} className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-pink-400 transition-colors" />
+                        <FiExternalLink
+                          size={18}
+                          className="text-gray-700 dark:text-gray-300 group-hover:text-purple-600 dark:group-hover:text-pink-400 transition-colors"
+                        />
                       </a>
                       <a
                         href={project.codeUrl}
@@ -83,7 +87,10 @@ const Project = () => {
                         aria-label="View Code"
                         title="View Code"
                       >
-                        <FaGithub size={18} className="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors" />
+                        <FaGithub
+                          size={18}
+                          className="text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors"
+                        />
                       </a>
                     </div>
                   </div>
@@ -99,10 +106,9 @@ const Project = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Glow effect */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden">
-                  <div className="absolute -inset-8 bg-gradient-to-r from-purple-900/20 via-pink-900/30 to-purple-900/0 rounded-2xl blur-xl"></div>
+                  <div className="absolute -inset-8 bg-gradient-to-r from-gray-900/20 via-gray-700/40 to-gray-900/0 rounded-2xl blur-xl"></div>
                 </div>
               </div>
             ))}
@@ -134,8 +140,8 @@ const Project = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white/90 text-sm translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <p className="text-white text-lg font-semibold leading-snug translate-y-4 group-hover:translate-y-0 transition-transform duration-500 px-5 py-3 rounded-xl bg-black/50 backdrop-blur-md border border-white/30">
                     {project.description}
                   </p>
                 </div>
@@ -169,7 +175,7 @@ const Project = () => {
                     rel="noopener noreferrer"
                     className="text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline flex items-center group-hover:text-purple-600 dark:group-hover:text-pink-400 transition-colors"
                   >
-                    View Project{" "}
+                    View Project{' '}
                     <FaArrowRight
                       size={14}
                       className="ml-1.5 group-hover:translate-x-1 transition-transform"
@@ -190,11 +196,9 @@ const Project = () => {
                   </a>
                 </div>
               </div>
-
-              {/* Glow effect */}
-              <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden">
-                <div className="absolute -inset-6 bg-gradient-to-r from-purple-900/10 via-pink-900/20 to-purple-900/0 rounded-xl blur-lg"></div>
-              </div>
+                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden">
+                  <div className="absolute -inset-8 bg-gradient-to-r from-gray-900/20 via-gray-700/40 to-gray-900/0 rounded-2xl blur-xl"></div>
+                </div>
             </div>
           ))}
         </div>
@@ -203,7 +207,8 @@ const Project = () => {
       {/* CTA */}
       <div className="text-center">
         <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-          Want to see more? Check out my GitHub for additional projects and code samples.
+          Want to see more? Check out my GitHub for additional projects and code
+          samples.
         </p>
         <a
           href="https://github.com/PushUpDev"
@@ -221,8 +226,7 @@ const Project = () => {
         </a>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Project;
-
+export default Project

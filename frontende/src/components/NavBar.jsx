@@ -1,98 +1,122 @@
-import { useState } from "react";
-import data  from "../../data/restApi.json"
+import { useState, useCallback, memo } from "react";
+import data from "../../data/restApi.json";
 import aziz from "/images/aziz.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeFill } from "react-icons/ri";
-import { Link as ScrollLink } from 'react-scroll';
+import { Link as ScrollLink } from "react-scroll";
+
+const NavItem = memo(({ element, activeSection, onSetActive, isMobile }) => (
+  <ScrollLink
+    to={element.link}
+    spy={!isMobile}
+    smooth
+    duration={500}
+    offset={-70}
+    onSetActive={!isMobile ? () => onSetActive(element.link) : undefined}
+    onClick={isMobile ? () => onSetActive(element.link) : undefined}
+    className={`${
+      isMobile
+        ? `block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
+            activeSection === element.link
+              ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
+              : "text-gray-300 hover:bg-gray-800/70 hover:text-white"
+          }`
+        : `relative cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+            activeSection === element.link
+              ? "text-white bg-gradient-to-r from-cyan-600 to-blue-600 shadow-lg shadow-cyan-500/20"
+              : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+          }`
+    }`}
+  >
+    {element.title}
+    {!isMobile && activeSection === element.link && (
+      <span className="absolute  rounded-full"></span>
+    )}
+  </ScrollLink>
+));
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState(null);
+  const [activeSection, setActiveSection] = useState("home");
 
-  const handleItemClick = (id) => {
-    setActiveItem(id);
+  const handleSetActive = useCallback((section) => {
+    setActiveSection(section);
     setMenuOpen(false);
-  };
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-black">
-      <div className="max-w-screen-2xl mx-auto px-4 md:px-20">
-        <div className="flex justify-between items-center h-16 md:h-20">
-          {/* Logo Section */}
+    <nav className="fixed top-0 w-full z-50 border-b bg-black border-gray-800 shadow-xl">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <ScrollLink
             to="home"
-            smooth={true}
+            smooth
             duration={500}
             offset={-70}
-            className="flex items-center space-x-3 cursor-pointer group"
+            className="flex items-center space-x-2 cursor-pointer group"
             onClick={() => setMenuOpen(false)}
+            onSetActive={() => handleSetActive("home")}
           >
-            <img
-              src={aziz}
-              alt="Aziz Logo"
-              className="h-10 w-10 md:h-12 md:w-12 rounded-full border-2 border-orange-500 group-hover:border-cyan-400 transition-all duration-300"
-            />
+            <div className="relative">
+              <img
+                src={aziz}
+                alt="Aziz Logo"
+                className="h-10 w-10 rounded-full border-2 border-orange-500 group-hover:border-cyan-400 transition-all duration-300 group-hover:scale-105"
+              />
+              <div className="absolute -inset-1 rounded-full bg-cyan-500/10 group-hover:bg-cyan-500/20 blur-md transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
+            </div>
             <div>
-              <h1 className="font-bold text-lg md:text-xl text-white">
-                Azi<span className="text-orange-500">z</span>
+              <h1 className="font-bold text-lg text-white tracking-tight">
+                Azi
+                <span className="text-orange-500 group-hover:text-cyan-400 transition-colors duration-300">
+                  z
+                </span>
               </h1>
-              <p className="text-xs md:text-sm text-emerald-400">
+              <p className="text-xs text-emerald-400/90 group-hover:text-emerald-300 transition-colors duration-300">
                 Full Stack Developer
               </p>
             </div>
           </ScrollLink>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-7">
-            {data.navbarLinks.map((element) => (
-              <ScrollLink
-                key={element.id}
-                to={element.link}
-                spy={true}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onClick={() => handleItemClick(element.id)}
-                className={`cursor-pointer px-4 py-2 rounded-full transition-all duration-300 ${
-                  activeItem === element.id
-                    ? "text-white bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg"
-                    : "text-gray-300 hover:text-white hover:bg-gray-800"
-                }`}
-              >
-                {element.title}
-              </ScrollLink>
+          {/* Desktop Links */}
+          <div className="hidden md:flex items-center space-x-1">
+            {data.navbarLinks.map((el) => (
+              <NavItem
+                key={el.id}
+                element={el}
+                activeSection={activeSection}
+                onSetActive={handleSetActive}
+                isMobile={false}
+              />
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          {/* Mobile Button */}
+          <button
+            className="md:hidden p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+            onClick={() => setMenuOpen((prev) => !prev)}
+            aria-label="Toggle menu"
+          >
             {menuOpen ? (
-              <RiCloseLargeFill className="text-red-500 text-2xl" />
+              <RiCloseLargeFill className="text-2xl text-red-400 hover:text-red-300 transition-colors" />
             ) : (
-              <GiHamburgerMenu className="text-cyan-400 text-2xl" />
+              <GiHamburgerMenu className="text-2xl text-cyan-400 hover:text-cyan-300 transition-colors" />
             )}
-          </div>
+          </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Links */}
         {menuOpen && (
-          <div className="md:hidden flex flex-col items-center space-y-4 mt-4">
-            {data.navbarLinks.map((element) => (
-              <ScrollLink
-                key={element.id}
-                to={element.link}
-                smooth={true}
-                duration={500}
-                offset={-70}
-                onClick={() => handleItemClick(element.id)}
-                className={`block w-full text-center py-3 rounded-lg transition-all duration-300 ${
-                  activeItem === element.id
-                    ? "bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium shadow-lg"
-                    : "text-gray-300 hover:bg-gray-800 hover:text-white"
-                }`}
-              >
-                {element.title}
-              </ScrollLink>
+          <div className="md:hidden pb-4 space-y-2 bg-black">
+            {data.navbarLinks.map((el) => (
+              <NavItem
+                key={el.id}
+                element={el}
+                activeSection={activeSection}
+                onSetActive={handleSetActive}
+                isMobile
+              />
             ))}
           </div>
         )}
@@ -102,3 +126,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+

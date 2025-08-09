@@ -1,4 +1,4 @@
-import data from "../../data/restApi.json"
+import data from '../../data/restApi.json'
 
 const About = () => {
   return (
@@ -19,9 +19,10 @@ const About = () => {
         </h2>
 
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          I craft pixel-perfect, accessible, and performant web experiences with
-          React and Next.js. Passionate about creating intuitive interfaces that
-          users love.
+          I build clean, responsive, and user-friendly web interfaces with
+          React. Currently expanding my skills by learning Spring Boot to grow
+          as a full-stack developer. Passionate about crafting experiences that
+          are both functional and enjoyable for users.
         </p>
       </div>
 
@@ -52,9 +53,7 @@ const About = () => {
                     {item.highlights.map((highlight, i) => (
                       <li key={i} className="leading-relaxed">
                         {highlight}
-                 
                       </li>
-                      
                     ))}
                   </ul>
                 </div>
