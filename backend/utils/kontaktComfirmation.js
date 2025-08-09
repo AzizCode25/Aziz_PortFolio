@@ -14,13 +14,18 @@ export const kontaktConfirmation = async (nachName, email) => {
   const emailContent = `
     <html>
       <body>
-        <h2>Ihre Kontaktanfrage ist eingegangen</h2>
-        <p>Sehr geehrte*r <strong>Herr/Frau ${nachName}</strong>,</p>
-        <p>vielen Dank für Ihre Nachricht und Ihr Interesse.</p>
-        <p>Ich habe Ihre Anfrage erhalten und werde mich innerhalb von 24 Stunden bei Ihnen melden.</p>
-        <p>Falls Sie in der Zwischenzeit Fragen haben, können Sie gerne direkt auf diese E-Mail antworten.</p>
-        <br>
-        <p>Viele Grüße<br><strong>Aziz</strong></p>
+        <h2>Kontaktanfrage erhalten</h2>
+        <p>Sehr geehrte*r Herr/Frau <strong>${nachName}</strong>,</p>
+        <p>Vielen Dank für Ihre Nachricht. Ich melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+        <p>Bei Fragen können Sie gerne direkt antworten.</p>
+        <p>Viele Grüße<br /><strong>Aziz</strong></p>
+          <hr>
+        <h2>Contact Request Received</h2>
+        <p>Dear Mr./Ms. <strong>${nachName}</strong>,</p>
+        <p>Thank you for your message. I will get back to you within 24 hours.</p>
+        <p>If you have any questions, feel free to reply directly.</p>
+        <p>Best regards,<br /><strong>Aziz</strong></p>
+
       </body>
     </html>
   `
