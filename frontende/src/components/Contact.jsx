@@ -3,7 +3,7 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import { FaPaperPlane } from 'react-icons/fa'
 import data from '../../data/restApi.json'
-import earth from '../assets/videos/glob.mp4'
+// import earth from '../assets/videos/glob.mp4'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -82,7 +82,7 @@ const Contact = () => {
         {/* Contact Info & Video */}
         <div className="space-y-8">
           <div className="relative h-80 lg:h-full rounded-xl overflow-hidden border border-gray-700/50 shadow-2xl group">
-            <video
+            {/* <video
               autoPlay
               loop
               muted
@@ -90,7 +90,8 @@ const Contact = () => {
               className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             >
               <source src={earth} type="video/mp4" />
-            </video>
+            </video> */}
+            <img className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500" src="../../public/images/erath.png" alt="" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
             <div className="relative z-10 p-8 h-full flex flex-col justify-end">
