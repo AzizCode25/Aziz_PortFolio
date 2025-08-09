@@ -46,13 +46,14 @@ const Home = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
-                  Hello, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400 animate-text-gradient">Aziz</span>
+                  Hello, here is <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400 animate-text-gradient">Aziz</span>
                 </h1>
                 <div className="flex flex-wrap items-center gap-2 text-3xl md:text-4xl font-bold animate-fade-in-up delay-100">
-                  <span className="text-gray-700 dark:text-gray-300">Professional</span>
+                   <span className="text-gray-700 dark:text-gray-300">I’m a</span>
                   <ReactTyped
                     className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 min-w-[100px]"
-                    strings={["Frontend Developer", "React Specialist", "UI Engineer", "MERN Stack Dev"]}
+                    strings={["Frontend Developer",  "React Developer"]}
+                    // , "Application Developer"
                     typeSpeed={50}
                     backSpeed={40}
                     loop
