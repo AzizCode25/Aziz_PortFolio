@@ -3,7 +3,7 @@ import { SiTailwindcss, SiTypescript, SiMongodb, SiExpress, SiNodedotjs, SiSprin
 import { FaReact } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
 import main from "../assets/videos/icon-software.mp4";
-import AnimationContainer from "./AnimationContainer";
+// import AnimationContainer from "./AnimationContainer";
 
 
 
@@ -38,7 +38,7 @@ const Home = () => {
 
   return ( 
     <section id="home" className="relative overflow-hidden py-24 md:py-32 lg:py-48 ">
-      <AnimationContainer />
+      {/* <AnimationContainer /> */}
       <div className="max-w-screen-xl mx-auto px-6 md:px-8 relative">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-20">
           {/* Text Content */}
