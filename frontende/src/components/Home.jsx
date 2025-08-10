@@ -37,7 +37,7 @@ const Home = () => {
   ];
 
   return ( 
-    <section id="home" className="relative overflow-hidden py-24 md:py-32 lg:py-48 ">
+    <section id="home" className="relative overflow-hidden py-24 md:py-32 lg:py-40">
       {/* <AnimationContainer /> */}
       <div className="max-w-screen-xl mx-auto px-6 md:px-8 relative">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-20">
