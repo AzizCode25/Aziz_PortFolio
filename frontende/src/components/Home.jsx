@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { SiTailwindcss, SiTypescript, SiMongodb, SiExpress, SiNodedotjs, SiSpringboot,SiDjango  } from "react-icons/si";
 import { FaReact } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
-// import main from "../assets/videos/icon-software.mp4";
+import main from "../assets/videos/icon-software.mp4";
 // import AnimationContainer from "./AnimationContainer";
 
 
@@ -130,7 +130,7 @@ const Home = () => {
           <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2 relative">
             <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px] xl:w-[480px] xl:h-[480px] group">
               <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white/20 dark:border-gray-800/50 shadow-2xl group-hover:border-sky-400/30 transition-all duration-500">
-                {/* <video 
+                <video 
                   autoPlay
                   loop
                   muted
@@ -138,8 +138,8 @@ const Home = () => {
                   className="w-full h-full object-cover scale-[1.02] group-hover:scale-100 transition-transform duration-500"
                 >
                   <source src={main} type="video/mp4" />
-                </video> */}
-               <img src="../images/softwareIcons.png" alt="" />
+                </video>
+               {/* <img src="../images/softwareIcons.png" alt="" /> */}
               </div>
               <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-sky-500/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500 pointer-events-none"></div>
             </div>
