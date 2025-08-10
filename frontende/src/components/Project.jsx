@@ -33,7 +33,7 @@ const Project = () => {
           <div className="flex items-center mb-8">
             <div className="w-12 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 mr-4"></div>
             <h3 className="text-2xl font-semibold text-gray-800 dark:text-white flex items-center">
-              <FaStar className="text-yellow-400 mr-2" />
+              {/* <FaStar className="text-yellow-400 mr-2" /> */}
               Featured Projects
             </h3>
             <div className="w-12 h-0.5 bg-gradient-to-r from-pink-500 to-purple-500 ml-4"></div>
