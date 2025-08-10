@@ -63,16 +63,13 @@ const NavBar = () => {
               <img
                 src={aziz}
                 alt="Aziz Logo"
-                className="h-10 w-10 rounded-full border-2 border-orange-500 group-hover:border-cyan-400 transition-all duration-300 group-hover:scale-105"
+                className="h-10 w-10 rounded-full border-2 border-emerald-600"
               />
               <div className="absolute -inset-1 rounded-full bg-cyan-500/10 group-hover:bg-cyan-500/20 blur-md transition-all duration-300 opacity-0 group-hover:opacity-100"></div>
             </div>
             <div>
               <h1 className="font-bold text-lg text-white tracking-tight">
-                Azi
-                <span className="text-orange-500 group-hover:text-cyan-400 transition-colors duration-300">
-                  z
-                </span>
+                Aziz
               </h1>
               <p className="text-xs text-emerald-400/90 group-hover:text-emerald-300 transition-colors duration-300">
                 Junior Web Developer
