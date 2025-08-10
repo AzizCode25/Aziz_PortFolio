@@ -18,13 +18,12 @@ const Project = () => {
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-            My Projects
+            Projects
           </span>
           <RiRocket2Fill className="inline-block text-pink-500 animate-bounce" />
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Here are some of my best works. Each project is unique and solves
-          different problems.
+          Where unique value proposition meets innovation
         </p>
       </div>
 

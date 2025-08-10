@@ -7,10 +7,10 @@ const Education = () => {
       {/* Header Section */}
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-          My Technical Expertise
+          Technical Expertise
         </h2>
         <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-          Technologies I've mastered through hands-on experience
+          Technologies mastered through hands-on experience
         </p>
       </div>
 
@@ -48,7 +48,7 @@ const Education = () => {
 
       {/* Continuous Growth Section */}
       <div className="mt-16 p-6 md:p-8 bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-xl border border-gray-200/70 dark:border-gray-700/70 shadow-sm hover:shadow-md transition-all duration-300">
-        <h3 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white mb-3">Continuous Growth</h3>
+        <h3 className="text-xl md:text-2xl font-bold text-gray-800 dark:text-white mb-3">Career Enhancement</h3>
         <p className="text-gray-600 dark:text-gray-300 mb-4">
           Committed to lifelong learning through courses, certifications, and building innovative projects.
         </p>

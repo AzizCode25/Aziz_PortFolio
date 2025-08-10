@@ -49,7 +49,7 @@ const Home = () => {
                   Hello, here is <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400 animate-text-gradient">Aziz</span>
                 </h1>
                 <div className="flex flex-wrap items-center gap-2 text-3xl md:text-4xl font-bold animate-fade-in-up delay-100">
-                   <span className="text-gray-700 dark:text-gray-300">I’m a</span>
+                   <span className="text-gray-700 dark:text-gray-300">A</span>
                   <ReactTyped
                     className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 min-w-[100px]"
                     strings={["Frontend Developer",  "React Developer"]}
