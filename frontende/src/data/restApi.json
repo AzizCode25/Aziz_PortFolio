@@ -38,31 +38,32 @@
         "Optimized web performance (Lighthouse score +40%)"
       ]
     },
-    {
-      "id": 2,
-      "degree": "Vocational Training - Application Development",
-      "institution": "CBW Hamburg",
-      "year": "2022–2024",
-      "highlights": [
-        "Grundlagen Hardware",
-        "Grundlagen Relationale Datenbanken / SQL",
-        "Netzwerkgrundlagen",
-        "Grundlagen Cloud-Computing",
-        "Agiles Projektmanagement mit Scrum",
-        "Certified Scrum Master",
-        "Programmierung in HTML5 mit JavaScript und CSS3 - Fortgeschrittene",
-        "Objektorientierte Programmierung",
-        "React",
-        "UML - Unified Modeling Language",
-        "Associate in Python Programming - Grundlagen",
-        "Associate in Python Programming - Aufbaukurs",
-        "AWS Certified: Cloud Practitioner",
-        "AWS Certified: Cloud Practitioner - Zertifizierung",
-        "Bewerbungsstrategien",
-        "OCFA Java Foundations - Grundlagen",
-        "OCFA Java Foundations - Aufbaukurs"
-      ]
-    }
+   {
+  "id": 2,
+  "degree": "Vocational Training - Application Development",
+  "institution": "CBW Hamburg",
+  "year": "2022–2024",
+  "highlights": [
+    "Basics of Hardware",
+    "Basics of Relational Databases / SQL",
+    "Network Fundamentals",
+    "Basics of Cloud Computing",
+    "Agile Project Management with Scrum",
+    "Certified Scrum Master",
+    "Programming in HTML5 with JavaScript and CSS3 - Advanced",
+    "Object-Oriented Programming",
+    "React",
+    "UML - Unified Modeling Language",
+    "Associate in Python Programming - Basics",
+    "Associate in Python Programming - Advanced Course",
+    "AWS Certified: Cloud Practitioner",
+    "AWS Certified: Cloud Practitioner - Certification",
+    "Job Application Strategies",
+    "OCFA Java Foundations - Basics",
+    "OCFA Java Foundations - Advanced Course"
+  ]
+}
+
   ],
   "skills": [
     {
