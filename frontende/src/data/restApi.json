@@ -34,36 +34,35 @@
       "year": "2024",
       "highlights": [
         "Developed responsive UIs with React.js",
-        "Collaborated with design team on component library",
-        "Optimized web performance (Lighthouse score +40%)"
+        "Created a  (Kühlschrank) refrigerator application",
+        "Developed a booking system for dance school (Tanzschule) places"
       ]
     },
-   {
-  "id": 2,
-  "degree": "Vocational Training - Application Development",
-  "institution": "CBW Hamburg",
-  "year": "2022–2024",
-  "highlights": [
-    "Basics of Hardware",
-    "Basics of Relational Databases / SQL",
-    "Network Fundamentals",
-    "Basics of Cloud Computing",
-    "Agile Project Management with Scrum",
-    "Certified Scrum Master",
-    "Programming in HTML5 with JavaScript and CSS3 - Advanced",
-    "Object-Oriented Programming",
-    "React",
-    "UML - Unified Modeling Language",
-    "Associate in Python Programming - Basics",
-    "Associate in Python Programming - Advanced Course",
-    "AWS Certified: Cloud Practitioner",
-    "AWS Certified: Cloud Practitioner - Certification",
-    "Job Application Strategies",
-    "OCFA Java Foundations - Basics",
-    "OCFA Java Foundations - Advanced Course"
-  ]
-}
-
+    {
+      "id": 2,
+      "degree": "Vocational Training - Application Development",
+      "institution": "CBW Hamburg",
+      "year": "2022–2024",
+      "highlights": [
+        "Basics of Hardware",
+        "Basics of Relational Databases / SQL",
+        "Network Fundamentals",
+        "Basics of Cloud Computing",
+        "Agile Project Management with Scrum",
+        "Certified Scrum Master",
+        "Programming in HTML5 with JavaScript and CSS3 - Advanced",
+        "Object-Oriented Programming",
+        "React",
+        "UML - Unified Modeling Language",
+        "Associate in Python Programming - Basics",
+        "Associate in Python Programming - Advanced Course",
+        "AWS Certified: Cloud Practitioner",
+        "AWS Certified: Cloud Practitioner - Certification",
+        "Job Application Strategies",
+        "OCFA Java Foundations - Basics",
+        "OCFA Java Foundations - Advanced Course"
+      ]
+    }
   ],
   "skills": [
     {
@@ -96,7 +95,7 @@
         { "name": "Responsive Design", "level": 90 },
         { "name": "UI/UX Principles", "level": 80 },
         { "name": "Performance Optimization", "level": 85 },
-        { "name": "Agile Development", "level": 80 }
+        { "name": "Scrum Master (Agile)", "level": 80 }
       ],
       "icon": "🚀"
     }
