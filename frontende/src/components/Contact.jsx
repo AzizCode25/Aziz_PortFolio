@@ -77,7 +77,7 @@ const Contact = () => {
       <div className="grid lg:grid-cols-2 gap-12 cursor-pointer">
         {/* Contact Info & Video */}
         <div className="space-y-8">
-          <div className="relative h-80 lg:h-full rounded-xl overflow-hidden border-gray-700/50 shadow-2xl group">
+          <div className="relative h-80 lg:h-full border rounded-xl overflow-hidden border-gray-700/50 shadow-2xl group">
             <video
               autoPlay
               loop
@@ -94,7 +94,7 @@ const Contact = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
             <div className="relative z-10 p-8 h-full flex flex-col justify-end">
-              <div className="space-y-6 bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border-gray-700/50">
+              <div className="space-y-6 bg-gray-900/30  backdrop-blur-sm p-6 rounded-xl border-gray-700/50">
                 {data.contactInfo.map((item) => (
                   <div key={item.id} className="flex items-start space-x-4">
                     <div className="p-3 bg-sky-500/10 rounded-lg shadow-sm text-2xl hover:bg-blue-300/50">
@@ -135,7 +135,7 @@ const Contact = () => {
         {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="rounded-xl shadow-2xl p-6 sm:p-8 border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
+          className="rounded-xl shadow-2xl border p-6 sm:p-8 border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
         >
           <h3 className="text-2xl font-bold text-white mb-6">
             Send us a message
