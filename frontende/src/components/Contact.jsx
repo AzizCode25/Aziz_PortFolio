@@ -3,7 +3,7 @@ import axios from 'axios'
 import toast from 'react-hot-toast'
 import { FaPaperPlane } from 'react-icons/fa'
 import data from '../data/restApi.json'
-import earth from '../assets/videos/glob.mp4'
+// import earth from '../assets/videos/glob.mp4'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -89,7 +89,7 @@ const Contact = () => {
               playsInline
               className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             >
-              <source src={earth} type="video/mp4" />
+              <source src="https://videos.pexels.com/video-files/3129902/3129902-uhd_2560_1440_25fps.mp4" type="video/mp4" />
             </video>
             {/* <img className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500" src="../images/erath.png" alt="" /> */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
