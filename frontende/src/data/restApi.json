@@ -147,7 +147,6 @@
       "description": "A full-stack MERN application featuring responsive TailwindCSS design, Nodemailer integration, and optimized frontend-backend performance.",
       "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
       "demoUrl": "#",
-      "codeUrl": "https://github.com/PushUpDev/Radik_MERN",
       "featured": true
     },
     {
