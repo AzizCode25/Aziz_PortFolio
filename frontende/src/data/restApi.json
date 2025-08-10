@@ -121,16 +121,6 @@
 
   "projects": [
     {
-      "id": 1,
-      "image": "/images/aziz.png",
-      "name": "E-Commerce Platform",
-      "description": "Full-featured online store with payment integration, product management, and admin dashboard. Built with MERN stack and Stripe API.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Stripe"],
-      "demoUrl": "#",
-      "codeUrl": "#",
-      "featured": true
-    },
-    {
       "id": 2,
       "image": "/images/azizKaffee.png",
       "name": "Aziz Coffee, Admin",
@@ -172,7 +162,7 @@
     },
     {
       "id": 6,
-      "image": "/images/mongodb.png",
+      "image": "/images/tanz-schule.png",
       "name": "Social Media Analytics",
       "description": "Data visualization dashboard for social media metrics with custom charts, filters, and export functionality.",
       "tags": ["D3.js", "Express", "MongoDB", "JWT"],
