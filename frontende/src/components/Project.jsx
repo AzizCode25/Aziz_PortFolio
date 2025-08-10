@@ -141,7 +141,7 @@ const Project = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white text-lg font-semibold leading-snug translate-y-4 group-hover:translate-y-0 transition-transform duration-500 px-5 py-3 rounded-xl bg-black/50 backdrop-blur-md border border-white/30">
+                  <p className="text-white text-sm font-semibold leading-snug translate-y-4 group-hover:translate-y-0 transition-transform duration-500 px-5 py-3 rounded-xl bg-black/50 backdrop-blur-md border border-white/30">
                     {project.description}
                   </p>
                 </div>
