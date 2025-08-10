@@ -11,3 +11,15 @@ body {
 ::-webkit-scrollbar {
   display: none;
 }
+
+
+/* Zeige die Beschreibung standardmäßig auf Touch-Geräten */
+@media (hover: none) {
+  .group .absolute.inset-0.bg-gradient-to-t.from-black\/95.via-black\/60.to-transparent {
+    opacity: 1 !important;
+  }
+  
+  .group .translate-y-4 {
+    transform: translateY(0) !important;
+  }
+}

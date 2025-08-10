@@ -101,23 +101,22 @@
     }
   ],
   "WhyChoose": [
-
-  {
-    "id": 1,
-    "title": "UI/UX Focused",
-    "context": "Accessible, responsive, and visually smooth interfaces."
-  },
-  {
-    "id": 2,
-    "title": "Modern Stack",
-    "context": "React, Hooks, Context, and Redux for high-performance apps."
-  },
-  {
-    "id": 3,
-    "title": "Clean Code",
-    "context": "Readable, maintainable, and well-structured code."
-  }
-],
+    {
+      "id": 1,
+      "title": "UI/UX Focused",
+      "context": "Accessible, responsive, and visually smooth interfaces."
+    },
+    {
+      "id": 2,
+      "title": "Modern Stack",
+      "context": "React, Hooks, Context, and Redux for high-performance apps."
+    },
+    {
+      "id": 3,
+      "title": "Clean Code",
+      "context": "Readable, maintainable, and well-structured code."
+    }
+  ],
 
   "projects": [
     {
@@ -130,12 +129,19 @@
       "codeUrl": "https://github.com/PushUpDev/KAFFEE_MERN",
       "featured": true
     },
-      {
+    {
       "id": 3,
       "image": "/images/bakooRasturant.png",
       "name": "Bakoo Restaurant",
       "description": "This project uses the MERN stack with TailwindCSS for a clean, responsive design. Nodemailer is integrated for email functionality. It aims to deliver a modern full-stack app with a smooth user experience.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Nodemailer", "Tailwind CSS"],
+      "tags": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Nodemailer",
+        "Tailwind CSS"
+      ],
       "demoUrl": "#",
       "codeUrl": "https://github.com/PushUpDev/RestaurantBookingSystem_MERN",
       "featured": true
@@ -145,17 +151,25 @@
       "image": "/images/Radik.png",
       "name": "Radik Renovierung & Innenausbau",
       "description": "A full-stack MERN application featuring responsive TailwindCSS design, Nodemailer integration, and optimized frontend-backend performance.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
+      "tags": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Tailwind CSS",
+        "Nodemailer"
+      ],
       "demoUrl": "#",
       "featured": true
     },
+
     {
       "id": 5,
       "image": "/images/portFolio.png",
-      "name": "Social Media Analytics",
-      "description": "A modern full-stack web application built with the MERN stack, styled with Tailwind CSS for a responsive design. The application integrates Nodemailer for reliable email functionalities including contact forms and notification systems.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
-      "demoUrl": "#",
+      "name": "Aziz Portfolio",
+      "description": "Mein persönliches Portfolio, erstellt mit dem MERN-Stack und Tailwind CSS. Hier zeige ich meine Projekte und Fähigkeiten mit einem modernen, responsiven Design.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://aziz-port-folio.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/PortFolio",
       "featured": true
     },
@@ -165,7 +179,6 @@
       "name": "Platzreservierung für eine Tanzschule (Abschlussprojekt)",
       "description": "Für mein Abschlussprojekt im Rahmen meiner Umschulung habe ich eine Platzreservierung für eine Tanzschule entwickelt, die es Nutzern ermöglicht, bequem online Tanzkurse zu buchen.",
       "tags": ["MongoDB", "Express", "React", "Node.js"]
-
     }
   ],
   "expert": [
@@ -255,7 +268,6 @@
     }
   ],
   "contactInfo": [
- 
     {
       "id": 2,
       "icon": "📞",
