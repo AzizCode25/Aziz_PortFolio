@@ -25,8 +25,8 @@ dist-ssr
 
 .env
 
-data
-rest.Api.json
-public\images
-images
-assets
+# data
+# rest.Api.json
+# public\images
+# images
+# assets
