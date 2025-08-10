@@ -3,7 +3,7 @@ import { FaGithub, FaArrowRight, FaStar } from 'react-icons/fa'
 import { RiRocket2Fill } from 'react-icons/ri'
 import { BsCodeSlash } from 'react-icons/bs'
 
-import data from '../../data/restApi.json'
+import data from "../data/restApi.json";
 
 const Project = () => {
   const projects = data.projects

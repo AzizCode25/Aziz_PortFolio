@@ -1,5 +1,5 @@
-import data from "../../data/restApi.json";
-import { TbBrandReactNative } from "react-icons/tb";
+import data from "../data/restApi.json";
+
 
 const Education = () => {
   return (
