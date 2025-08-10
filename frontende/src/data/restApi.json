@@ -271,9 +271,9 @@
     {
       "id": 2,
       "icon": "📞",
-      "title": "Telefon",
-      "content": "+49 176 63319903",
-      "extra": "<a href=\"https://wa.me/4917663319903\" target=\"_blank\" rel=\"noopener noreferrer\">📱 WhatsApp Chat</a>"
+      "title": "Phone",
+      "content": "+49 176 63319903"
+ 
     },
     {
       "id": 3,

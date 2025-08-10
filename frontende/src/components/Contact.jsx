@@ -63,25 +63,21 @@ const Contact = () => {
     >
       {/* Header Section */}
       <div className="mb-16 text-center">
-        <h2 className="text-lg md:text-xl font-semibold text-sky-400 tracking-wide mb-3">
-          CONTACT
-        </h2>
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6 text-white">
-          I am seeking new{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-600">
-            challenges
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+            CONTACT
           </span>
-        </h1>
+        </h2>
+
         <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-          I look forward to hearing from you and working together on exciting
-          projects.
+          Looking forward to thriving together in future projects
         </p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-12 cursor-pointer">
         {/* Contact Info & Video */}
         <div className="space-y-8">
-          <div className="relative h-80 lg:h-full rounded-xl overflow-hidden border border-gray-700/50 shadow-2xl group">
+          <div className="relative h-80 lg:h-full rounded-xl overflow-hidden border-gray-700/50 shadow-2xl group">
             <video
               autoPlay
               loop
@@ -89,13 +85,16 @@ const Contact = () => {
               playsInline
               className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500"
             >
-              <source src="https://videos.pexels.com/video-files/3129902/3129902-uhd_2560_1440_25fps.mp4" type="video/mp4" />
+              <source
+                src="https://videos.pexels.com/video-files/3129902/3129902-uhd_2560_1440_25fps.mp4"
+                type="video/mp4"
+              />
             </video>
-            {/* <img className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-500" src="../images/erath.png" alt="" /> */}
+
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
 
             <div className="relative z-10 p-8 h-full flex flex-col justify-end">
-              <div className="space-y-6 bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50">
+              <div className="space-y-6 bg-gray-900/30 backdrop-blur-sm p-6 rounded-xl border-gray-700/50">
                 {data.contactInfo.map((item) => (
                   <div key={item.id} className="flex items-start space-x-4">
                     <div className="p-3 bg-sky-500/10 rounded-lg shadow-sm text-2xl hover:bg-blue-300/50">
@@ -136,10 +135,10 @@ const Contact = () => {
         {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="rounded-xl shadow-2xl p-6 sm:p-8 border border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
+          className="rounded-xl shadow-2xl p-6 sm:p-8 border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
         >
           <h3 className="text-2xl font-bold text-white mb-6">
-            Senden Sie uns eine Nachricht
+            Send us a message
           </h3>
 
           <div className="space-y-5">
@@ -149,7 +148,7 @@ const Contact = () => {
                   htmlFor="name"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
-                  Vorname *
+                  First name  *
                 </label>
                 <input
                   type="text"
@@ -157,8 +156,8 @@ const Contact = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
-                  placeholder="Max"
+                  className="w-full px-4 py-3 bg-gray-700/50  rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
+  
                   required
                 />
               </div>
@@ -168,7 +167,7 @@ const Contact = () => {
                   htmlFor="nachName"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
-                  Nachname *
+                 Last name *
                 </label>
                 <input
                   type="text"
@@ -176,8 +175,8 @@ const Contact = () => {
                   name="nachName"
                   value={formData.nachName}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
-                  placeholder="Mustermann"
+                  className="w-full px-4 py-3 bg-gray-700/50  rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
+                
                   required
                 />
               </div>
@@ -189,7 +188,7 @@ const Contact = () => {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
-                  E-Mail Adresse *
+                  E-mail address *
                 </label>
                 <input
                   type="email"
@@ -197,8 +196,8 @@ const Contact = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
-                  placeholder="max@example.com"
+                  className="w-full px-4 py-3 bg-gray-700/50  rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white transition-all"
+                 
                   required
                 />
               </div>
@@ -208,7 +207,7 @@ const Contact = () => {
                   htmlFor="telefon"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
-                  Telefonnummer
+                  Telephone number
                 </label>
                 <input
                   type="tel"
@@ -216,8 +215,8 @@ const Contact = () => {
                   name="telefon"
                   value={formData.telefon}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
-                  placeholder="+49 123 456789"
+                  className="w-full px-4 py-3 bg-gray-700/50 border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
+                 
                 />
               </div>
             </div>
@@ -227,7 +226,7 @@ const Contact = () => {
                 htmlFor="nachricht"
                 className="block text-sm font-medium text-gray-300 mb-2"
               >
-                Ihre Nachricht *
+               Your message *
               </label>
               <textarea
                 id="nachricht"
@@ -235,8 +234,8 @@ const Contact = () => {
                 value={formData.nachricht}
                 onChange={handleChange}
                 rows="5"
-                className="w-full px-4 py-3 bg-gray-700/50 border rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white placeholder-gray-400 transition-all"
-                placeholder="Ihre Nachricht"
+                className="w-full px-4 py-3 bg-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
+                
                 required
               ></textarea>
             </div>
@@ -247,7 +246,7 @@ const Contact = () => {
                 className="w-full flex items-center justify-center px-6 py-3.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20"
               >
                 <span className="flex items-center">
-                  <FaPaperPlane className="mr-2" /> Nachricht senden
+                  <FaPaperPlane className="mr-2" /> Send Message
                 </span>
               </button>
             </div>

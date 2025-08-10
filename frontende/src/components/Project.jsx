@@ -13,7 +13,7 @@ const Project = () => {
   return (
     <section
       id="projects"
-      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24"
+      className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-18"
     >
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -174,27 +174,6 @@ const Project = () => {
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="text-center">
-        <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-          Want to see more? Check out my GitHub for additional projects and code
-          samples.
-        </p>
-        <a
-          href="https://github.com/PushUpDev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center px-8 py-3.5 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
-        >
-          <FaGithub
-            size={20}
-            className="mr-3 group-hover:scale-110 transition-transform"
-          />
-          <span className="group-hover:translate-x-1 transition-transform">
-            View My GitHub
-          </span>
-        </a>
-      </div>
     </section>
   )
 }
