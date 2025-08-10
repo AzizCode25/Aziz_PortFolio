@@ -14,12 +14,12 @@ body {
 
 
 /* Zeige die Beschreibung standardmäßig auf Touch-Geräten */
-@media (hover: none) {
-  .group .absolute.inset-0.bg-gradient-to-t.from-black\/95.via-black\/60.to-transparent {
+/* Zeige die Beschreibung auf Touch-Geräten */
+@media (pointer: coarse) {
+  .touch-device\:opacity-100 {
     opacity: 1 !important;
   }
-  
-  .group .translate-y-4 {
+  .touch-device\:translate-y-0 {
     transform: translateY(0) !important;
   }
 }
