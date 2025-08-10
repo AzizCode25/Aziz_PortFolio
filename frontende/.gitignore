@@ -27,5 +27,5 @@ dist-ssr
 
 # data
 # rest.Api.json
-public
+# public
 assets
