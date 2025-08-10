@@ -75,7 +75,7 @@ const NavBar = () => {
                 </span>
               </h1>
               <p className="text-xs text-emerald-400/90 group-hover:text-emerald-300 transition-colors duration-300">
-                Frontend Developer
+                Junior Web Developer
               </p>
             </div>
           </ScrollLink>
