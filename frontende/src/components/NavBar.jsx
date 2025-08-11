@@ -1,7 +1,8 @@
 import { useState, useCallback, memo } from "react";
 
 import data from "../data/restApi.json"
-import aziz from "/images/aziz.png";
+// import aziz from "/images/aziz.png";
+import logo from "/images/logo.jpeg"
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RiCloseLargeFill } from "react-icons/ri";
 import { Link as ScrollLink } from "react-scroll";
@@ -60,21 +61,25 @@ const NavBar = () => {
             onSetActive={() => handleSetActive("home")}
           >
             <div className="relative">
-              <img
+              {/* <img
                 src={aziz}
+                // src={logo}
                 alt="Aziz Logo"
                 className="h-10 w-10 rounded-full"
-              />
+              /> */}
+
+              <img src={logo} alt="logo"  className="h-12 w-12 rounded-full"/>
             
             </div>
             <div>
-              <h1 className="font-bold text-2xl text-white tracking-tight">
+              {/* <h1 className="font-bold text-2xl text-white tracking-tight">
                 Aziz
-              </h1>
-              <p className="text-xs font-semibold text-cyan-400 ">
-                Junior Web Developer
+              </h1> */}
+              <p className="text-lg font-semibold text-cyan-400 ">
+                Junior Web Developer 
               </p>
             </div>
+      
           </ScrollLink>
 
           {/* Desktop Links */}
