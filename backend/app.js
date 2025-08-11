@@ -24,6 +24,9 @@ app.use(express.urlencoded({ extended: true }));
 // Routen
 app.use('/api/v1/contact', contactRouter);
 
+app.get('/', (req,res)=>{
+  res.send('just connet with server')
+})
 // Datenbankverbindung herstellen
 dbConnection();
 
