@@ -24,7 +24,8 @@ const Contact = () => {
 
     try {
       const { data } = await axios.post(
-        'http://localhost:4000/api/v1/contact/send',
+        // 'http://localhost:4000/api/v1/contact/send',
+        'https://aziz-portfolio-api.onrender.com',
         formData,
         {
           withCredentials: true,
