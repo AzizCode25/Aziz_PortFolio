@@ -11,11 +11,12 @@ const app = express();
 // CORS-Konfiguration
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL ? [process.env.FRONTEND_URL] : '*', // Fallback falls FRONTEND_URL fehlt
+    origin: process.env.FRONTEND_URL?.trim() || '*',  // .trim() entfernt Leerzeichen
     methods: ['POST'],
     credentials: true,
   })
 );
+
 
 // Body-Parser Middleware
 app.use(express.json());
