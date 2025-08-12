@@ -68,7 +68,7 @@ const NavBar = () => {
                 className="h-10 w-10 rounded-full"
               /> */}
 
-              <img src={logo} alt="logo"  className="h-12 w-12 rounded-full"/>
+              <img src={logo} alt="logo"  className="h-10 w-12"/>
             
             </div>
             <div>

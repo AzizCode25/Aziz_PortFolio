@@ -1,6 +1,5 @@
-
-import data from "../data/restApi.json"
-import { TiPin } from "react-icons/ti";
+import data from '../data/restApi.json'
+import { TiPin } from 'react-icons/ti'
 const About = () => {
   return (
     <section
@@ -16,14 +15,14 @@ const About = () => {
 
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-          Frontend Developer
+          Full Stack Developer
         </h2>
 
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          I build clean, responsive, and user-friendly web interfaces with
-          React. Currently expanding my skills by learning Spring Boot to grow
-          as a full-stack developer. Passionate about crafting experiences that
-          are both functional and enjoyable for users.
+          I build scalable, responsive web applications using the MERN stack and
+          Spring Boot. Skilled in both frontend and backend, I deliver complete,
+          high-performance solutions that are maintainable and visually
+          engaging.
         </p>
       </div>
 
@@ -31,7 +30,9 @@ const About = () => {
         {/* Experience Section */}
         <div className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-xl backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 hover:shadow-lg transition-shadow">
           <h3 className="text-2xl font-bold mb-8 text-sky-600 dark:text-sky-400 flex items-center gap-3">
-          <span className="text-3xl text-gray-300"><TiPin /></span>
+            <span className="text-3xl text-gray-300">
+              <TiPin />
+            </span>
             Education & Experience
           </h3>
           <div className="space-y-8">

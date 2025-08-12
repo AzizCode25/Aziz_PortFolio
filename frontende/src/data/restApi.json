@@ -66,7 +66,7 @@
   ],
   "skills": [
     {
-      "category": "Frontend Expertise",
+      "category": "Full Stack Developer",
       "items": [
         { "name": "React", "level": 90 },
         { "name": "MongoDB", "level": 60 },
@@ -92,6 +92,7 @@
     {
       "category": "Core Skills",
       "items": [
+        { "name": "Full Stack Architecture", "level": 70 },
         { "name": "Responsive Design", "level": 90 },
         { "name": "UI/UX Principles", "level": 80 },
         { "name": "Performance Optimization", "level": 85 },
@@ -103,18 +104,18 @@
   "WhyChoose": [
     {
       "id": 1,
-      "title": "UI/UX Focused",
-      "context": "Accessible, responsive, and visually smooth interfaces."
+      "title": "End-to-End Development",
+      "context": "Skilled in both frontend and backend, delivering complete, scalable applications."
     },
     {
       "id": 2,
-      "title": "Modern Stack",
-      "context": "React, Hooks, Context, and Redux for high-performance apps."
+      "title": "Modern & Versatile Tech Stack",
+      "context": "Proficient in MERN Stack, REST APIs, and Spring Boot for enterprise-grade solutions."
     },
     {
       "id": 3,
-      "title": "Clean Code",
-      "context": "Readable, maintainable, and well-structured code."
+      "title": "Clean & Maintainable Code",
+      "context": "Well-structured, readable, and optimized for long-term scalability."
     }
   ],
 
@@ -273,7 +274,6 @@
       "icon": "📞",
       "title": "Phone",
       "content": "+49 176 63319903"
- 
     },
     {
       "id": 3,
