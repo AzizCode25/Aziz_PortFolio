@@ -76,7 +76,8 @@ const NavBar = () => {
                 Aziz
               </h1> */}
               <p className="text-lg font-semibold text-cyan-400 ">
-                Web Developer 
+                {/* Full Web Developer  */}
+                Frontend Developer
               </p>
             </div>
       
