@@ -33,40 +33,40 @@
       "institution": "Grassau GmbH",
       "year": "2024",
       "highlights": [
-        "Developed responsive UIs with React.js",
-        "Collaborated with design team on component library",
-        "Optimized web performance (Lighthouse score +40%)"
+        "Developed responsive UIs with React.js.",
+        "Created a  (Kühlschrank) refrigerator application.",
+        "Developed a booking system for dance school (Tanzschule)."
       ]
     },
     {
       "id": 2,
-      "degree": "Vocational Training - Application Development",
+      "degree": "Professional Retraining – Application Development",
       "institution": "CBW Hamburg",
       "year": "2022–2024",
       "highlights": [
-        "Grundlagen Hardware",
-        "Grundlagen Relationale Datenbanken / SQL",
-        "Netzwerkgrundlagen",
-        "Grundlagen Cloud-Computing",
-        "Agiles Projektmanagement mit Scrum",
+        "Basics of Hardware",
+        "Basics of Relational Databases / SQL",
+        "Network Fundamentals",
+        "Basics of Cloud Computing",
+        "Agile Project Management with Scrum",
         "Certified Scrum Master",
-        "Programmierung in HTML5 mit JavaScript und CSS3 - Fortgeschrittene",
-        "Objektorientierte Programmierung",
+        "Programming in HTML5 with JavaScript and CSS3 - Advanced",
+        "Object-Oriented Programming",
         "React",
         "UML - Unified Modeling Language",
-        "Associate in Python Programming - Grundlagen",
-        "Associate in Python Programming - Aufbaukurs",
+        "Associate in Python Programming - Basics",
+        "Associate in Python Programming - Advanced Course",
         "AWS Certified: Cloud Practitioner",
-        "AWS Certified: Cloud Practitioner - Zertifizierung",
-        "Bewerbungsstrategien",
-        "OCFA Java Foundations - Grundlagen",
-        "OCFA Java Foundations - Aufbaukurs"
+        "AWS Certified: Cloud Practitioner - Certification",
+        "Job Application Strategies",
+        "OCFA Java Foundations - Basics",
+        "OCFA Java Foundations - Advanced Course"
       ]
     }
   ],
   "skills": [
     {
-      "category": "Frontend Expertise",
+      "category": "Full Stack Developer",
       "items": [
         { "name": "React", "level": 90 },
         { "name": "MongoDB", "level": 60 },
@@ -92,44 +92,34 @@
     {
       "category": "Core Skills",
       "items": [
+        { "name": "Full Stack Architecture", "level": 70 },
         { "name": "Responsive Design", "level": 90 },
         { "name": "UI/UX Principles", "level": 80 },
         { "name": "Performance Optimization", "level": 85 },
-        { "name": "Agile Development", "level": 80 }
+        { "name": "Scrum Master (Agile)", "level": 80 }
       ],
       "icon": "🚀"
     }
   ],
   "WhyChoose": [
-
-  {
-    "id": 1,
-    "title": "UI/UX Focused",
-    "context": "Accessible, responsive, and visually smooth interfaces."
-  },
-  {
-    "id": 2,
-    "title": "Modern Stack",
-    "context": "React, Hooks, Context, and Redux for high-performance apps."
-  },
-  {
-    "id": 3,
-    "title": "Clean Code",
-    "context": "Readable, maintainable, and well-structured code."
-  }
-],
-
-  "projects": [
     {
       "id": 1,
-      "image": "/images/aziz.png",
-      "name": "E-Commerce Platform",
-      "description": "Full-featured online store with payment integration, product management, and admin dashboard. Built with MERN stack and Stripe API.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Stripe"],
-      "demoUrl": "#",
-      "codeUrl": "#",
-      "featured": true
+      "title": "End-to-End Development",
+      "context": "Skilled in both frontend and backend, delivering complete, scalable applications."
     },
+    {
+      "id": 2,
+      "title": "Modern & Versatile Tech Stack",
+      "context": "Proficient in MERN Stack, REST APIs, and Spring Boot for enterprise-grade solutions."
+    },
+    {
+      "id": 3,
+      "title": "Clean & Maintainable Code",
+      "context": "Well-structured, readable, and optimized for long-term scalability."
+    }
+  ],
+
+  "projects": [
     {
       "id": 2,
       "image": "/images/azizKaffee.png",
@@ -140,12 +130,19 @@
       "codeUrl": "https://github.com/PushUpDev/KAFFEE_MERN",
       "featured": true
     },
-      {
+    {
       "id": 3,
       "image": "/images/bakooRasturant.png",
       "name": "Bakoo Restaurant",
       "description": "This project uses the MERN stack with TailwindCSS for a clean, responsive design. Nodemailer is integrated for email functionality. It aims to deliver a modern full-stack app with a smooth user experience.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Nodemailer", "Tailwind CSS"],
+      "tags": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Nodemailer",
+        "Tailwind CSS"
+      ],
       "demoUrl": "#",
       "codeUrl": "https://github.com/PushUpDev/RestaurantBookingSystem_MERN",
       "featured": true
@@ -155,29 +152,34 @@
       "image": "/images/Radik.png",
       "name": "Radik Renovierung & Innenausbau",
       "description": "A full-stack MERN application featuring responsive TailwindCSS design, Nodemailer integration, and optimized frontend-backend performance.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
+      "tags": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Tailwind CSS",
+        "Nodemailer"
+      ],
       "demoUrl": "#",
-      "codeUrl": "https://github.com/PushUpDev/Radik_MERN",
       "featured": true
     },
+
     {
       "id": 5,
       "image": "/images/portFolio.png",
-      "name": "Social Media Analytics",
-      "description": "A modern full-stack web application built with the MERN stack, styled with Tailwind CSS for a responsive design. The application integrates Nodemailer for reliable email functionalities including contact forms and notification systems.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
-      "demoUrl": "#",
+      "name": "Aziz Portfolio",
+      "description": "Mein persönliches Portfolio, erstellt mit dem MERN-Stack und Tailwind CSS. Hier zeige ich meine Projekte und Fähigkeiten mit einem modernen, responsiven Design.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://aziz-port-folio.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/PortFolio",
       "featured": true
     },
     {
       "id": 6,
-      "image": "/images/mongodb.png",
-      "name": "Social Media Analytics",
-      "description": "Data visualization dashboard for social media metrics with custom charts, filters, and export functionality.",
-      "tags": ["D3.js", "Express", "MongoDB", "JWT"],
-      "demoUrl": "#",
-      "codeUrl": "#"
+      "image": "/images/tanz-schule.png",
+      "name": "Platzreservierung für eine Tanzschule (Abschlussprojekt)",
+      "description": "Für mein Abschlussprojekt im Rahmen meiner Umschulung habe ich eine Platzreservierung für eine Tanzschule entwickelt, die es Nutzern ermöglicht, bequem online Tanzkurse zu buchen.",
+      "tags": ["MongoDB", "Express", "React", "Node.js"]
     }
   ],
   "expert": [
@@ -267,13 +269,11 @@
     }
   ],
   "contactInfo": [
- 
     {
       "id": 2,
       "icon": "📞",
-      "title": "Telefon",
-      "content": "+49 176 63319903",
-      "extra": "<a href=\"https://wa.me/4917663319903\" target=\"_blank\" rel=\"noopener noreferrer\">📱 WhatsApp Chat</a>"
+      "title": "Phone",
+      "content": "+49 176 63319903"
     },
     {
       "id": 3,
@@ -295,22 +295,8 @@
       "icon": "github",
       "color": "hover:text-gray-800 dark:hover:text-gray-200",
       "bg": "hover:bg-gray-800/10 dark:hover:bg-gray-200/10",
-      "url": "https://github.com/PushUpDev",
+      "url": "https://github.com/AzizCode25",
       "name": "GitHub"
-    },
-    {
-      "icon": "youtube",
-      "color": "hover:text-[#FF0000] dark:hover:text-[#FF0000]",
-      "bg": "hover:bg-[#FF0000]/10",
-      "url": "https://www.youtube.com/",
-      "name": "YouTube"
-    },
-    {
-      "icon": "instagram",
-      "color": "hover:text-[#E4405F] dark:hover:text-[#E4405F]",
-      "bg": "hover:bg-[#E4405F]/10",
-      "url": "https://www.instagram.com/",
-      "name": "Instagram"
     }
   ]
 }

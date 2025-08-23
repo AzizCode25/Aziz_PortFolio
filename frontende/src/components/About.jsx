@@ -15,14 +15,17 @@ const About = () => {
 
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-          Full Stack Developer
+          {/* Full Stack Developer */}
+          Frontend Developer
         </h2>
 
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          I build scalable, responsive web applications using the MERN stack and
+          {/* I build scalable, responsive web applications using the MERN stack and
           Spring Boot. Skilled in both frontend and backend, I deliver complete,
           high-performance solutions that are maintainable and visually
-          engaging.
+          engaging. */}
+          As a Frontend Developer, I build responsive and visually engaging web applications using modern frameworks and libraries. With a focus on performance, usability, and clean design, 
+          I create maintainable interfaces that deliver great user experiences.
         </p>
       </div>
 

@@ -52,8 +52,14 @@ const Home = () => {
                    <span className="text-gray-700 dark:text-gray-300">A</span>
                   <ReactTyped
                     className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 min-w-[100px]"
-                    strings={["Full Stack Developer", "MERN Stack Developer", "Spring Boot Developer"]}
+                    // strings={["Full Stack Developer", "MERN Stack Developer", "Spring Boot Developer"]}
                     // , "Application Developer"
+                    strings={[
+                              "Frontend Developer",
+                              "React Developer",
+                      
+                            ]}
+
                     typeSpeed={50}
                     backSpeed={40}
                     loop
@@ -63,8 +69,10 @@ const Home = () => {
               </div>
 
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed animate-fade-in-up delay-200 max-w-2xl">
-                I build exceptional digital experiences with modern web technologies, delivering fast, scalable, 
-                and visually appealing applications from frontend to backend.
+                {/* I build exceptional digital experiences with modern web technologies, delivering fast, scalable, 
+                and visually appealing applications from frontend to backend. */}
+                As a Frontend Developer, I create modern, user-friendly, and performant web applications using current technologies, 
+                with a focus on clean design and great user experience.
               </p>
             </div>
 
