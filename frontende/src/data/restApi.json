@@ -315,20 +315,6 @@
       "bg": "hover:bg-gray-800/10 dark:hover:bg-gray-200/10",
       "url": "https://github.com/PushUpDev",
       "name": "GitHub"
-    },
-    {
-      "icon": "youtube",
-      "color": "hover:text-[#FF0000] dark:hover:text-[#FF0000]",
-      "bg": "hover:bg-[#FF0000]/10",
-      "url": "https://www.youtube.com/",
-      "name": "YouTube"
-    },
-    {
-      "icon": "instagram",
-      "color": "hover:text-[#E4405F] dark:hover:text-[#E4405F]",
-      "bg": "hover:bg-[#E4405F]/10",
-      "url": "https://www.instagram.com/",
-      "name": "Instagram"
     }
   ]
 }
