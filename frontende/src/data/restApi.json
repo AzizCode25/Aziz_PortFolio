@@ -154,7 +154,7 @@
         "Nodemailer",
         "Tailwind CSS"
       ],
-      "demoUrl": "#",
+      "demoUrl": "https://restaurant-booking-system-mern.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/RestaurantBookingSystem_MERN",
       "featured": true
     },
