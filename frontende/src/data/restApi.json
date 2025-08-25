@@ -137,7 +137,7 @@
       "name": "Aziz Coffee, Admin",
       "description": "A coffee shop web app with menu management, table reservations, and admin dashboard built using the MERN stack.",
       "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
-      "demoUrl": "#",
+      "demoUrl": "https://kaffee-mern.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/KAFFEE_MERN",
       "featured": true
     },
