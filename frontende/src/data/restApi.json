@@ -68,24 +68,36 @@
     {
       "category": "Frontend Expertise",
       "items": [
-        { "name": "React", "level": 90 },
-        { "name": "MongoDB", "level": 60 },
+        { "name": "HTML5", "level": 90 },
+        { "name": "CSS", "level": 80 },
+        { "name": "JavaScript", "level": 50 },
+        { "name": "React", "level": 89 },
+        { "name": "Tailwindcss", "level": 90 }
+      ],
+      "icon": "💻"
+    },
+     {
+      "category": "Backend Expertise",
+      "items": [
+        { "name": "Spring Boot", "level": 75 },
+        { "name": "Django", "level": 40 },
         { "name": "Express.js", "level": 50 },
         { "name": "Nodejs", "level": 50 },
-        { "name": "Tailwindcss", "level": 90 },
-        { "name": "CSS", "level": 80 },
-        { "name": "Django", "level": 40 },
-        { "name": "Spring Boot", "level": 75 }
+        { "name": "MySQL", "level": 80 },
+        { "name": "MongoDB", "level": 60 },
+        { "name": "SQL", "level": 80 }
       ],
       "icon": "💻"
     },
     {
       "category": "Development Tools",
       "items": [
-        { "name": "Git/GitHub", "level": 85 },
+        { "name": "GitHub", "level": 85 },
         { "name": "VS Code", "level": 95 },
+        { "name": "IntelliJ IDEA", "level": 80 },
         { "name": "Postman", "level": 70 },
         { "name": "Thunder Client", "level": 75 }
+        
       ],
       "icon": "🛠️"
     },
