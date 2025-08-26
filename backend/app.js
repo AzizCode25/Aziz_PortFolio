@@ -11,7 +11,7 @@ const app = express();
 // CORS-Konfiguration
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL?.trim() || '*',  // .trim() entfernt Leerzeichen
+    origin: "https://aziz-port-folio.vercel.app", // .trim() entfernt Leerzeichen
     methods: ['POST'],
     credentials: true,
   })
