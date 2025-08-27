@@ -23,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+    setLoading(true);
     try {
       const { data } = await axios.post(
         'https://aziz-portfolio-z6cs.onrender.com/api/v1/contact/send',
