@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
-import { FaPaperPlane } from 'react-icons/fa'
+import { FaPaperPlane, FaSpinner } from 'react-icons/fa'
 import data from '../data/restApi.json'
 // import earth from '../assets/videos/glob.mp4'
 
@@ -23,7 +23,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    setLoading(true);
+    setLoading(true)
     try {
       const { data } = await axios.post(
         'https://aziz-portfolio-z6cs.onrender.com/api/v1/contact/send',
@@ -244,35 +244,16 @@ const Contact = () => {
                 type="submit"
                 disabled={loading}
                 className={`w-full flex items-center justify-center px-6 py-3.5 
-      bg-gradient-to-r from-sky-500 to-blue-600 
-      hover:from-sky-600 hover:to-blue-700 
-      text-white font-semibold rounded-lg 
-      transition-all duration-300 
-      hover:shadow-lg hover:shadow-sky-500/20
-      ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                bg-gradient-to-r from-sky-500 to-blue-600 
+                hover:from-sky-600 hover:to-blue-700 
+                text-white font-semibold rounded-lg 
+                transition-all duration-300 
+                hover:shadow-lg hover:shadow-sky-500/20
+                ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
                 {loading ? (
                   <span className="flex items-center">
-                    <svg
-                      className="animate-spin h-5 w-5 mr-2 text-white"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                    >
-                      <circle
-                        className="opacity-25"
-                        cx="12"
-                        cy="12"
-                        r="10"
-                        stroke="currentColor"
-                        strokeWidth="4"
-                      ></circle>
-                      <path
-                        className="opacity-75"
-                        fill="currentColor"
-                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-                      ></path>
-                    </svg>
+                    <FaSpinner className="animate-spin mr-2 text-black text-2xl" />
                     Wird gesendet...
                   </span>
                 ) : (
