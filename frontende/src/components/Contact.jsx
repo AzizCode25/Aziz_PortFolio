@@ -6,6 +6,8 @@ import data from '../data/restApi.json'
 // import earth from '../assets/videos/glob.mp4'
 
 const Contact = () => {
+  const [loading, setLoading] = useState(false)
+
   const [formData, setFormData] = useState({
     name: '',
     nachName: '',
@@ -53,6 +55,8 @@ const Contact = () => {
       } else {
         toast.error(errorData?.message || 'Ein Fehler ist aufgetreten')
       }
+    } finally {
+      setLoading(false) // Ende loading
     }
   }
 
@@ -148,7 +152,7 @@ const Contact = () => {
                   htmlFor="name"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
-                  First name  *
+                  First name *
                 </label>
                 <input
                   type="text"
@@ -157,7 +161,6 @@ const Contact = () => {
                   value={formData.name}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-700/50  rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
-  
                   required
                 />
               </div>
@@ -167,7 +170,7 @@ const Contact = () => {
                   htmlFor="nachName"
                   className="block text-sm font-medium text-gray-300 mb-2"
                 >
-                 Last name *
+                  Last name *
                 </label>
                 <input
                   type="text"
@@ -176,7 +179,6 @@ const Contact = () => {
                   value={formData.nachName}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-700/50  rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
-                
                   required
                 />
               </div>
@@ -197,7 +199,6 @@ const Contact = () => {
                   value={formData.email}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-700/50  rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white transition-all"
-                 
                   required
                 />
               </div>
@@ -216,7 +217,6 @@ const Contact = () => {
                   value={formData.telefon}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-gray-700/50 border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
-                 
                 />
               </div>
             </div>
@@ -226,7 +226,7 @@ const Contact = () => {
                 htmlFor="nachricht"
                 className="block text-sm font-medium text-gray-300 mb-2"
               >
-               Your message *
+                Your message *
               </label>
               <textarea
                 id="nachricht"
@@ -235,7 +235,6 @@ const Contact = () => {
                 onChange={handleChange}
                 rows="5"
                 className="w-full px-4 py-3 bg-gray-700/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-white  transition-all"
-                
                 required
               ></textarea>
             </div>
@@ -243,11 +242,44 @@ const Contact = () => {
             <div>
               <button
                 type="submit"
-                className="w-full flex items-center justify-center px-6 py-3.5 bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-sky-500/20"
+                disabled={loading}
+                className={`w-full flex items-center justify-center px-6 py-3.5 
+      bg-gradient-to-r from-sky-500 to-blue-600 
+      hover:from-sky-600 hover:to-blue-700 
+      text-white font-semibold rounded-lg 
+      transition-all duration-300 
+      hover:shadow-lg hover:shadow-sky-500/20
+      ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
               >
-                <span className="flex items-center">
-                  <FaPaperPlane className="mr-2" /> Send Message
-                </span>
+                {loading ? (
+                  <span className="flex items-center">
+                    <svg
+                      className="animate-spin h-5 w-5 mr-2 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      ></path>
+                    </svg>
+                    Wird gesendet...
+                  </span>
+                ) : (
+                  <span className="flex items-center">
+                    <FaPaperPlane className="mr-2" /> Send Message
+                  </span>
+                )}
               </button>
             </div>
           </div>

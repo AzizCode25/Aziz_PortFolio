@@ -198,6 +198,13 @@
       "name": "Platzreservierung für eine Tanzschule (Abschlussprojekt)",
       "description": "Für mein Abschlussprojekt im Rahmen meiner Umschulung habe ich eine Platzreservierung für eine Tanzschule entwickelt, die es Nutzern ermöglicht, bequem online Tanzkurse zu buchen.",
       "tags": ["MongoDB", "Express", "React", "Node.js"]
+    },
+    {
+      "id": 6,
+      "image": "/images/tanz-schule.png",
+      "name": "Platzreservierung für eine Tanzschule (Abschlussprojekt)",
+      "description": "Für mein Abschlussprojekt im Rahmen meiner Umschulung habe ich eine Platzreservierung für eine Tanzschule entwickelt, die es Nutzern ermöglicht, bequem online Tanzkurse zu buchen.",
+      "tags": ["MongoDB", "Express", "React", "Node.js"]
     }
   ],
   "expert": [
