@@ -68,10 +68,10 @@ const Home = () => {
               </div>
 
               <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 leading-relaxed animate-fade-in-up delay-200 max-w-2xl">
-                {/* I build exceptional digital experiences with modern web technologies, delivering fast, scalable, 
-                and visually appealing applications from frontend to backend. */}
-                As a Frontend Developer, I create modern, user-friendly, and performant web applications using current technologies, 
-                with a focus on clean design and great user experience.
+                I build exceptional digital experiences with modern web technologies, delivering fast, scalable, 
+                and visually appealing applications from frontend to backend.
+                {/* As a Frontend Developer, I create modern, user-friendly, and performant web applications using current technologies, 
+                with a focus on clean design and great user experience. */}
               </p>
             </div>
 

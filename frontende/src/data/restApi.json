@@ -33,102 +33,96 @@
       "institution": "Grassau GmbH",
       "year": "2024",
       "highlights": [
-        "Developed responsive UIs with React.js",
-        "Collaborated with design team on component library",
-        "Optimized web performance (Lighthouse score +40%)"
+        "Developed responsive UIs with React.js.",
+        "Created a  (Kühlschrank) refrigerator application.",
+        "Developed a booking system for dance school (Tanzschule)."
       ]
     },
     {
       "id": 2,
-      "degree": "Vocational Training - Application Development",
+      "degree": "Professional Retraining – Application Development",
       "institution": "CBW Hamburg",
       "year": "2022–2024",
       "highlights": [
-        "Grundlagen Hardware",
-        "Grundlagen Relationale Datenbanken / SQL",
-        "Netzwerkgrundlagen",
-        "Grundlagen Cloud-Computing",
-        "Agiles Projektmanagement mit Scrum",
+        "Basics of Hardware",
+        "Basics of Relational Databases / SQL",
+        "Network Fundamentals",
+        "Basics of Cloud Computing",
+        "Agile Project Management with Scrum",
         "Certified Scrum Master",
-        "Programmierung in HTML5 mit JavaScript und CSS3 - Fortgeschrittene",
-        "Objektorientierte Programmierung",
+        "Programming in HTML5 with JavaScript and CSS3 - Advanced",
+        "Object-Oriented Programming",
         "React",
         "UML - Unified Modeling Language",
-        "Associate in Python Programming - Grundlagen",
-        "Associate in Python Programming - Aufbaukurs",
+        "Associate in Python Programming - Basics",
+        "Associate in Python Programming - Advanced Course",
         "AWS Certified: Cloud Practitioner",
-        "AWS Certified: Cloud Practitioner - Zertifizierung",
-        "Bewerbungsstrategien",
-        "OCFA Java Foundations - Grundlagen",
-        "OCFA Java Foundations - Aufbaukurs"
+        "AWS Certified: Cloud Practitioner - Certification",
+        "Job Application Strategies",
+        "OCFA Java Foundations - Basics",
+        "OCFA Java Foundations - Advanced Course"
       ]
     }
   ],
   "skills": [
     {
-      "category": "Frontend Expertise",
+      "category": "Full Stack Developer",
       "items": [
-        { "name": "HTML5", "level": 90 },
-        { "name": "CSS", "level": 80 },
-        { "name": "JavaScript", "level": 50 },
-        { "name": "React", "level": 89 },
-        { "name": "Tailwindcss", "level": 90 }
-      ],
-      "icon": "💻"
-    },
-     {
-      "category": "Backend Expertise",
-      "items": [
-        { "name": "Spring Boot", "level": 75 },
-        { "name": "Django", "level": 40 },
-        { "name": "Express.js", "level": 50 },
-        { "name": "Nodejs", "level": 50 },
-        { "name": "MySQL", "level": 80 },
-        { "name": "MongoDB", "level": 60 },
-        { "name": "SQL", "level": 80 }
+      { "name": "HTML5", "level": 90 },
+      { "name": "CSS", "level": 80 },
+      { "name": "JavaScript", "level": 50 },
+      { "name": "React", "level": 89 },
+      { "name": "Tailwind CSS", "level": 90 },
+      { "name": "Spring Boot", "level": 75 },
+      { "name": "Django", "level": 40 },
+      { "name": "Express.js", "level": 50 },
+      { "name": "Node.js", "level": 50 },
+      { "name": "MySQL", "level": 80 },
+      { "name": "MongoDB", "level": 60 },
+      { "name": "SQL", "level": 80 }
       ],
       "icon": "💻"
     },
     {
       "category": "Development Tools",
       "items": [
-        { "name": "GitHub", "level": 85 },
+        { "name": "Git/GitHub", "level": 85 },
         { "name": "VS Code", "level": 95 },
-        { "name": "IntelliJ IDEA", "level": 80 },
         { "name": "Postman", "level": 70 },
         { "name": "Thunder Client", "level": 75 }
-        
       ],
       "icon": "🛠️"
     },
     {
       "category": "Core Skills",
       "items": [
+        { "name": "Full Stack Architecture", "level": 70 },
         { "name": "Responsive Design", "level": 90 },
         { "name": "UI/UX Principles", "level": 80 },
         { "name": "Performance Optimization", "level": 85 },
-        { "name": "Agile Development", "level": 80 }
+        { "name": "Scrum Master (Agile)", "level": 80 }
       ],
       "icon": "🚀"
     }
   ],
-  "WhyChoose": [
-    {
-      "id": 1,
-      "title": "UI/UX Focused",
-      "context": "Accessible, responsive, and visually smooth interfaces."
-    },
-    {
-      "id": 2,
-      "title": "Modern Stack",
-      "context": "React, Hooks, Context, and Redux for high-performance apps."
-    },
-    {
-      "id": 3,
-      "title": "Clean Code",
-      "context": "Readable, maintainable, and well-structured code."
-    }
-  ],
+"WhyChoose": [
+  {
+    "id": 1,
+    "title": "End-to-End Development",
+    "context": "Skilled in frontend and backend, I deliver complete, scalable, and high-performance applications."
+  },
+  {
+    "id": 2,
+    "title": "Modern & Versatile Tech Stack",
+    "context": "Proficient in the MERN stack, RESTful APIs, and Spring Boot, building solutions from startups to enterprise scale."
+  },
+  {
+    "id": 3,
+    "title": "Clean & Maintainable Code",
+    "context": "Writing well-structured, efficient, and scalable code for long-term maintainability."
+  }
+]
+,
 
   "projects": [
     {
@@ -172,23 +166,16 @@
         "Nodemailer"
       ],
       "demoUrl": "https://radik-mern.vercel.app/",
-      "codeUrl": "https://github.com/PushUpDev/Radik_MERN",
       "featured": true
     },
+
     {
       "id": 5,
       "image": "/images/portFolio.png",
-      "name": "Social Media Analytics",
-      "description": "A modern full-stack web application built with the MERN stack, styled with Tailwind CSS for a responsive design. The application integrates Nodemailer for reliable email functionalities including contact forms and notification systems.",
-      "tags": [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "Tailwind CSS",
-        "Nodemailer"
-      ],
-      "demoUrl": "#",
+      "name": "Aziz Portfolio",
+      "description": "Mein persönliches Portfolio, erstellt mit dem MERN-Stack und Tailwind CSS. Hier zeige ich meine Projekte und Fähigkeiten mit einem modernen, responsiven Design.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://aziz-port-folio.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/PortFolio",
       "featured": true
     },
@@ -313,7 +300,7 @@
       "icon": "github",
       "color": "hover:text-gray-800 dark:hover:text-gray-200",
       "bg": "hover:bg-gray-800/10 dark:hover:bg-gray-200/10",
-      "url": "https://github.com/PushUpDev",
+      "url": "https://github.com/AzizCode25",
       "name": "GitHub"
     }
   ]

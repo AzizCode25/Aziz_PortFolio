@@ -15,17 +15,14 @@ const About = () => {
 
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
-          {/* Full Stack Developer */}
-          Frontend Developer
+          Full Stack Developer
+          {/* Frontend Developer */}
         </h2>
 
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          {/* I build scalable, responsive web applications using the MERN stack and
-          Spring Boot. Skilled in both frontend and backend, I deliver complete,
-          high-performance solutions that are maintainable and visually
-          engaging. */}
-          As a Frontend Developer, I build responsive and visually engaging web applications using modern frameworks and libraries. With a focus on performance, usability, and clean design, 
-          I create maintainable interfaces that deliver great user experiences.
+          I build scalable and responsive web applications using the MERN stack and Spring Boot. With expertise in both frontend and backend, I deliver high-performance, maintainable, and visually engaging solutions.
+          {/* As a Frontend Developer, I build responsive and visually engaging web applications using modern frameworks and libraries. With a focus on performance, usability, and clean design, 
+          I create maintainable interfaces that deliver great user experiences. */}
         </p>
       </div>
 
@@ -108,7 +105,8 @@ const About = () => {
       {/* USP Section */}
       <div className="mt-20 bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/20 p-8 md:p-10 rounded-2xl border border-sky-100 dark:border-sky-900/50">
         <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">
-          Why Choose Me As Your Frontend Developer?
+          {/* Why Choose Me As Your Frontend Developer? */}
+        Why Choose Me As Your Full-Stack Developer?
         </h3>
         <div className="grid md:grid-cols-3 gap-6">
           {data.WhyChoose.map((element) => (
