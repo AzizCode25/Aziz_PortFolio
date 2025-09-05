@@ -52,13 +52,12 @@ const Home = () => {
                    <span className="text-gray-700 dark:text-gray-300">A</span>
                   <ReactTyped
                     className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 min-w-[100px]"
-                    // strings={["Full Stack Developer", "MERN Stack Developer", "Spring Boot Developer"]}
-                    // , "Application Developer"
-                    strings={[
-                              "Frontend Developer",
-                              "React Developer",
+                    strings={["Full Stack Developer", "MERN Stack Developer", "Spring Boot Developer", "Application Developer"]}
+                    // strings={[
+                    //           "Frontend Developer",
+                    //           "React Developer",
                       
-                            ]}
+                    //         ]}
 
                     typeSpeed={50}
                     backSpeed={40}
