@@ -68,6 +68,7 @@ const About = () => {
         <div className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-xl backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 hover:shadow-lg transition-shadow">
           <h3 className="text-2xl font-bold mb-8 text-sky-600 dark:text-sky-400 flex items-center gap-3">
             <span className="text-2xl">🛠</span>
+            {/* Technical Toolbox */}
             Technical Toolbox
           </h3>
           <div className="space-y-8">
