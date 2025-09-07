@@ -27,17 +27,19 @@
     }
   ],
   "educationData": [
-    {
-      "id": 1,
-      "degree": "6-month Internship as Frontend Developer",
-      "institution": "Grassau GmbH",
-      "year": "2024",
-      "highlights": [
-        "Developed responsive UIs with React.js.",
-        "Created a  (Kühlschrank) refrigerator application.",
-        "Developed a booking system for dance school (Tanzschule)."
-      ]
-    },
+  {
+    "id": 1,
+    "degree": "6-month Internship as Full-Stack Developer",
+    "institution": "Grassau GmbH",
+    "year": "2024",
+    "highlights": [
+      "Developed and maintained responsive UIs with React.js and TailwindCSS.",
+      "Implemented backend services with Node.js and Express for API integration.",
+      "Designed and managed relational database structures with MySQL / MongoDB.",
+      "Developed a booking system for a dance school (Tanzschule) including authentication and database integration."
+    ]
+  },
+
     {
       "id": 2,
       "degree": "Professional Retraining – Application Development",
