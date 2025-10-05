@@ -263,10 +263,7 @@
     }
   ],
   "ContinuousGrowth": [
-    {
-      "id": 1,
-      "title": "Currently Learning: Spring Boot"
-    },
+  
     {
       "id": 2,
       "title": "Exploring: React Native"

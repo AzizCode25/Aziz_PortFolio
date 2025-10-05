@@ -1,0 +1,209 @@
+{
+  "navbarLinks": [
+    { "id": 1, "title": "STARTSEITE", "link": "home" },
+    { "id": 2, "title": "ÜBER MICH", "link": "about" },
+    { "id": 3, "title": "PROJEKTE", "link": "projects" },
+    { "id": 4, "title": "FÄHIGKEITEN", "link": "skills" },
+    { "id": 5, "title": "KONTAKT", "link": "contact" }
+  ],
+
+  "educationData": [
+    {
+      "id": 1,
+      "degree": "12-monatiges Praktikum als Full-Stack-Entwickler",
+      "institution": "Grassau GmbH",
+      "year": "2024",
+      "highlights": [
+        "Entwicklung und Pflege von responsiven Benutzeroberflächen mit React.js und TailwindCSS.",
+        "Implementierung von Backend-Diensten mit Node.js und Express zur API-Integration.",
+        "Entwurf und Verwaltung relationaler Datenbankstrukturen mit MySQL / MongoDB.",
+        "Entwicklung eines Buchungssystems für eine Tanzschule inklusive Authentifizierung und Datenbankintegration.",
+        "Entwicklung der Kühlschrank-App 'Kühlschrank App' mit dem MERN-Stack, inklusive Mitarbeiterrabatt-System und Admin-Dashboard."
+      ]
+    },
+    {
+      "id": 2,
+      "degree": "Umschulung zum Fachinformatiker – Anwendungsentwicklung",
+      "institution": "CBW Hamburg",
+      "year": "2022–2024",
+      "highlights": [
+        "Grundlagen der Hardware",
+        "Grundlagen relationaler Datenbanken / SQL",
+        "Netzwerkgrundlagen",
+        "Grundlagen des Cloud Computing",
+        "Agiles Projektmanagement mit Scrum",
+        "Zertifizierter Scrum Master",
+        "Programmierung in HTML5 mit JavaScript und CSS3 – Fortgeschritten",
+        "Objektorientierte Programmierung",
+        "React",
+        "UML – Unified Modeling Language",
+        "Associate in Python Programming – Grundlagen",
+        "Associate in Python Programming – Fortgeschritten",
+        "AWS Certified: Cloud Practitioner",
+        "AWS Certified: Cloud Practitioner – Zertifizierung",
+        "Bewerbungsstrategien",
+        "OCFA Java Foundations – Grundlagen",
+        "OCFA Java Foundations – Fortgeschritten"
+      ]
+    }
+  ],
+
+  "skills": [
+    {
+      "category": "Full-Stack-Entwicklung",
+      "items": [
+        { "name": "HTML5", "level": 90 },
+        { "name": "CSS", "level": 80 },
+        { "name": "JavaScript", "level": 50 },
+        { "name": "React", "level": 89 },
+        { "name": "Tailwind CSS", "level": 90 },
+        { "name": "Spring Boot", "level": 75 },
+        { "name": "Django", "level": 40 },
+        { "name": "Express.js", "level": 50 },
+        { "name": "Node.js", "level": 50 },
+        { "name": "MySQL", "level": 80 },
+        { "name": "MongoDB", "level": 60 },
+        { "name": "SQL", "level": 80 }
+      ],
+      "icon": "💻"
+    },
+    {
+      "category": "Entwicklungswerkzeuge",
+      "items": [
+        { "name": "Git/GitHub", "level": 85 },
+        { "name": "VS Code", "level": 95 },
+        { "name": "Postman", "level": 70 },
+        { "name": "Thunder Client", "level": 75 }
+      ],
+      "icon": "🛠️"
+    },
+    {
+      "category": "Kernkompetenzen",
+      "items": [
+        { "name": "Full-Stack-Architektur", "level": 70 },
+        { "name": "Responsives Design", "level": 90 },
+        { "name": "UI/UX-Prinzipien", "level": 80 },
+        { "name": "Leistungsoptimierung", "level": 85 },
+        { "name": "Scrum Master (Agil)", "level": 80 }
+      ],
+      "icon": "🚀"
+    }
+  ],
+
+  "WhyChoose": [
+    {
+      "id": 1,
+      "title": "End-to-End-Entwicklung",
+      "context": "Sowohl im Frontend als auch im Backend erfahren, liefere ich vollständige, skalierbare und leistungsstarke Anwendungen."
+    },
+    {
+      "id": 2,
+      "title": "Moderner & Vielseitiger Tech-Stack",
+      "context": "Erfahren im MERN-Stack, RESTful APIs und Spring Boot – von Startup- bis Enterprise-Lösungen."
+    },
+    {
+      "id": 3,
+      "title": "Sauberer & Wartbarer Code",
+      "context": "Ich schreibe klar strukturierten, effizienten und skalierbaren Code für langfristige Wartbarkeit."
+    }
+  ],
+
+  "projects": [
+    {
+      "id": 2,
+      "image": "/images/azizKaffee.png",
+      "name": "Aziz Coffee, Admin",
+      "description": "Eine Coffee-Shop-Web-App mit Menüverwaltung, Tischreservierung und Admin-Dashboard, entwickelt mit dem MERN-Stack.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://kaffee-mern.vercel.app/",
+      "codeUrl": "https://github.com/PushUpDev/KAFFEE_MERN",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "image": "/images/bakooRasturant.png",
+      "name": "Bakoo Restaurant",
+      "description": "Dieses Projekt verwendet den MERN-Stack mit TailwindCSS für ein sauberes, responsives Design. Nodemailer ist für die E-Mail-Funktionalität integriert. Ziel ist eine moderne Full-Stack-App mit einer reibungslosen Benutzererfahrung.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Nodemailer", "Tailwind CSS"],
+      "demoUrl": "https://restaurant-booking-system-mern.vercel.app/",
+      "codeUrl": "https://github.com/PushUpDev/RestaurantBookingSystem_MERN",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "image": "/images/Radik.png",
+      "name": "Radik Renovierung & Innenausbau",
+      "description": "Eine Full-Stack-MERN-Anwendung mit responsivem TailwindCSS-Design, Nodemailer-Integration und optimierter Frontend-Backend-Leistung.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
+      "demoUrl": "https://radik-mern.vercel.app/",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "image": "/images/portFolio.png",
+      "name": "Aziz Portfolio",
+      "description": "Mein persönliches Portfolio, erstellt mit dem MERN-Stack und Tailwind CSS. Hier zeige ich meine Projekte und Fähigkeiten in einem modernen, responsiven Design.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://aziz-port-folio.vercel.app/",
+      "codeUrl": "https://github.com/PushUpDev/PortFolio",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "image": "/images/tanz-schule.png",
+      "name": "Platzreservierung für eine Tanzschule (Abschlussprojekt)",
+      "description": "Für mein Abschlussprojekt im Rahmen meiner Umschulung habe ich eine Platzreservierung für eine Tanzschule entwickelt, die es Nutzern ermöglicht, bequem online Tanzkurse zu buchen.",
+      "tags": ["MongoDB", "Express", "React", "Node.js"]
+    }
+  ],
+
+  "expert": [
+    { "id": 4, "logo": "/images/js.png", "name": "JavaScript" },
+    { "id": 5, "logo": "/images/reactjs.png", "name": "React" },
+    { "id": 7, "logo": "/images/mongodb.png", "name": "MongoDB" },
+    { "id": 8, "logo": "/images/typescript.png", "name": "TypeScript" },
+    { "id": 3, "logo": "/images/python.webp", "name": "Python" },
+    { "id": 9, "logo": "/images/css3.webp", "name": "CSS" },
+    { "id": 1, "logo": "/images/java.png", "name": "Java" },
+    { "id": 2, "logo": "/images/mySql.png", "name": "MySQL" },
+    { "id": 11, "logo": "/images/nodejs.png", "name": "NodeJs" },
+    { "id": 12, "logo": "/images/Tailwind CSS.png", "name": "Tailwind CSS" },
+    { "id": 13, "logo": "/images/thunder.jpeg", "name": "Thunder Client" },
+    { "id": 14, "logo": "/images/html5.webp", "name": "HTML5" },
+    { "id": 15, "logo": "/images/django.png", "name": "Django" },
+    { "id": 16, "logo": "/images/Spring Boot.png", "name": "Spring Boot" }
+  ],
+
+  "ContinuousGrowth": [
+    { "id": 2, "title": "Erforsche: React Native" },
+    { "id": 3, "title": "Nächster Fokus: Full-Stack-Entwicklung mit Django" }
+  ],
+
+  "contactInfo": [
+    { "id": 2, "icon": "📞", "title": "Telefon", "content": "+49 176 63319903" },
+    {
+      "id": 3,
+      "icon": "📩",
+      "title": "E-Mail",
+      "content": "azizcode92@gmail.com",
+      "isLink": true
+    }
+  ],
+
+  "socialLinks": [
+    {
+      "icon": "linkedin",
+      "color": "hover:text-[#0077B5] dark:hover:text-[#0077B5]",
+      "bg": "hover:bg-[#0077B5]/10",
+      "url": "https://www.linkedin.com/in/aziz-7a24a0283/",
+      "name": "LinkedIn"
+    },
+    {
+      "icon": "github",
+      "color": "hover:text-gray-800 dark:hover:text-gray-200",
+      "bg": "hover:bg-gray-800/10 dark:hover:bg-gray-200/10",
+      "url": "https://github.com/AzizCode25",
+      "name": "GitHub"
+    }
+  ]
+}
