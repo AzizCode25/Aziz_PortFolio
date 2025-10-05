@@ -176,7 +176,7 @@
       "id": 5,
       "image": "/images/portFolio.png",
       "name": "Aziz Portfolio",
-      "description": "Mein persönliches Portfolio, erstellt mit dem MERN-Stack und Tailwind CSS. Hier zeige ich meine Projekte und Fähigkeiten mit einem modernen, responsiven Design.",
+      "description": "My personal portfolio, built with the MERN stack and Tailwind CSS. Here I showcase my projects and skills with a modern, responsive design.",
       "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
       "demoUrl": "https://aziz-port-folio.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/PortFolio",
@@ -185,8 +185,8 @@
     {
       "id": 6,
       "image": "/images/tanz-schule.png",
-      "name": "Platzreservierung für eine Tanzschule (Abschlussprojekt)",
-      "description": "Für mein Abschlussprojekt im Rahmen meiner Umschulung habe ich eine Platzreservierung für eine Tanzschule entwickelt, die es Nutzern ermöglicht, bequem online Tanzkurse zu buchen.",
+     "name": "Dance School Seat Reservation (Final Project)",
+    "description": "For my final project during my retraining program, I developed a seat reservation system for a dance school that allows users to conveniently book dance classes online.",
       "tags": ["MongoDB", "Express", "React", "Node.js"]
     }
   ],
