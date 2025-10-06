@@ -16,11 +16,17 @@ const app = express();
 //     credentials: true,
 //   })
 // );
-app.use(cors({
-  origin: 'https://aziz-port-folio.vercel.app',
-  methods: ['POST'],
-  credentials: true,
-}));
+app.use(
+  cors({
+    origin: [
+      "https://aziz-port-folio.vercel.app",
+      "https://azizportfolio-production.up.railway.app",
+      "http://localhost:5173"
+    ],
+    methods: ["POST"],
+    credentials: true,
+  })
+);
 
 // Body-Parser Middleware
 app.use(express.json());
