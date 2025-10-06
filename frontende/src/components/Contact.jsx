@@ -25,17 +25,12 @@ const Contact = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      const { data } = await axios.post(
-        'https://portfolio-backend-ycsn.onrender.com/api/v1/contact/send',
-        // 'https://backend-production-be4a.up.railway.app/api/v1/contact/send',
-        // 'http://localhost:4000/api/v1/contact/send', 
-        
+        const { data } = await axios.post(
+        "https://portfolio-backend-ycsn.onrender.com/api/v1/contact/send",
         formData,
-        {
-          withCredentials: true,
-          headers: { 'Content-Type': 'application/json' },
-        }
-      )
+        { headers: { "Content-Type": "application/json" } }
+      );
+
 
       toast.success(data.message, {
         iconTheme: { primary: '#3b82f6', secondary: '#fff' },
