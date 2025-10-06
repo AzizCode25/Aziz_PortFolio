@@ -26,7 +26,7 @@ const Contact = () => {
     setLoading(true)
     try {
         const { data } = await axios.post(
-        "https://portfolio-backend-ycsn.onrender.com/api/v1/contact/send",
+        "https://portfolio-backend-ycsn.onrender.com/api/v1/contact/send/",
         formData,
         { headers: { "Content-Type": "application/json" } }
       );
