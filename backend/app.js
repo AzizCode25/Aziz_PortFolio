@@ -18,6 +18,8 @@ app.use(
     methods: ["GET", "POST"],
   })
 );
+// 👇 unbedingt hinzufügen!
+app.options("*", cors());
 
 
 
@@ -27,6 +29,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routen
 app.use("/api/v1/contact", contactRouter);
+
 
 
 // Datenbankverbindung herstellen
