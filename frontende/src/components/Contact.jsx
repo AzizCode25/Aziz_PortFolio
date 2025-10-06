@@ -66,7 +66,7 @@ const Contact = () => {
   const API_BASE_URL =
     import.meta.env.MODE === "development"
       ? "http://localhost:4000" // 👉 läuft lokal
-      : "https://portfolio-backend-ycsn.onrender.com"; // 👉 läuft auf Render
+      : "https://portfolio-backend-ycsn.onrender.com/"; // 👉 läuft auf Render
 
   try {
     const { data } = await axios.post(
