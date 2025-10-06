@@ -20,13 +20,14 @@ app.use(
   cors({
     origin: [
       "https://aziz-port-folio.vercel.app",
-      "https://azizportfolio-production.up.railway.app",
+      "https://portfolio-backend-ycsn.onrender.com",
       "http://localhost:5173"
     ],
     methods: ["POST"],
     credentials: true,
   })
 );
+
 
 // Body-Parser Middleware
 app.use(express.json());
