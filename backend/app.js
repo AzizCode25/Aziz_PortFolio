@@ -12,7 +12,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://aziz-port-folio.vercel.app",
+      "https://aziz-port-folio.vercel.app/",
       "http://localhost:5173" // Für lokale Tests
     ],
     methods: ["POST"],
