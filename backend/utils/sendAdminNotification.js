@@ -3,24 +3,35 @@ import nodemailer from 'nodemailer';
 
 dotenv.config({ path: './config/.env' });
 
-// ✅ Gmail Transport (funktioniert mit App-Passwort)
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // SSL verwenden!
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
   },
 });
 
-// ✅ Check: Verbindung zum Mailserver testen
-(async () => {
-  try {
-    await transporter.verify();
-    console.log('📨 Mailserver bereit zum Senden ✅');
-  } catch (err) {
-    console.error('❌ Mailserver-Fehler:', err);
-  }
-})();
+// ✅ Gmail Transport (funktioniert mit App-Passwort)
+// const transporter = nodemailer.createTransport({
+//   service: 'gmail',
+//   auth: {
+//     user: process.env.EMAIL_USER,
+//     pass: process.env.EMAIL_PASS,
+//   },
+// });
+
+// // ✅ Check: Verbindung zum Mailserver testen
+// (async () => {
+//   try {
+//     await transporter.verify();
+//     console.log('📨 Mailserver bereit zum Senden ✅');
+//   } catch (err) {
+//     console.error('❌ Mailserver-Fehler:', err);
+//   }
+// })();
+
 
 // ✅ Funktion zum Senden der Admin-Mail
 export const sendAdminNotification = async ({ name, nachName, email, telefon, nachricht }) => {

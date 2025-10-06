@@ -27,7 +27,7 @@ const Contact = () => {
     try {
       const { data } = await axios.post(
         // 'https://aziz-portfolio-z6cs.onrender.com/api/v1/contact/send',
-        'https://azizportfolio-production.up.railway.app/api/v1/contact/send',
+        'https://backend-production-be4a.up.railway.app/api/v1/contact/send',
         // 'http://localhost:4000/api/v1/contact/send', 
         
         formData,
