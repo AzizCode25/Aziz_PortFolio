@@ -9,14 +9,18 @@ dotenv.config({ path: './config/.env' });
 const app = express();
 
 // CORS-Konfiguration
-app.use(
-  cors({
-    origin: "https://aziz-port-folio.vercel.app", // .trim() entfernt Leerzeichen
-    methods: ['POST'],
-    credentials: true,
-  })
-);
-
+// app.use(
+//   cors({
+//     origin: "https://aziz-port-folio.vercel.app", // .trim() entfernt Leerzeichen
+//     methods: ['POST'],
+//     credentials: true,
+//   })
+// );
+app.use(cors({
+  origin: 'https://aziz-port-folio.vercel.app',
+  methods: ['POST'],
+  credentials: true,
+}));
 
 // Body-Parser Middleware
 app.use(express.json());
