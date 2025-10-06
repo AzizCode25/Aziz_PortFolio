@@ -18,7 +18,7 @@ app.use(
     methods: ["GET", "POST"],
   })
 );
-// 👇 unbedingt hinzufügen!
+
 app.options("*", cors());
 
 
