@@ -15,7 +15,7 @@ app.use(
       "https://aziz-port-folio.vercel.app",
       "http://localhost:5173" // Für lokale Tests
     ],
-    methods: ["POST"],
+    methods: ["POST"]
   })
 );
 
