@@ -70,7 +70,7 @@ const Contact = () => {
 
   try {
     const { data } = await axios.post(
-      `${API_BASE_URL}/api/v1/contact/send`,
+      `${API_BASE_URL}api/v1/contact/send`,
       formData,
       {
         headers: { "Content-Type": "application/json" },
