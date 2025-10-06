@@ -26,7 +26,9 @@ const Contact = () => {
     setLoading(true)
     try {
       const { data } = await axios.post(
-        'https://aziz-portfolio-z6cs.onrender.com/api/v1/contact/send',
+        // 'https://aziz-portfolio-z6cs.onrender.com/api/v1/contact/send',
+        'https://azizportfolio-production.up.railway.app//api/v1/contact/send',
+        
         formData,
         {
           withCredentials: true,
