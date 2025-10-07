@@ -64,25 +64,19 @@ const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
 
-  // 🔧 Dynamisch: automatisch richtige Backend-URL
-  const API_BASE_URL =
-    import.meta.env.MODE === "development"
-      ? "http://localhost:4000"
-      : "https://azizportfolio-production.up.railway.app";
-
   try {
     const { data } = await axios.post(
-      `${API_BASE_URL}/api/v1/contact/send`,
+      "https://azizportfolio-production.up.railway.app/api/v1/contact/send",
       formData,
-      {
-        headers: { "Content-Type": "application/json" },
-      }
+      { headers: { "Content-Type": "application/json" } }
     );
 
+    // Nachricht vom Backend anzeigen
     toast.success(data.message, {
       iconTheme: { primary: "#3b82f6", secondary: "#fff" },
     });
 
+    // Formular zurücksetzen
     setFormData({
       name: "",
       nachName: "",
@@ -92,18 +86,12 @@ const handleSubmit = async (e) => {
     });
   } catch (error) {
     const errorData = error.response?.data;
-
-    if (errorData?.errors) {
-      Object.entries(errorData.errors).forEach(([field, message]) => {
-        toast.error(`${field}: ${message}`);
-      });
-    } else {
-      toast.error(errorData?.message || "Ein Fehler ist aufgetreten");
-    }
+    toast.error(errorData?.message || "Ein Fehler ist aufgetreten");
   } finally {
     setLoading(false);
   }
 };
+
 
 
   return (
