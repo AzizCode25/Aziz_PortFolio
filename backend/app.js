@@ -12,14 +12,28 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://aziz-port-folio.vercel.app",
-      "http://localhost:5173" // Für lokale Tests
+      "https://aziz-port-folio.vercel.app",   // dein Frontend auf Vercel
+      "https://azizportfolio-production.up.railway.app", //dein Backend auf Railway
+      "http://localhost:5173"                 //lokal für Tests
     ],
-    methods: ["POST"]
+    methods: ["GET", "POST"],
+    credentials: true,
   })
 );
-
 app.options("*", cors());
+
+
+// app.use(
+//   cors({
+//     origin: [
+//       "https://aziz-port-folio.vercel.app",
+//       "http://localhost:5173" // Für lokale Tests
+//     ],
+//     methods: ["POST"]
+//   })
+// );
+
+// app.options("*", cors());
 
 
 
