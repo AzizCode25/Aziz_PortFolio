@@ -24,9 +24,10 @@ export const sendeKontakt = async (req, res) => {
 
     // Erfolgsmeldung zurückgeben
     return res.status(200).json({
-      success: true,
-      message: "Nachricht erfolgreich gesendet und E-Mails verschickt!",
-    });
+    success: true,
+    message: "Danke für Ihre Nachricht. Ich melde mich innerhalb von 24 Stunden bei Ihnen.",
+  });
+
   } catch (error) {
     console.error("Fehler beim Senden der Nachricht:", error.message);
 
