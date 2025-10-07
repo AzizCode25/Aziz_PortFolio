@@ -21,89 +21,91 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   setLoading(true)
-  //   try {
-  //       const { data } = await axios.post(
-  //     "https://portfolio-backend-ycsn.onrender.com/api/v1/contact/send",
-        
-  //       formData,
-  //       { headers: { "Content-Type": "application/json" } }
-  //     );
-
-
-  //     toast.success(data.message, {
-  //       iconTheme: { primary: '#3b82f6', secondary: '#fff' },
-  //     })
-
-  //     setFormData({
-  //       name: '',
-  //       nachName: '',
-  //       email: '',
-  //       telefon: '',
-  //       nachricht: '',
-  //     })
-  //   } catch (error) {
-  //     const errorData = error.response?.data
-
-  //     if (errorData?.errors) {
-  //       Object.entries(errorData.errors).forEach(([field, message]) => {
-  //         toast.error(`${field}: ${message}`)
-  //       })
-  //     } else {
-  //       toast.error(errorData?.message || 'Ein Fehler ist aufgetreten')
-  //     }
-  //   } finally {
-  //     setLoading(false) // Ende loading
-  //   }
-  // }
   const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
+    e.preventDefault()
+    setLoading(true)
+    try {
+        const { data } = await axios.post(
+      "https://portfolio-backend-ycsn.onrender.com/api/v1/contact/send",
+        
+        formData,
+        { headers: { "Content-Type": "application/json" } }
+      );
 
-  // 🔧 Automatisch richtige URL auswählen
-  const API_BASE_URL =
-    import.meta.env.MODE === "development"
-      ? "http://localhost:4000" // 👉 läuft lokal
-      : "https://portfolio-backend-ycsn.onrender.com/"; // 👉 läuft auf Render
 
-  try {
-    const { data } = await axios.post(
-      `${API_BASE_URL}api/v1/contact/send`,
-      formData,
-      {
-        headers: { "Content-Type": "application/json" },
+      toast.success(data.message, {
+        iconTheme: { primary: '#3b82f6', secondary: '#fff' },
+      })
+
+      setFormData({
+        name: '',
+        nachName: '',
+        email: '',
+        telefon: '',
+        nachricht: '',
+      })
+    } catch (error) {
+      const errorData = error.response?.data
+
+      if (errorData?.errors) {
+        Object.entries(errorData.errors).forEach(([field, message]) => {
+          toast.error(`${field}: ${message}`)
+        })
+      } else {
+        toast.error(errorData?.message || 'Ein Fehler ist aufgetreten')
       }
-    );
-
-    // ✅ Erfolgsmeldung
-    toast.success(data.message, {
-      iconTheme: { primary: "#3b82f6", secondary: "#fff" },
-    });
-
-    // Felder leeren
-    setFormData({
-      name: "",
-      nachName: "",
-      email: "",
-      telefon: "",
-      nachricht: "",
-    });
-  } catch (error) {
-    const errorData = error.response?.data;
-
-    if (errorData?.errors) {
-      Object.entries(errorData.errors).forEach(([field, message]) => {
-        toast.error(`${field}: ${message}`);
-      });
-    } else {
-      toast.error(errorData?.message || "Ein Fehler ist aufgetreten");
+    } finally {
+      setLoading(false) // Ende loading
     }
-  } finally {
-    setLoading(false); // Ende loading
   }
-};
+  
+//   const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setLoading(true);
+
+
+//   const API_BASE_URL =
+//     import.meta.env.MODE === "development"
+//       ? "http://localhost:4000" // 
+//       : "https://portfolio-backend-ycsn.onrender.com/";
+
+//   try {
+//     const { data } = await axios.post(
+//       `${API_BASE_URL}api/v1/contact/send`,
+//       // "http://localhost:4000/api/v1/contact/send",
+//       formData,
+//       {
+//         headers: { "Content-Type": "application/json" },
+//       }
+//     );
+
+//     // ✅ Erfolgsmeldung
+//     toast.success(data.message, {
+//       iconTheme: { primary: "#3b82f6", secondary: "#fff" },
+//     });
+
+//     // Felder leeren
+//     setFormData({
+//       name: "",
+//       nachName: "",
+//       email: "",
+//       telefon: "",
+//       nachricht: "",
+//     });
+//   } catch (error) {
+//     const errorData = error.response?.data;
+
+//     if (errorData?.errors) {
+//       Object.entries(errorData.errors).forEach(([field, message]) => {
+//         toast.error(`${field}: ${message}`);
+//       });
+//     } else {
+//       toast.error(errorData?.message || "Ein Fehler ist aufgetreten");
+//     }
+//   } finally {
+//     setLoading(false); // Ende loading
+//   }
+// };
 
 
   return (
