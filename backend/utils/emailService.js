@@ -21,7 +21,7 @@ export const sendAdminNotification = async ({ name, nachName, email, telefon, na
     `;
 
     await resend.emails.send({
-      from: "Aziz Portfolio <onboarding@resend.dev>", // funktioniert sofort ohne Domain-Setup
+      from: "Aziz Portfolio <aziz@azizcode.com>", // funktioniert sofort ohne Domain-Setup
       to: process.env.EMAIL_USER,                     // sendet an dein Gmail
       subject: "Neue Kontaktanfrage eingegangen",
       html,
@@ -49,7 +49,7 @@ export const kontaktConfirmation = async (nachName, email) => {
     `;
 
     await resend.emails.send({
-      from: "Aziz Portfolio <onboarding@resend.dev>", // nutze resend.dev, bis deine Domain verifiziert ist
+      from: "Aziz Portfolio <aziz@azizcode.com>", // nutze resend.dev, bis deine Domain verifiziert ist
       to: email,
       subject: "Bestätigung Ihrer Kontaktanfrage",
       html,
