@@ -5,7 +5,7 @@ export const sendeKontakt = async (req, res) => {
   const { name, nachName, email, telefon, nachricht } = req.body;
 
   try {
-    // ✅ Validierung der Eingaben
+    // Validierung der Eingaben
     if (!name || !nachName || !email || !telefon || !nachricht) {
       return res.status(400).json({
         success: false,
@@ -13,22 +13,22 @@ export const sendeKontakt = async (req, res) => {
       });
     }
 
-    // ✅ Nachricht in der Datenbank speichern
+    // Nachricht in der Datenbank speichern
     await Kontakt.create({ name, nachName, email, telefon, nachricht });
 
-    // ✅ Bestätigung an den Kunden (Resend)
+    // Bestätigung an den Kunden (Resend)
     await kontaktConfirmation(nachName, email);
 
-    // ✅ Benachrichtigung an dich selbst (Resend)
+    // Benachrichtigung an dich selbst (Resend)
     await sendAdminNotification({ name, nachName, email, telefon, nachricht });
 
-    // ✅ Erfolgsmeldung zurückgeben
+    // Erfolgsmeldung zurückgeben
     return res.status(200).json({
       success: true,
       message: "Nachricht erfolgreich gesendet und E-Mails verschickt!",
     });
   } catch (error) {
-    console.error("❌ Fehler beim Senden der Nachricht:", error.message);
+    console.error("Fehler beim Senden der Nachricht:", error.message);
 
     return res.status(500).json({
       success: false,
