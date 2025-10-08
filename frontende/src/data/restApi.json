@@ -1,293 +1,206 @@
 {
   "navbarLinks": [
-    {
-      "id": 1,
-      "title": "HOME",
-      "link": "home"
-    },
-    {
-      "id": 2,
-      "title": "ABOUT US",
-      "link": "about"
-    },
+    { "id": 1, "title": "Home", "link": "home" },
+    { "id": 2, "title": "About", "link": "about" },
+    { "id": 3, "title": "Projects", "link": "projects" },
+    { "id": 4, "title": "Skills", "link": "skills" },
+    { "id": 5, "title": "Contact", "link": "contact" }
+  ],
+
+  "educationData": [
+      {
+        "id": 2,
+        "degree": "Computer Science Expert – Software Development (IHK Hamburg)",
+        "institution": "Hamburg Chamber of Commerce (IHK)",
+        "year": "Graduation: July 2, 2025",
+        "highlights": [
+          "Successfully completed the final examination for the accredited profession of Computer Science Expert, specializing in Software Development.",
+          "Training focused on planning, developing, and implementing software projects with modern technologies.",
+          "Gained strong knowledge in programming, database management, and software architecture.",
+          "Qualification corresponds to Level 4 of the German and European Qualifications Framework."
+        ]
+      }
+      ,
     {
       "id": 3,
-      "title": "Projects",
-      "link": "projects"
+      "degree": "6-Month Mandatory Internship as Full-Stack Developer",
+      "institution": "Grassau GmbH, Hamburg",
+      "year": "5/2024 – 12/2024",
+      "highlights": [
+        "Completed a mandatory internship as part of the vocational training for Application Development (IHK Hamburg).",
+        "Developed and maintained responsive user interfaces using React.js and TailwindCSS.",
+        "Implemented backend services with Node.js and Express for seamless API integration.",
+        "Designed and managed relational database structures with MySQL and MongoDB.",
+        "Developed a dance school reservation app (Final IHK Project) using the MERN Stack (MongoDB, Express, React, Node.js) featuring user login, form validation, dynamic course management, and automated email notifications.",
+        "Built the Kühlschrank App using the MERN Stack (MongoDB, Express, React, Node.js) – a web app for managing food and drinks for employees, including an automatic €30 monthly credit system."
+      ]
     },
     {
       "id": 4,
-      "title": "Skills",
-      "link": "skills"
-    },
-    {
-      "id": 5,
-      "title": "Contact",
-      "link": "contact"
-    }
-  ],
-  "educationData": [
-  {
-    "id": 1,
-    "degree": "12-month Internship as Full-Stack Developer",
-    "institution": "Grassau GmbH",
-    "year": "2024",
-    "highlights": [
-      "Developed and maintained responsive UIs with React.js and TailwindCSS.",
-      "Implemented backend services with Node.js and Express for API integration.",
-      "Designed and managed relational database structures with MySQL / MongoDB.",
-      "Developed a booking system for a dance school (Tanzschule) including authentication and database integration.",
-      "Developed the Refrigerator app 'Kühlschrank App' using the MERN stack, including an employee coupon system and admin dashboard."
-    ]
-  },
-
-    {
-      "id": 2,
-      "degree": "Professional Retraining – Application Development",
-      "institution": "CBW Hamburg",
+      "degree": "Professional Retraining – Application Development",
+      "institution": "CBW College, Hamburg",
       "year": "2022–2024",
       "highlights": [
-        "Basics of Hardware",
-        "Basics of Relational Databases / SQL",
-        "Network Fundamentals",
-        "Basics of Cloud Computing",
-        "Agile Project Management with Scrum",
-        "Certified Scrum Master",
-        "Programming in HTML5 with JavaScript and CSS3 - Advanced",
-        "Object-Oriented Programming",
-        "React",
-        "UML - Unified Modeling Language",
-        "Associate in Python Programming - Basics",
-        "Associate in Python Programming - Advanced Course",
-        "AWS Certified: Cloud Practitioner",
-        "AWS Certified: Cloud Practitioner - Certification",
-        "Job Application Strategies",
-        "OCFA Java Foundations - Basics",
-        "OCFA Java Foundations - Advanced Course"
-      ]
+      "Graduation: Successfully completed on July 2, 2025",
+        "Focus: Full-Stack Application Development with modern web technologies",
+        "Software Development: HTML5, CSS3, JavaScript (Basic to Advanced), React.js, PHP (with Databases, Performance & Security)",
+        "Object-Oriented Programming and UML – Unified Modeling Language",
+        "Backend, Databases & Cloud: Relational Databases / SQL, Cloud Computing Fundamentals, AWS Certified Cloud Practitioner (Certified)",
+        "Agile Methods & Project Management: Scrum Methodology, Certified Scrum Master, Planning and Implementation of Software Projects",
+        "Programming & Certifications: Associate in Python Programming (Basic & Advanced), OCFA Java Foundations (Basic & Advanced), AWS Cloud Practitioner – Certification Achieved",
+        "Business & Communication: Business Processes, Economics & Labor Law, Presentation and Job Application Techniques"
+          ]
     }
   ],
+
   "skills": [
     {
-      "category": "Full Stack Developer",
+      "category": "Full-Stack Development",
       "items": [
-      { "name": "HTML5", "level": 90 },
-      { "name": "CSS", "level": 80 },
-      { "name": "JavaScript", "level": 50 },
-      { "name": "React", "level": 89 },
-      { "name": "Tailwind CSS", "level": 90 },
-      { "name": "Spring Boot", "level": 75 },
-      { "name": "Django", "level": 40 },
-      { "name": "Express.js", "level": 50 },
-      { "name": "Node.js", "level": 50 },
-      { "name": "MySQL", "level": 80 },
-      { "name": "MongoDB", "level": 60 },
-      { "name": "SQL", "level": 80 }
+        { "name": "HTML5", "level": 90 },
+        { "name": "CSS3", "level": 85 },
+        { "name": "JavaScript", "level": 80 },
+        { "name": "TypeScript", "level": 70 },
+        { "name": "Java", "level": 75 },
+        { "name": "Python", "level": 60 },
+        { "name": "React.js", "level": 90 },
+        { "name": "Tailwind CSS", "level": 90 },
+        { "name": "Spring Boot", "level": 80 },
+        { "name": "Node.js", "level": 70 },
+        { "name": "Express.js", "level": 70 },
+        { "name": "Django", "level": 60 },
+        { "name": "MySQL", "level": 85 },
+        { "name": "MongoDB", "level": 75 }
       ],
       "icon": "💻"
     },
     {
-      "category": "Development Tools",
+      "category": "Development Tools & Platforms",
       "items": [
-        { "name": "Git/GitHub", "level": 85 },
+        { "name": "Git / GitHub", "level": 90 },
         { "name": "VS Code", "level": 95 },
-        { "name": "Postman", "level": 70 },
-        { "name": "Thunder Client", "level": 75 }
+        { "name": "Postman", "level": 80 },
+        { "name": "Thunder Client", "level": 75 },
+        { "name": "Vercel", "level": 85 },
+        { "name": "Render", "level": 80 },
+        { "name": "Railway", "level": 75 },
+        { "name": "AWS Cloud", "level": 70 }
       ],
       "icon": "🛠️"
     },
     {
-      "category": "Core Skills",
+      "category": "Core Competencies",
       "items": [
-        { "name": "Full Stack Architecture", "level": 70 },
+        { "name": "Full-Stack Architecture", "level": 80 },
         { "name": "Responsive Design", "level": 90 },
-        { "name": "UI/UX Principles", "level": 80 },
+        { "name": "UI/UX Principles", "level": 85 },
         { "name": "Performance Optimization", "level": 85 },
-        { "name": "Scrum Master (Agile)", "level": 80 }
+        { "name": "Agile & Scrum", "level": 80 }
       ],
       "icon": "🚀"
     }
   ],
-"WhyChoose": [
-  {
-    "id": 1,
-    "title": "End-to-End Development",
-    "context": "Skilled in frontend and backend, I deliver complete, scalable, and high-performance applications."
-  },
-  {
-    "id": 2,
-    "title": "Modern & Versatile Tech Stack",
-    "context": "Proficient in the MERN stack, RESTful APIs, and Spring Boot, building solutions from startups to enterprise scale."
-  },
-  {
-    "id": 3,
-    "title": "Clean & Maintainable Code",
-    "context": "Writing well-structured, efficient, and scalable code for long-term maintainability."
-  }
-]
-,
+
+  "WhyChoose": [
+    {
+      "id": 1,
+      "title": "End-to-End Development",
+      "context": "Experienced in both frontend and backend, I build complete, scalable, and high-performance applications from concept to deployment."
+    },
+    {
+      "id": 2,
+      "title": "Modern & Versatile Tech Stack",
+      "context": "Proficient in the MERN stack, RESTful APIs, and Spring Boot — delivering solutions that scale from startups to enterprise level."
+    },
+    {
+      "id": 3,
+      "title": "Clean & Maintainable Code",
+      "context": "Writing well-structured, efficient, and maintainable code that ensures long-term stability and scalability."
+    }
+  ],
 
   "projects": [
     {
-      "id": 2,
+      "id": 1,
       "image": "/images/azizKaffee.png",
-      "name": "Aziz Coffee, Admin",
-      "description": "A coffee shop web app with menu management, table reservations, and admin dashboard built using the MERN stack.",
+      "name": "Aziz Coffee Admin",
+      "description": "A full-stack coffee shop web app featuring menu management, table reservations, and an admin dashboard built with the MERN stack and TailwindCSS.",
       "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
       "demoUrl": "https://kaffee-mern.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/KAFFEE_MERN",
       "featured": true
     },
     {
-      "id": 3,
+      "id": 2,
       "image": "/images/bakooRasturant.png",
       "name": "Bakoo Restaurant",
-      "description": "This project uses the MERN stack with TailwindCSS for a clean, responsive design. Nodemailer is integrated for email functionality. It aims to deliver a modern full-stack app with a smooth user experience.",
-      "tags": [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "Nodemailer",
-        "Tailwind CSS"
-      ],
+      "description": "A restaurant booking system using the MERN stack and Nodemailer for automated email confirmations. Designed with a clean and responsive TailwindCSS interface.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Nodemailer", "Tailwind CSS"],
       "demoUrl": "https://restaurant-booking-system-mern.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/RestaurantBookingSystem_MERN",
       "featured": true
     },
     {
-      "id": 4,
+      "id": 3,
       "image": "/images/Radik.png",
-      "name": "Radik Renovierung & Innenausbau",
-      "description": "A full-stack MERN application featuring responsive TailwindCSS design, Nodemailer integration, and optimized frontend-backend performance.",
-      "tags": [
-        "MongoDB",
-        "Express",
-        "React",
-        "Node.js",
-        "Tailwind CSS",
-        "Nodemailer"
-      ],
+      "name": "Radik Renovation & Interior Design",
+      "description": "A full-stack MERN application showcasing company services, featuring a responsive design, Nodemailer integration, and optimized backend performance.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
       "demoUrl": "https://radik-mern.vercel.app/",
       "featured": true
     },
-
     {
-      "id": 5,
+      "id": 4,
       "image": "/images/portFolio.png",
       "name": "Aziz Portfolio",
-      "description": "My personal portfolio, built with the MERN stack and Tailwind CSS. Here I showcase my projects and skills with a modern, responsive design.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "description": "My personal developer portfolio built with React, Node.js, and TailwindCSS — highlighting my projects, experience, and technical skills in a modern responsive design.",
+      "tags": ["React", "Node.js", "Tailwind CSS"],
       "demoUrl": "https://aziz-port-folio.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/PortFolio",
       "featured": true
     },
     {
-      "id": 6,
+      "id": 5,
       "image": "/images/tanz-schule.png",
-     "name": "Dance School Seat Reservation (Final Project)",
-    "description": "For my final project during my retraining program, I developed a seat reservation system for a dance school that allows users to conveniently book dance classes online.",
+      "name": "Dance School Seat Reservation (Final Project)",
+      "description": "A seat reservation system for a dance school allowing users to conveniently book dance classes online. Developed using the MERN stack.",
       "tags": ["MongoDB", "Express", "React", "Node.js"]
     }
   ],
+
   "expert": [
-    {
-      "id": 4,
-      "logo": "/images/js.png",
-      "name": "JavaScript"
-    },
-    {
-      "id": 5,
-      "logo": "/images/reactjs.png",
-      "name": "React"
-    },
-    {
-      "id": 7,
-      "logo": "/images/mongodb.png",
-      "name": "MongoDB"
-    },
-    {
-      "id": 8,
-      "logo": "/images/typescript.png",
-      "name": "TypeScript"
-    },
-    {
-      "id": 3,
-      "logo": "/images/python.webp",
-      "name": "Python"
-    },
-    {
-      "id": 9,
-      "logo": "/images/css3.webp",
-      "name": "CSS"
-    },
-    {
-      "id": 1,
-      "logo": "/images/java.png",
-      "name": "Java"
-    },
-    {
-      "id": 2,
-      "logo": "/images/mySql.png",
-      "name": "MySQL"
-    },
-    {
-      "id": 11,
-      "logo": "/images/nodejs.png",
-      "name": "NodeJs"
-    },
-    {
-      "id": 12,
-      "logo": "/images/Tailwind CSS.png",
-      "name": "Tailwind CSS"
-    },
-    {
-      "id": 13,
-      "logo": "/images/thunder.jpeg",
-      "name": "Thunder Client"
-    },
-    {
-      "id": 14,
-      "logo": "/images/html5.webp",
-      "name": "HTML5"
-    },
-    {
-      "id": 15,
-      "logo": "/images/django.png",
-      "name": "Django"
-    },
-    {
-      "id": 16,
-      "logo": "/images/Spring Boot.png",
-      "name": "Spring Boot"
-    }
+    { "id": 1, "logo": "/images/java.png", "name": "Java" },
+    { "id": 2, "logo": "/images/mySql.png", "name": "MySQL" },
+    { "id": 3, "logo": "/images/python.webp", "name": "Python" },
+    { "id": 4, "logo": "/images/js.png", "name": "JavaScript" },
+    { "id": 5, "logo": "/images/reactjs.png", "name": "React" },
+    { "id": 7, "logo": "/images/mongodb.png", "name": "MongoDB" },
+    { "id": 8, "logo": "/images/typescript.png", "name": "TypeScript" },
+    { "id": 9, "logo": "/images/css3.webp", "name": "CSS3" },
+    { "id": 11, "logo": "/images/nodejs.png", "name": "Node.js" },
+    { "id": 12, "logo": "/images/Tailwind CSS.png", "name": "Tailwind CSS" },
+    { "id": 13, "logo": "/images/thunder.jpeg", "name": "Thunder Client" },
+    { "id": 14, "logo": "/images/html5.webp", "name": "HTML5" },
+    { "id": 15, "logo": "/images/django.png", "name": "Django" },
+    { "id": 16, "logo": "/images/Spring Boot.png", "name": "Spring Boot" }
   ],
+
   "ContinuousGrowth": [
-  
-    {
-      "id": 2,
-      "title": "Exploring: React Native"
-    },
-    {
-      "id": 3,
-      "title": "Upcoming Focus: Full-Stack Development with Django"
-    }
+    { "id": 1, "title": "Currently Exploring: React Native" },
+    { "id": 2, "title": "Upcoming Focus: Full-Stack Development with Django" }
   ],
+
   "contactInfo": [
+    { "id": 1, "icon": "📞", "title": "Phone", "content": "+49 176 63319903" },
     {
       "id": 2,
-      "icon": "📞",
-      "title": "Phone",
-      "content": "+49 176 63319903"
-    },
-    {
-      "id": 3,
       "icon": "📩",
-      "title": "E-Mail",
+      "title": "Email",
       "content": "azizcode92@gmail.com",
       "isLink": true
     }
   ],
+
   "socialLinks": [
     {
       "icon": "linkedin",

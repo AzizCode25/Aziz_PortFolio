@@ -20,45 +20,6 @@ const Contact = () => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
-
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault()
-  //   setLoading(true)
-  //   try {
-  //       const { data } = await axios.post(
-  //     "https://portfolio-backend-ycsn.onrender.com/api/v1/contact/send",
-  //     "https://azizportfolio-production.up.railway.app/api/v1/contact/send",
-        
-  //       formData,
-  //       { headers: { "Content-Type": "application/json" } }
-  //     );
-
-
-  //     toast.success(data.message, {
-  //       iconTheme: { primary: '#3b82f6', secondary: '#fff' },
-  //     })
-
-  //     setFormData({
-  //       name: '',
-  //       nachName: '',
-  //       email: '',
-  //       telefon: '',
-  //       nachricht: '',
-  //     })
-  //   } catch (error) {
-  //     const errorData = error.response?.data
-
-  //     if (errorData?.errors) {
-  //       Object.entries(errorData.errors).forEach(([field, message]) => {
-  //         toast.error(`${field}: ${message}`)
-  //       })
-  //     } else {
-  //       toast.error(errorData?.message || 'Ein Fehler ist aufgetreten')
-  //     }
-  //   } finally {
-  //     setLoading(false) // Ende loading
-  //   }
-  // }
   
 const handleSubmit = async (e) => {
   e.preventDefault();
