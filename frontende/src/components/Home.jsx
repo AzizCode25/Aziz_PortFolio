@@ -39,19 +39,19 @@ const Home = () => {
   return ( 
     <section id="home" className="relative overflow-hidden py-24 md:py-32 lg:py-60">
       {/* <AnimationContainer /> */}
-      <div className="max-w-screen-xl mx-auto px-6 md:px-8 relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 relative">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 xl:gap-20">
           {/* Text Content */}
           <div className="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
             <div className="space-y-6">
               <div className="space-y-4">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight animate-fade-in-up">
-                  Hello, here is <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-500 to-cyan-400 animate-text-gradient">Aziz</span>
+                  Hello, here is <span className="text-transparent bg-clip-text bg-linear-to-r from-sky-500 to-cyan-400 animate-text-gradient">Aziz</span>
                 </h1>
                 <div className="flex flex-wrap items-center gap-2 text-3xl md:text-4xl font-bold animate-fade-in-up delay-100">
                    <span className="text-gray-700 dark:text-gray-300">A</span>
                   <ReactTyped
-                    className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 min-w-[100px]"
+                    className="text-transparent bg-clip-text bg-linear-to-r from-purple-500 to-pink-500 min-w-[100px]"
                     strings={["Full Stack Developer", "MERN Stack Developer", "Spring Boot Developer", "Application Developer"]}
                     // strings={[
                     //           "Frontend Developer",
@@ -79,7 +79,7 @@ const Home = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">
               <a 
                 href="#projects" 
-                className="px-8 py-2 bg-gradient-to-r from-sky-500 to-cyan-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1"
+                className="px-8 py-2 bg-linear-to-r from-sky-500 to-cyan-500 text-white font-medium rounded-lg hover:shadow-lg hover:shadow-sky-500/30 transition-all duration-300 hover:-translate-y-1"
               >
                 View My Work
               </a>
@@ -148,7 +148,7 @@ const Home = () => {
                 </video>
                {/* <img src="../images/softwareIcons.png" alt="" /> */}
               </div>
-              <div className="absolute -inset-4 rounded-full bg-gradient-to-r from-sky-500/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500 pointer-events-none"></div>
+              <div className="absolute -inset-4 rounded-full bg-linear-to-r from-sky-500/20 to-cyan-400/20 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500 pointer-events-none"></div>
             </div>
           </div>
         </div>

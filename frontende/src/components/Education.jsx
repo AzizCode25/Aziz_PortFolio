@@ -1,4 +1,4 @@
-import data from '../i18n/en.json'
+import data from '../i18n/de.json'
 
 const Education = () => {
   return (

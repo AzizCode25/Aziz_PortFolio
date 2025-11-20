@@ -1,7 +1,7 @@
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa'
 import { FaYoutube, FaHeart } from 'react-icons/fa6'
 
-import data from '../i18n/en.json'
+import data from '../i18n/de.json'
 
 const Footer = () => {
   const iconMap = {

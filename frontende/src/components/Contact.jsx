@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa'
-import data from '../i18n/en.json'
+import data from '../i18n/de.json'
 // import earth from '../assets/videos/glob.mp4'
 
 const Contact = () => {
@@ -61,7 +61,7 @@ const Contact = () => {
       {/* Header Section */}
       <div className="mb-16 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-4">
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
+          <span className="bg-clip-text text-transparent bg-linear-to-r from-purple-600 to-pink-600">
             CONTACT
           </span>
         </h2>
@@ -88,7 +88,7 @@ const Contact = () => {
               />
             </video>
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/70 via-transparent to-transparent" />
 
             <div className="relative z-10 p-8 h-full flex flex-col justify-end">
               <div className="space-y-6 bg-gray-900/30  backdrop-blur-sm p-6 rounded-xl border-gray-700/50">
@@ -237,7 +237,7 @@ const Contact = () => {
                 type="submit"
                 disabled={loading}
                 className={`w-full flex items-center justify-center px-6 py-3.5 
-                bg-gradient-to-r from-sky-500 to-blue-600 
+                bg-linear-to-r from-sky-500 to-blue-600 
                 hover:from-sky-600 hover:to-blue-700 
                 text-white font-semibold rounded-lg 
                 transition-all duration-300 
