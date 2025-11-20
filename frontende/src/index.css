@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   overflow-x: hidden;
@@ -15,4 +16,6 @@ body {
   .touch-device\:translate-y-0 {
     transform: translateY(0) !important;
   }
-}
+} 
+
+

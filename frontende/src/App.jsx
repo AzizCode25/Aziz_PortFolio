@@ -18,12 +18,12 @@ export default function App() {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme(prev => (prev === "light" ? "dark" : "light"));
+    setTheme((prev) => (prev === "light" ? "dark" : "light"));
   };
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen transition-colors duration-300">
+      <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-all duration-300">
         <NavBar />
         <Home />
         <About />
@@ -32,13 +32,11 @@ export default function App() {
         <Contact />
         <Footer />
       </div>
+
       <Toaster />
     </ThemeContext.Provider>
   );
 }
-
-
-
 
 // import Home from "./components/Home.jsx";
 // import NavBar from "./components/NavBar.jsx";
@@ -49,7 +47,6 @@ export default function App() {
 // import Contact from "./components/Contact.jsx";
 // import { Toaster } from "react-hot-toast";
 
-
 // const App = () => {
 //   return (
 //     <>
@@ -59,9 +56,9 @@ export default function App() {
 //       <About />
 //       <Project />
 //       <Education />
-//       <Contact /> 
+//       <Contact />
 //       <Footer />
-      
+
 //       </div>
 //       <Toaster />
 //     </>
