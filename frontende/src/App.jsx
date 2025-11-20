@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Home from "./components/Home.jsx";
 import NavBar from "./components/NavBar.jsx";
 import About from "./components/About.jsx";
@@ -7,23 +8,64 @@ import Footer from "./components/Footer.jsx";
 import Contact from "./components/Contact.jsx";
 import { Toaster } from "react-hot-toast";
 
+import { ThemeContext } from "./context/ThemeContext";
 
-const App = () => {
+export default function App() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", theme === "dark");
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => (prev === "light" ? "dark" : "light"));
+  };
+
   return (
-    <>
-      <div>
-      <NavBar />
-      <Home />
-      <About />
-      <Project />
-      <Education />
-      <Contact /> 
-      <Footer />
-      
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div className="bg-white dark:bg-black text-black dark:text-white min-h-screen transition-colors duration-300">
+        <NavBar />
+        <Home />
+        <About />
+        <Project />
+        <Education />
+        <Contact />
+        <Footer />
       </div>
       <Toaster />
-    </>
+    </ThemeContext.Provider>
   );
-};
+}
 
-export default App;
+
+
+
+// import Home from "./components/Home.jsx";
+// import NavBar from "./components/NavBar.jsx";
+// import About from "./components/About.jsx";
+// import Project from "./components/Project.jsx";
+// import Education from "./components/Education.jsx";
+// import Footer from "./components/Footer.jsx";
+// import Contact from "./components/Contact.jsx";
+// import { Toaster } from "react-hot-toast";
+
+
+// const App = () => {
+//   return (
+//     <>
+//       <div>
+//       <NavBar />
+//       <Home />
+//       <About />
+//       <Project />
+//       <Education />
+//       <Contact /> 
+//       <Footer />
+      
+//       </div>
+//       <Toaster />
+//     </>
+//   );
+// };
+
+// export default App;

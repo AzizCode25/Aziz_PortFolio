@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
-
 body {
-  background-color: black;
-  color: #fff;
   overflow-x: hidden;
 }
 
@@ -11,9 +8,6 @@ body {
   display: none;
 }
 
-
-/* Zeige die Beschreibung standardmäßig auf Touch-Geräten */
-/* Zeige die Beschreibung auf Touch-Geräten */
 @media (pointer: coarse) {
   .touch-device\:opacity-100 {
     opacity: 1 !important;

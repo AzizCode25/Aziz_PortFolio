@@ -5,7 +5,7 @@ const About = () => {
     <section
       id="about"
       name="About"
-      className="max-w-7xl mx-auto relative px-4 md:px-8 py-25 md:py-28"
+      className="max-w-7xl mx-auto relative px-4 md:px-8 py-25 md:py-28 "
     >
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden -z-10">
