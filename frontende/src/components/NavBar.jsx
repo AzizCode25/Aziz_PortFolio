@@ -1,12 +1,12 @@
 // Updated NavBar with Dark/Light Toggle Button
-import { useState, useCallback, useContext } from "react";
-import data from "../data/restApi.json";
-import logo from "/images/logo.jpeg";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { RiCloseLargeFill } from "react-icons/ri";
-import { Link as ScrollLink } from "react-scroll";
-import { BsSun, BsMoon } from "react-icons/bs";
-import { ThemeContext } from "../context/ThemeContext";
+import { useState, useCallback, useContext } from 'react'
+import data from '../i18n/en.json'
+import logo from '/images/logo.jpeg'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { RiCloseLargeFill } from 'react-icons/ri'
+import { Link as ScrollLink } from 'react-scroll'
+import { BsSun, BsMoon } from 'react-icons/bs'
+import { ThemeContext } from '../context/ThemeContext'
 
 const NavItem = ({ element, activeSection, onSetActive, isMobile }) => (
   <ScrollLink
@@ -21,36 +21,37 @@ const NavItem = ({ element, activeSection, onSetActive, isMobile }) => (
       isMobile
         ? `block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 ${
             activeSection === element.link
-              ? "bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg"
-              : "text-gray-300 hover:bg-gray-800/70 hover:text-white"
+              ? 'bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
+              : 'text-gray-700 dark:text-gray-300 hover:bg-gray-800/70 hover:text-white'
           }`
         : `relative cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
             activeSection === element.link
-              ? "text-white bg-gradient-to-r from-cyan-600 to-blue-600 shadow-lg shadow-cyan-500/20"
-              : "text-gray-300 hover:text-white hover:bg-gray-800/50"
+              ? 'text-white bg-gradient-to-r from-cyan-600 to-blue-600 shadow-lg shadow-cyan-500/20'
+              : 'text-gray-700 dark:text-gray-300 hover:text-white hover:bg-gray-800/50'
           }`
     }`}
   >
     {element.title}
   </ScrollLink>
-);
+)
 
 const NavBar = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("home");
-  const { theme, toggleTheme } = useContext(ThemeContext);
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [activeSection, setActiveSection] = useState('home')
+  const { theme, toggleTheme } = useContext(ThemeContext)
 
   const handleSetActive = useCallback((section) => {
-    setActiveSection(section);
-    setMenuOpen(false);
-  }, []);
+    setActiveSection(section)
+    setMenuOpen(false)
+  }, [])
 
   return (
-    <nav className="fixed top-0 w-full z-50 border-b 
+    <nav
+      className="fixed top-0 w-full z-50 border-b 
     bg-white dark:bg-black 
-    text-black dark:text-white 
-    transition-colors duration-300 h-20 items-center justify-center p-2">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    transition-colors duration-300 h-20 items-center justify-center p-2"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <ScrollLink
@@ -60,14 +61,16 @@ const NavBar = () => {
             offset={-70}
             className="flex items-center space-x-2 cursor-pointer group"
             onClick={() => setMenuOpen(false)}
-            onSetActive={() => handleSetActive("home")}
+            onSetActive={() => handleSetActive('home')}
           >
             <img src={logo} alt="logo" className="h-10 w-12 rounded" />
-            <p className="text-lg font-semibold text-cyan-400">Full-Stack Developer</p>
+            <p className="text-lg lg:text-2xl font-semibold text-black dark:text-cyan-400">
+              Full-Stack Developer
+            </p>
           </ScrollLink>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-1 ">
             {data.navbarLinks.map((el) => (
               <NavItem
                 key={el.id}
@@ -83,7 +86,7 @@ const NavBar = () => {
               onClick={toggleTheme}
               className="ml-4 p-2 rounded-full bg-gray-800 dark:bg-gray-200 text-white dark:text-black transition-all"
             >
-              {theme === "light" ? <BsMoon size={18} /> : <BsSun size={18} />}
+              {theme === 'light' ? <BsMoon size={18} /> : <BsSun size={18} />}
             </button>
           </div>
 
@@ -95,7 +98,7 @@ const NavBar = () => {
             {menuOpen ? (
               <RiCloseLargeFill className="text-2xl text-red-400" />
             ) : (
-              <GiHamburgerMenu className="text-2xl text-cyan-400" />
+              <GiHamburgerMenu className="text-2xl dark:text-cyan-400 text-black" />
             )}
           </button>
         </div>
@@ -117,18 +120,16 @@ const NavBar = () => {
               onClick={toggleTheme}
               className="block w-full text-left px-4 py-3 rounded-lg bg-gray-800 dark:bg-gray-200 text-white dark:text-black"
             >
-              {theme === "light" ? "Dark Mode" : "Light Mode"}
+              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
             </button>
           </div>
         )}
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
-
-
+export default NavBar
 
 // import { useState, useCallback, memo } from "react";
 
@@ -201,7 +202,7 @@ export default NavBar;
 //               /> */}
 
 //               <img src={logo} alt="logo"  className="h-10 w-12"/>
-            
+
 //             </div>
 //             <div>
 //               {/* <h1 className="font-bold text-2xl text-white tracking-tight">
@@ -212,7 +213,7 @@ export default NavBar;
 //                 {/* Frontend Developer */}
 //               </p>
 //             </div>
-      
+
 //           </ScrollLink>
 
 //           {/* Desktop Links */}
@@ -262,4 +263,3 @@ export default NavBar;
 // };
 
 // export default NavBar;
-

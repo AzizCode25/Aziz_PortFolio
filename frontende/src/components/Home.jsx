@@ -33,7 +33,7 @@ const Home = () => {
     { icon: <SiTailwindcss size={24} />, color: "text-cyan-500", name: "Tailwind" },
      { icon: <SiSpringboot size={24} />, color: "text-green-600", name: "TypeScript" },
     { icon: <SiTypescript size={24} />, color: "text-blue-600", name: "TypeScript" },
-     { icon: <SiDjango size={24} />, color: "text-emerald-200", name: "TypeScript" }
+     { icon: <SiDjango size={24} />, color: "text-emerald-400", name: "TypeScript" }
   ];
 
   return ( 
@@ -121,7 +121,7 @@ const Home = () => {
                   {techStack.map((item, index) => (
                     <div 
                       key={index}
-                      className={`p-3 rounded-full bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${item.color}`}
+                      className={`p-4 rounded-full bg-blue-100 dark:bg-gray-800 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 ${item.color}`}
                       aria-label={item.name}
                       data-tooltip={item.name}
                     >
@@ -136,7 +136,7 @@ const Home = () => {
           {/* Video Profile Container */}
           <div className="w-full lg:w-1/2 flex justify-center order-1 lg:order-2 relative">
             <div className="relative w-72 h-72 md:w-80 md:h-80 lg:w-[420px] lg:h-[420px] xl:w-[480px] xl:h-[480px] group">
-              <div className="absolute inset-0 rounded-full overflow-hidden border-4 border-white/20 dark:border-gray-800/50 shadow-2xl group-hover:border-sky-400/30 transition-all duration-500">
+              <div className=" absolute inset-0 rounded-full overflow-hidden border-4 border-blue-700 dark:border-gray-800/50 shadow-2xl group-hover:border-sky-400/30 transition-all duration-500">
                 <video 
                   autoPlay
                   loop

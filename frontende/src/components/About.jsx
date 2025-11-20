@@ -1,4 +1,4 @@
-import data from '../data/restApi.json'
+import data from '../i18n/en.json'
 import { TiPin } from 'react-icons/ti'
 const About = () => {
   return (
@@ -20,7 +20,10 @@ const About = () => {
         </h2>
 
         <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-          I build scalable and responsive web applications using the MERN stack and Spring Boot. With expertise in both frontend and backend, I deliver high-performance, maintainable, and visually engaging solutions.
+          I build scalable and responsive web applications using the MERN stack
+          and Spring Boot. With expertise in both frontend and backend, I
+          deliver high-performance, maintainable, and visually engaging
+          solutions.
           {/* As a Frontend Developer, I build responsive and visually engaging web applications using modern frameworks and libraries. With a focus on performance, usability, and clean design, 
           I create maintainable interfaces that deliver great user experiences. */}
         </p>
@@ -28,9 +31,9 @@ const About = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative">
         {/* Experience Section */}
-        <div className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-xl backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 hover:shadow-lg transition-shadow">
+        <div className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-lg backdrop-blur-sm border border-gray-200 dark:border-gray-700/50 hover:shadow-lg transition-shadow">
           <h3 className="text-2xl font-bold mb-8 text-sky-600 dark:text-sky-400 flex items-center gap-3">
-            <span className="text-3xl text-gray-300">
+            <span className="text-3xl dark:text-gray-300 text-black">
               <TiPin />
             </span>
             Education & Experience
@@ -65,7 +68,7 @@ const About = () => {
         </div>
 
         {/* Skills Section */}
-        <div className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-xl backdrop-blur-sm border border-gray-100 dark:border-gray-700/50 hover:shadow-lg transition-shadow">
+        <div className="bg-white dark:bg-gray-800/50 p-8 rounded-2xl shadow-lg backdrop-blur-sm border border-gray-200 dark:border-gray-700/50 hover:shadow-lg transition-shadow">
           <h3 className="text-2xl font-bold mb-8 text-sky-600 dark:text-sky-400 flex items-center gap-3">
             <span className="text-2xl">🛠</span>
             {/* Technical Toolbox */}
@@ -104,10 +107,10 @@ const About = () => {
       </div>
 
       {/* USP Section */}
-      <div className="mt-20 bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/20 p-8 md:p-10 rounded-2xl border border-sky-100 dark:border-sky-900/50">
+      <div className="mt-20 bg-gradient-to-r from-sky-50 to-cyan-50 dark:from-sky-900/30 dark:to-cyan-900/20 p-8 md:p-10 rounded-2xl shadow-lg border border-sky-200 dark:border-sky-900/50">
         <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center text-gray-800 dark:text-white">
           {/* Why Choose Me As Your Frontend Developer? */}
-        Why Choose Me As Your Full-Stack Developer?
+          Why Choose Me As Your Full-Stack Developer?
         </h3>
         <div className="grid md:grid-cols-3 gap-6">
           {data.WhyChoose.map((element) => (

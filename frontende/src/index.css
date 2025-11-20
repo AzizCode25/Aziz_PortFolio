@@ -3,6 +3,14 @@
 
 body {
   overflow-x: hidden;
+  
+}
+html {
+  color: black;
+}
+
+html.dark {
+  color: white;
 }
 
 ::-webkit-scrollbar {

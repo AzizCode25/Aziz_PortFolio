@@ -3,7 +3,7 @@ import { FaGithub, FaArrowRight, FaStar } from 'react-icons/fa'
 import { RiRocket2Fill } from 'react-icons/ri'
 import { BsCodeSlash } from 'react-icons/bs'
 
-import data from '../data/restApi.json'
+import data from '../i18n/en.json'
 
 const Project = () => {
   const projects = data.projects
@@ -160,19 +160,15 @@ const Project = () => {
                       {tag}
                     </span>
                   ))}
-             
                 </div>
-
-            
               </div>
-                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden">
-                  <div className="absolute -inset-8 bg-gradient-to-r from-gray-900/20 via-gray-700/40 to-gray-900/0 rounded-2xl blur-xl"></div>
-                </div>
+              <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none overflow-hidden">
+                <div className="absolute -inset-8 bg-gradient-to-r from-gray-900/20 via-gray-700/40 to-gray-900/0 rounded-2xl blur-xl"></div>
+              </div>
             </div>
           ))}
         </div>
       </div>
-
     </section>
   )
 }

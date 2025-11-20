@@ -1,0 +1,219 @@
+{
+  "navbarLinks": [
+    { "id": 1, "title": "Startseite", "link": "home" },
+    { "id": 2, "title": "Über mich", "link": "about" },
+    { "id": 3, "title": "Projekte", "link": "projects" },
+    { "id": 4, "title": "Fähigkeiten", "link": "skills" },
+    { "id": 5, "title": "Kontakt", "link": "contact" }
+  ],
+
+  "educationData": [
+    {
+      "id": 2,
+      "degree": "Fachinformatiker – Anwendungsentwicklung (IHK Hamburg)",
+      "institution": "Handelskammer Hamburg (IHK)",
+      "year": "Abschluss: 2. Juli 2025",
+      "highlights": [
+        "Erfolgreich bestandene Abschlussprüfung zum staatlich anerkannten Beruf Fachinformatiker für Anwendungsentwicklung.",
+        "Ausbildungsschwerpunkte: Planung, Entwicklung und Umsetzung von Softwareprojekten mit modernen Technologien.",
+        "Fundierte Kenntnisse in Programmierung, Datenbankmanagement und Softwarearchitektur.",
+        "Qualifikation entspricht Niveau 4 des Deutschen und Europäischen Qualifikationsrahmens."
+      ]
+    },
+    {
+      "id": 3,
+      "degree": "6-monatiges Pflichtpraktikum als Full-Stack Developer",
+      "institution": "Grassau GmbH, Hamburg",
+      "year": "5/2024 – 12/2024",
+      "highlights": [
+        "Pflichtpraktikum im Rahmen der beruflichen Umschulung zum Fachinformatiker Anwendungsentwicklung (IHK Hamburg).",
+        "Entwicklung und Wartung responsiver Benutzeroberflächen mit React.js und TailwindCSS.",
+        "Implementierung von Backend-Services mit Node.js und Express für nahtlose API-Integration.",
+        "Entwurf und Verwaltung relationaler Datenbankstrukturen mit MySQL und MongoDB.",
+        "Entwicklung einer Tanzschul-Reservierungs-App (IHK Abschlussprojekt) mit dem MERN Stack inklusive Login, Formularvalidierung, Kursmanagement und automatischen E-Mail-Benachrichtigungen.",
+        "Entwicklung der Kühlschrank-App (MERN Stack) – eine Web-App zur Verwaltung von Mitarbeitergetränken inkl. automatischem monatlichen 30-€-Guthaben."
+      ]
+    },
+    {
+      "id": 4,
+      "degree": "Umschulung – Anwendungsentwicklung",
+      "institution": "CBW College, Hamburg",
+      "year": "2022–2024",
+      "highlights": [
+        "Abschluss: Erfolgreich bestanden am 2. Juli 2025",
+        "Schwerpunkt: Full-Stack Entwicklung mit modernen Web-Technologien",
+        "Softwareentwicklung: HTML5, CSS3, JavaScript, React.js, PHP (mit Datenbanken, Performance und Sicherheit)",
+        "Objektorientierte Programmierung und UML – Unified Modeling Language",
+        "Backend, Datenbanken & Cloud: Relationale Datenbanken / SQL, Cloud Computing Grundlagen, AWS Certified Cloud Practitioner",
+        "Agile Methoden & Projektmanagement: Scrum, Planung und Umsetzung von Softwareprojekten",
+        "Programmierung & Zertifikate: Python Programming (Basic & Advanced), OCFA Java Foundations, AWS Cloud Practitioner",
+        "Wirtschaft & Kommunikation: Geschäftsprozesse, Wirtschaft, Arbeitsrecht, Präsentation und Bewerbungstechniken"
+      ]
+    }
+  ],
+
+  "skills": [
+    {
+      "category": "Full-Stack Entwicklung",
+      "items": [
+        { "name": "HTML5", "level": 90 },
+        { "name": "CSS3", "level": 85 },
+        { "name": "JavaScript", "level": 80 },
+        { "name": "TypeScript", "level": 70 },
+        { "name": "Java", "level": 75 },
+        { "name": "Python", "level": 60 },
+        { "name": "React.js", "level": 90 },
+        { "name": "Tailwind CSS", "level": 90 },
+        { "name": "Spring Boot", "level": 80 },
+        { "name": "Node.js", "level": 70 },
+        { "name": "Express.js", "level": 70 },
+        { "name": "Django", "level": 60 },
+        { "name": "MySQL", "level": 85 },
+        { "name": "MongoDB", "level": 75 }
+      ],
+      "icon": "💻"
+    },
+    {
+      "category": "Entwicklungstools & Plattformen",
+      "items": [
+        { "name": "Git / GitHub", "level": 90 },
+        { "name": "VS Code", "level": 95 },
+        { "name": "Postman", "level": 80 },
+        { "name": "Thunder Client", "level": 75 },
+        { "name": "Vercel", "level": 85 },
+        { "name": "Render", "level": 80 },
+        { "name": "Railway", "level": 75 },
+        { "name": "AWS Cloud", "level": 70 }
+      ],
+      "icon": "🛠️"
+    },
+    {
+      "category": "Kernkompetenzen",
+      "items": [
+        { "name": "Full-Stack Architektur", "level": 80 },
+        { "name": "Responsives Design", "level": 90 },
+        { "name": "UI/UX Prinzipien", "level": 85 },
+        { "name": "Performance Optimierung", "level": 85 },
+        { "name": "Agile & Scrum", "level": 80 }
+      ],
+      "icon": "🚀"
+    }
+  ],
+
+  "WhyChoose": [
+    {
+      "id": 1,
+      "title": "End-to-End Entwicklung",
+      "context": "Erfahren im Frontend und Backend – ich entwickle komplette, skalierbare und leistungsstarke Anwendungen von der Idee bis zum Deployment."
+    },
+    {
+      "id": 2,
+      "title": "Moderner & vielseitiger Tech-Stack",
+      "context": "Experte im MERN Stack, REST-APIs und Spring Boot – ideal für Projekte von Startups bis Enterprise."
+    },
+    {
+      "id": 3,
+      "title": "Sauberer & wartbarer Code",
+      "context": "Ich schreibe durchdachten, effizienten und leicht wartbaren Code für langfristige Stabilität."
+    }
+  ],
+
+  "projects": [
+    {
+      "id": 1,
+      "image": "/images/azizKaffee.png",
+      "name": "Aziz Kaffee Admin",
+      "description": "Eine Full-Stack Café-Webapp mit Menüverwaltung, Tischreservierungen und Admin-Dashboard – entwickelt mit MERN & TailwindCSS.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://kaffee-mern.vercel.app/",
+      "codeUrl": "https://github.com/PushUpDev/KAFFEE_MERN",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "image": "/images/bakooRasturant.png",
+      "name": "Bakoo Restaurant",
+      "description": "Ein Restaurantsystem mit Reservierung, MERN-Stack und automatischen E-Mail-Bestätigungen über Nodemailer.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Nodemailer", "Tailwind CSS"],
+      "demoUrl": "https://restaurant-booking-system-mern.vercel.app/",
+      "codeUrl": "https://github.com/PushUpDev/RestaurantBookingSystem_MERN",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "image": "/images/Radik.png",
+      "name": "Radik Renovierung & Innenausbau",
+      "description": "Eine moderne MERN-Webseite mit Firmenservices, responsivem Design, Nodemailer und optimiertem Backend.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
+      "demoUrl": "https://radik-mern.vercel.app/",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "image": "/images/portFolio.png",
+      "name": "Aziz Portfolio",
+      "description": "Mein persönliches Entwickler-Portfolio – gebaut mit React, Node.js und TailwindCSS.",
+      "tags": ["React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://aziz-port-folio.vercel.app/",
+      "codeUrl": "https://github.com/PushUpDev/PortFolio",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "image": "/images/tanz-schule.png",
+      "name": "Tanzschul-Reservierung (IHK Projekt)",
+      "description": "Ein Online-Reservierungssystem für Tanzschulen – entwickelt mit dem MERN Stack.",
+      "tags": ["MongoDB", "Express", "React", "Node.js"]
+    }
+  ],
+
+  "expert": [
+    { "id": 1, "logo": "/images/java.png", "name": "Java" },
+    { "id": 2, "logo": "/images/mySql.png", "name": "MySQL" },
+    { "id": 3, "logo": "/images/python.webp", "name": "Python" },
+    { "id": 4, "logo": "/images/js.png", "name": "JavaScript" },
+    { "id": 5, "logo": "/images/reactjs.png", "name": "React" },
+    { "id": 7, "logo": "/images/mongodb.png", "name": "MongoDB" },
+    { "id": 8, "logo": "/images/typescript.png", "name": "TypeScript" },
+    { "id": 9, "logo": "/images/css3.webp", "name": "CSS3" },
+    { "id": 11, "logo": "/images/nodejs.png", "name": "Node.js" },
+    { "id": 12, "logo": "/images/Tailwind CSS.png", "name": "Tailwind CSS" },
+    { "id": 13, "logo": "/images/thunder.jpeg", "name": "Thunder Client" },
+    { "id": 14, "logo": "/images/html5.webp", "name": "HTML5" },
+    { "id": 15, "logo": "/images/django.png", "name": "Django" },
+    { "id": 16, "logo": "/images/Spring Boot.png", "name": "Spring Boot" }
+  ],
+
+  "ContinuousGrowth": [
+    { "id": 1, "title": "Aktuell: React Native" },
+    { "id": 2, "title": "Nächster Fokus: Django Full-Stack" }
+  ],
+
+  "contactInfo": [
+    { "id": 1, "icon": "📞", "title": "Telefon", "content": "+49 176 63319903" },
+    {
+      "id": 2,
+      "icon": "📩",
+      "title": "E-Mail",
+      "content": "azizcode92@gmail.com",
+      "isLink": true
+    }
+  ],
+
+  "socialLinks": [
+    {
+      "icon": "linkedin",
+      "color": "hover:text-[#0077B5] dark:hover:text-[#0077B5]",
+      "bg": "hover:bg-[#0077B5]/10",
+      "url": "https://www.linkedin.com/in/aziz-7a24a0283/",
+      "name": "LinkedIn"
+    },
+    {
+      "icon": "github",
+      "color": "hover:text-gray-800 dark:hover:text-gray-200",
+      "bg": "hover:bg-gray-800/10 dark:hover:bg-gray-200/10",
+      "url": "https://github.com/AzizCode25",
+      "name": "GitHub"
+    }
+  ]
+}

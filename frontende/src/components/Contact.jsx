@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { FaPaperPlane, FaSpinner } from 'react-icons/fa'
-import data from '../data/restApi.json'
+import data from '../i18n/en.json'
 // import earth from '../assets/videos/glob.mp4'
 
 const Contact = () => {
@@ -20,40 +20,38 @@ const Contact = () => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
-  
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setLoading(true);
 
-  try {
-    const { data } = await axios.post(
-      "https://azizportfolio-production.up.railway.app/api/v1/contact/send",
-      formData,
-      { headers: { "Content-Type": "application/json" } }
-    );
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setLoading(true)
 
-    // Nachricht vom Backend anzeigen
-    toast.success(data.message, {
-      iconTheme: { primary: "#3b82f6", secondary: "#fff" },
-    });
+    try {
+      const { data } = await axios.post(
+        'https://azizportfolio-production.up.railway.app/api/v1/contact/send',
+        formData,
+        { headers: { 'Content-Type': 'application/json' } }
+      )
 
-    // Formular zurücksetzen
-    setFormData({
-      name: "",
-      nachName: "",
-      email: "",
-      telefon: "",
-      nachricht: "",
-    });
-  } catch (error) {
-    const errorData = error.response?.data;
-    toast.error(errorData?.message || "Ein Fehler ist aufgetreten");
-  } finally {
-    setLoading(false);
+      // Nachricht vom Backend anzeigen
+      toast.success(data.message, {
+        iconTheme: { primary: '#3b82f6', secondary: '#fff' },
+      })
+
+      // Formular zurücksetzen
+      setFormData({
+        name: '',
+        nachName: '',
+        email: '',
+        telefon: '',
+        nachricht: '',
+      })
+    } catch (error) {
+      const errorData = error.response?.data
+      toast.error(errorData?.message || 'Ein Fehler ist aufgetreten')
+    } finally {
+      setLoading(false)
+    }
   }
-};
-
-
 
   return (
     <section
@@ -68,7 +66,7 @@ const handleSubmit = async (e) => {
           </span>
         </h2>
 
-        <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+        <p className="text-lg md:text-xl dark:text-gray-300 max-w-3xl mx-auto">
           Looking forward to thriving together in future projects
         </p>
       </div>
@@ -134,9 +132,9 @@ const handleSubmit = async (e) => {
         {/* Contact Form */}
         <form
           onSubmit={handleSubmit}
-          className="rounded-xl shadow-2xl border p-6 sm:p-8 border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
+          className="rounded-xl shadow-2xl border p-6 sm:p-8 border-gray-200 dark:border-gray-700/50 backdrop-blur-sm hover:shadow-lg transition-all duration-300"
         >
-          <h3 className="text-2xl font-bold text-white mb-6">
+          <h3 className="text-2xl font-bold dark:text-white mb-6">
             Send us a message
           </h3>
 
@@ -145,7 +143,7 @@ const handleSubmit = async (e) => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium dark:text-gray-300 mb-2"
                 >
                   First name *
                 </label>
@@ -163,7 +161,7 @@ const handleSubmit = async (e) => {
               <div>
                 <label
                   htmlFor="nachName"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium dark:text-gray-300 mb-2"
                 >
                   Last name *
                 </label>
@@ -183,7 +181,7 @@ const handleSubmit = async (e) => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium dark:text-gray-300 mb-2"
                 >
                   E-mail address *
                 </label>
@@ -201,7 +199,7 @@ const handleSubmit = async (e) => {
               <div>
                 <label
                   htmlFor="telefon"
-                  className="block text-sm font-medium text-gray-300 mb-2"
+                  className="block text-sm font-medium dark:text-gray-300 mb-2"
                 >
                   Telephone number
                 </label>
@@ -219,7 +217,7 @@ const handleSubmit = async (e) => {
             <div>
               <label
                 htmlFor="nachricht"
-                className="block text-sm font-medium text-gray-300 mb-2"
+                className="block text-sm font-medium dark:text-gray-300 mb-2"
               >
                 Your message *
               </label>
