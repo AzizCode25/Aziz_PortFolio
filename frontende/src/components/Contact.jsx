@@ -55,12 +55,12 @@ const Contact = () => {
       className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-linear-to-br from-sky-50/40 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(56,189,248,0.08),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_50%,rgba(56,189,248,0.04),transparent)]"></div>
-      </div>
+        {/* Background Effects */}
+      <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
+      <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
+      
 
-      <div className="max-w-7xl mx-auto">
+      <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-16 md:mb-20 text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-sky-600 via-blue-600 to-cyan-600 animate-gradient-x">

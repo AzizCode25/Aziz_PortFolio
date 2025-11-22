@@ -62,7 +62,7 @@ const techStack = [
 
 
   return ( 
-    <section id="home" className="size-padding-top relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-10  lg:pt-28 lg:pb-0">
+    <section id="home" className="size-padding-top relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-10  lg:pt-28 lg:pb-0">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
       <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
@@ -98,13 +98,14 @@ const techStack = [
                 </div>
               </div>
 
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl text-center lg:text-left">
-                I build exceptional digital experiences with modern web technologies, 
-                delivering <span className="font-semibold text-sky-600 dark:text-sky-400">fast</span>,{" "}
-                <span className="font-semibold text-purple-600 dark:text-purple-400">scalable</span>, and{" "}
-                <span className="font-semibold text-cyan-600 dark:text-cyan-400">visually appealing</span>{" "}
-                applications from frontend to backend.
-              </p>
+          <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl text-center lg:text-left">
+            Ich entwickle außergewöhnliche digitale Erlebnisse mit modernen Webtechnologien 
+            und liefere <span className="font-semibold text-sky-600 dark:text-sky-400">schnelle</span>,{" "}
+            <span className="font-semibold text-purple-600 dark:text-purple-400">skalierbare</span> und{" "}
+            <span className="font-semibold text-cyan-600 dark:text-cyan-400">visuell ansprechende</span>{" "}
+            Anwendungen – von Frontend bis Backend.
+          </p>
+
             </div>
 
             {/* Call to Action Buttons */}

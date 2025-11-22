@@ -4,7 +4,7 @@ const Education = () => {
   return (
     <section
       id="skills"
-      className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8  ipad-size lg:py-20"
+      className="relative w-full overflow-hidden px-4 sm:px-6 py-16 lg:px-8  ipad-size lg:py-20"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 -z-10">
