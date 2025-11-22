@@ -17,21 +17,31 @@ const NavItem = ({ element, activeSection, onSetActive, isMobile }) => (
     offset={-70}
     onSetActive={!isMobile ? () => onSetActive(element.link) : undefined}
     onClick={isMobile ? () => onSetActive(element.link) : undefined}
-    className={`${
-      isMobile
-        ? `block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300  ${
-            activeSection === element.link
-              ? 'bg-linear-to-r from-cyan-600 to-blue-600 text-white shadow-lg'
-              : 'text-gray-900 dark:text-gray-300 hover:bg-gray-800/70 hover:text-white'
-          }`
-        : `relative cursor-pointer px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-            activeSection === element.link
-              ? 'text-white bg-linear-to-r from-cyan-600 to-blue-600 shadow-lg shadow-cyan-500/20'
-              : 'text-gray-300 hover:text-white hover:bg-gray-800/50 '
-          }`
-    }`}
+    className={`
+      relative transition-all duration-300 ease-out cursor-pointer
+      ${
+        isMobile
+          ? `block w-full px-4 py-3 rounded-xl text-base font-semibold 
+             transition-transform duration-200 active:scale-95
+             ${
+               activeSection === element.link
+                 ? 'bg-linear-to-r from-cyan-600 via-blue-600 to-indigo-600 text-white shadow-lg shadow-blue-500/25'
+                 : 'text-gray-900 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700/80 hover:text-cyan-600 dark:hover:text-cyan-400'
+             }`
+          : `px-4 py-2.5 rounded-full text-sm font-medium
+             hover:scale-105 active:scale-95
+             ${
+               activeSection === element.link
+                 ? 'text-white bg-linear-to-r from-cyan-600 to-blue-600 shadow-lg shadow-cyan-500/30 transform scale-105'
+                 : 'text-gray-300 hover:text-white hover:bg-gray-800/60 backdrop-blur-sm'
+             }`
+      }
+    `}
   >
     {element.title}
+    {!isMobile && activeSection === element.link && (
+      <span className="absolute inset-x-1 -bottom-2 h-0.5 bg-linear-to-r from-cyan-400 to-blue-400 rounded-full" />
+    )}
   </ScrollLink>
 )
 
@@ -49,32 +59,48 @@ const NavBar = () => {
     toggleTheme()
     setMenuOpen(false)
   }
+
   return (
     <nav
-      className="fixed top-0 w-full z-50 border-b 
-    bg-black text-white
-    transition-colors duration-300 h-20 items-center justify-center p-2"
+      className="fixed top-0 w-full z-50 
+                bg-gray-900 backdrop-blur-xl
+                 border-b border-gray-200/60 dark:border-gray-700/60
+                 transition-all duration-300 h-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-        <div className="flex justify-between items-center h-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="flex justify-between items-center h-full">
           {/* Logo */}
           <ScrollLink
             to="home"
             smooth
             duration={500}
             offset={-70}
-            className="flex items-center space-x-2 cursor-pointer group"
+            className="flex items-center space-x-3 cursor-pointer group"
             onClick={() => setMenuOpen(false)}
             onSetActive={() => handleSetActive('home')}
           >
-            <img src={logo} alt="logo" className="h-10 w-12 rounded" />
-            <p className="text-lg lg:text-2xl font-semibold text-cyan-400">
+            <div className="relative">
+              <img 
+                src={logo} 
+                alt="logo" 
+                className="h-12 w-14 rounded-xl border-2 border-cyan-400/20 
+                           group-hover:border-cyan-400/40 transition-all duration-300
+                           shadow-lg group-hover:shadow-cyan-400/10
+                           transform group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 rounded-xl border-2 border-cyan-400/0 
+                            group-hover:border-cyan-400/20 transition-all duration-300" />
+            </div>
+            <p className="text-xl lg:text-2xl font-bold bg-linear-to-r from-cyan-500 to-blue-500 
+                         bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-400
+                         transition-all duration-300">
               Full-Stack Developer
             </p>
           </ScrollLink>
 
-          {/* Desktop Links */}
-          <div className="hidden md:flex items-center space-x-1 ">
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-1 bg-gray-900/50 dark:bg-gray-800/50 
+                         backdrop-blur-md rounded-full px-2 py-1 border border-gray-700/30">
             {data.navbarLinks.map((el) => (
               <NavItem
                 key={el.id}
@@ -84,50 +110,72 @@ const NavBar = () => {
                 isMobile={false}
               />
             ))}
-
-            {/* Dark / Light Toggle */}
-            <button
-              onClick={toggleTheme}
-              className="ml-4 p-2 rounded-full bg-gray-800 dark:bg-gray-200 text-white dark:text-black transition-all"
-            >
-              {theme === 'light' ? <BsMoon size={18} /> : <BsSun size={18} />}
-            </button>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-2 rounded-lg focus:outline-none"
-            onClick={() => setMenuOpen((prev) => !prev)}
-          >
-            {menuOpen ? (
-              <RiCloseLargeFill className="text-2xl text-red-400" />
-            ) : (
-              <GiHamburgerMenu className="text-2xl text-cyan-400" />
-            )}
-          </button>
+          {/* Theme Toggle & Mobile Menu */}
+          <div className="flex items-center space-x-3">
+            {/* Theme Toggle */}
+            <button
+              onClick={handleThemeClick}
+              className="p-2.5 rounded-xl bg-gray-800 
+              text-gray-300
+                         border border-cyan-900 dark:border-gray-700
+                         hover:bg-cyan-900/30
+                         transition-all duration-300 ease-out
+                         hover:scale-105 active:scale-95
+                         shadow-sm hover:shadow-md"
+            >
+              {theme === 'light' ? (
+                <BsMoon size={20}  />
+              ) : (
+                <BsSun size={20}  />
+              )}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden p-2.5 rounded-xl bg-gray-800 
+                            border border-cyan-900 dark:border-gray-700
+                         hover:bg-cyan-900/30
+                         transition-all duration-300 ease-out
+                         hover:scale-105 active:scale-95
+                         shadow-sm hover:shadow-md"
+              onClick={() => setMenuOpen((prev) => !prev)}
+            >
+              {menuOpen ? (
+                <RiCloseLargeFill className="text-2xl text-red-500 hover:text-red-600 transition-colors" />
+              ) : (
+                <GiHamburgerMenu className="text-2xl text-cyan-500 hover:text-cyan-600 transition-colors" />
+              )}
+            </button>
+          </div>
         </div>
 
-        {/* Mobile Links */}
-        {menuOpen && (
-          <div className="md:hidden pb-4 space-y-2 bg-white dark:bg-gray-800 transition-colors duration-300 border border-gray-900 p-4 rounded-b-2xl">
+        {/* Mobile Menu */}
+        <div className={`
+          md:hidden absolute left-4 right-4 mt-2
+          bg-white/95 dark:bg-gray-900/95 backdrop-blur-2xl
+          border border-gray-200/60 dark:border-gray-700/60
+          rounded-2xl shadow-2xl shadow-black/10
+          transition-all duration-300 ease-out
+          overflow-hidden
+          ${menuOpen 
+            ? 'opacity-100 scale-100 translate-y-0' 
+            : 'opacity-0 scale-95 -translate-y-2 pointer-events-none'
+          }
+        `}>
+          <div className="p-3 space-y-1">
             {data.navbarLinks.map((el) => (
               <NavItem
                 key={el.id}
                 element={el}
                 activeSection={activeSection}
                 onSetActive={handleSetActive}
-                isMobile
+                isMobile={true}
               />
             ))}
-
-            <button
-              onClick={handleThemeClick}
-              className="block w-full text-left px-4 py-3 rounded-lg bg-gray-800 dark:bg-gray-200 text-white dark:text-black"
-            >
-              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
-            </button>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   )
