@@ -83,10 +83,8 @@ const NavBar = () => {
               <img 
                 src={logo} 
                 alt="logo" 
-                className="h-12 w-14 rounded-xl border-2 border-cyan-400/20 
-                           group-hover:border-cyan-400/40 transition-all duration-300
-                           shadow-lg group-hover:shadow-cyan-400/10
-                           transform group-hover:scale-105" 
+                className="h-12 w-14 rounded-xl
+                          " 
               />
               <div className="absolute inset-0 rounded-xl border-2 border-cyan-400/0 
                             group-hover:border-cyan-400/20 transition-all duration-300" />
