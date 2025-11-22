@@ -18,7 +18,7 @@ const NavItem = ({ element, activeSection, onSetActive, isMobile }) => (
     onSetActive={!isMobile ? () => onSetActive(element.link) : undefined}
     onClick={isMobile ? () => onSetActive(element.link) : undefined}
     className={`
-      relative transition-all duration-300 ease-out cursor-pointer
+      relative transition-all duration-300 ease-out cursor-pointer m-2
       ${
         isMobile
           ? `block w-full px-4 py-3 rounded-xl text-base font-semibold 
@@ -32,7 +32,7 @@ const NavItem = ({ element, activeSection, onSetActive, isMobile }) => (
              hover:scale-105 active:scale-95
              ${
                activeSection === element.link
-                 ? 'text-white bg-linear-to-r from-cyan-600 to-blue-600 shadow-lg shadow-cyan-500/30 transform scale-105'
+                 ? 'text-white bg-linear-to-r from-cyan-600 to-blue-600 shadow-lg shadow-cyan-500/30 transform scale-105 gap-6'
                  : 'text-gray-300 hover:text-white hover:bg-gray-800/60 backdrop-blur-sm'
              }`
       }
@@ -65,7 +65,7 @@ const NavBar = () => {
       className="fixed top-0 w-full z-50 
                 bg-gray-900 backdrop-blur-xl
                  border-b border-gray-200/60 dark:border-gray-700/60
-                 transition-all duration-300 h-20"
+                 transition-all duration-300 h-28 nav-hight"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between items-center h-full">
@@ -90,7 +90,7 @@ const NavBar = () => {
                             group-hover:border-cyan-400/20 transition-all duration-300" />
             </div>
             <p className="text-xl lg:text-2xl font-bold bg-linear-to-r from-cyan-500 to-blue-500 
-                         bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-400
+                         bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-blue-400 
                          transition-all duration-300">
               Full-Stack Developer
             </p>
