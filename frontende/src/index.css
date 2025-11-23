@@ -36,7 +36,7 @@ html.dark {
 @media (min-width: 768px) and (max-width: 1024px) {
     .typed-text,
     .typed-container {
-        font-size: 2.1rem !important; /* text-lg */
+        font-size: 2.1rem !important; 
     }
     .header-text{
       font-size: 2.7rem !important;
