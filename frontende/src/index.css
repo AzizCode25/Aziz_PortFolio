@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  overflow-x: hidden;
+  
+}
+html {
+  color: black;
+}
+
+html.dark {
+  color: white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media (pointer: coarse) {
+  .touch-device\:opacity-100 {
+    opacity: 1 !important;
+  }
+  .touch-device\:translate-y-0 {
+    transform: translateY(0) !important;
+  }
+} 
+
+/* Mobile (default) – groß */
+.typed-text,
+.typed-container {
+    font-size: 1.875rem;
+}
+
+/* iPad / Tablet – kleiner */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .typed-text,
+    .typed-container {
+        font-size: 2.1rem !important; 
+    }
+    .header-text{
+      font-size: 2rem !important;
+    }
+    .size-padding-top{
+      padding-top: 0 !important;
+    }
+    .nav-hight{
+      height: 8rem !important;
+    }
+    .ipad-size{
+      padding-top: 8rem !important;
+    }
+    .project-padding{
+      padding-top: 6rem !important;
+      
+    }
+}
+
+/* Desktop – groß */
+@media (min-width: 1024px) {
+    .typed-text,
+    .typed-container {
+        font-size: 3rem;
+    }
+}
+
