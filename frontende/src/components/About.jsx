@@ -8,10 +8,10 @@ const About = () => {
       name="About"
       className="relative w-full overflow-hidden px-4 md:px-8 pt-16 md:pt-24 pb-10"
     >
-      {/* Animated Background */}
+      {/*  Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-sky-300/60 via-white/40 to-cyan-500/40 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(56,189,248,0.15),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(56,189,248,0.08),transparent)]"></div>
+        <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
       </div>
 
       <div className="max-w-7xl mx-auto">

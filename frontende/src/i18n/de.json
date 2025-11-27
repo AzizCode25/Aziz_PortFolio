@@ -146,6 +146,7 @@
       "description": "Eine moderne MERN-Webseite mit Firmenservices, responsivem Design, Nodemailer und optimiertem Backend.",
       "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
       "demoUrl": "https://radik-seevetal.de/",
+      "codeUrl": "https://github.com/AzizCode25/Radik_MERN",
       "featured": true
     },
     {

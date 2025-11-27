@@ -14,10 +14,11 @@ const Project = () => {
       id="projects"
       className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 py-16 project-padding lg:pt-28 lg:pb-0"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
-
+        {/*  Background */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
+      </div>
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-16 md:mb-20 text-center">
@@ -58,7 +59,7 @@ const Project = () => {
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       loading="lazy"
                     />
-                    
+
                     {/* Mobile Touch-friendly Overlay */}
                     <div className="lg:absolute lg:inset-0 lg:bg-linear-to-t lg:from-black/70 lg:via-black/40 lg:to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 flex items-end p-4 md:p-6">
                       <p className="text-white text-base md:text-lg leading-relaxed lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-500 bg-black/60 backdrop-blur-md border border-white/20 rounded-2xl p-4 md:p-5 w-full lg:w-auto">
@@ -150,7 +151,7 @@ const Project = () => {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     loading="lazy"
                   />
-                  
+
                   {/* Mobile Touch-friendly Overlay */}
                   <div className="lg:absolute lg:inset-0 lg:bg-linear-to-t lg:from-black/70 lg:via-black/40 lg:to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 flex items-end p-4">
                     <p className="text-white text-sm leading-relaxed lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-500 bg-black/60 backdrop-blur-md border border-white/20 rounded-xl p-3 w-full lg:w-auto">

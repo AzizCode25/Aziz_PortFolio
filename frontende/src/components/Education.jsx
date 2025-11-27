@@ -6,18 +6,21 @@ const Education = () => {
       id="skills"
       className="relative w-full overflow-hidden px-4 sm:px-6 py-16 lg:px-8  ipad-size lg:py-20"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-linear-to-br from-purple-50/40 via-white to-pink-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-purple-900/10"></div> </div>
+       {/*  Background */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
+      </div>
 
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-16 md:mb-20 text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-purple-600 via-pink-600 to-rose-600 animate-gradient-x">
-             Technische Expertise
+            Technische Expertise
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Technologien, die ich durch praktische Erfahrung und kontinuierliches Lernen beherrsche
+            Technologien, die ich durch praktische Erfahrung und
+            kontinuierliches Lernen beherrsche
           </p>
         </div>
 
@@ -38,7 +41,7 @@ const Education = () => {
                     loading="lazy"
                   />
                 </div>
-                
+
                 {/* Hover Ring Effect */}
                 <div className="absolute -inset-2 rounded-2xl border-2 border-purple-500/0 group-hover:border-purple-500/30 transition-all duration-500 pointer-events-none"></div>
               </div>
@@ -66,13 +69,16 @@ const Education = () => {
           <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6 md:gap-8">
             <div className="flex-1">
               <h3 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-purple-600 group-hover:to-pink-600 transition-all duration-500">
-         Karriereentwicklung
+                Karriereentwicklung
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                Engagiert für lebenslanges Lernen durch Kurse, Zertifizierungen und das Entwickeln innovativer Projekte. Ich erweitere kontinuierlich meine Fähigkeiten, um stets an der Spitze der Technologie zu bleiben.
+                Engagiert für lebenslanges Lernen durch Kurse, Zertifizierungen
+                und das Entwickeln innovativer Projekte. Ich erweitere
+                kontinuierlich meine Fähigkeiten, um stets an der Spitze der
+                Technologie zu bleiben.
               </p>
             </div>
-            
+
             <div className="flex-1">
               <div className="flex flex-wrap gap-3">
                 {data.ContinuousGrowth.map((element) => (

@@ -41,7 +41,7 @@ const Home = () => {
         'hover:bg-gray-100 dark:hover:bg-gray-800 hover:border-gray-200 dark:hover:border-gray-700',
       hoverColor: 'group-hover:text-gray-800 dark:group-hover:text-gray-200',
       name: 'Github',
-      url: 'https://github.com/PushUpDev',
+      url: 'https://github.com/AzizCode25',
     },
   ]
 
@@ -114,10 +114,11 @@ const Home = () => {
       id="home"
       className="size-padding-top relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-10  lg:pt-28 lg:pb-0"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
-
+          {/* Background */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-sky-300/60 via-white/40 to-cyan-500/40 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(56,189,248,0.15),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-20%,rgba(56,189,248,0.08),transparent)]"></div>
+      </div>
       <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
         <div className="flex flex-col  lg:flex-row items-center gap-12 lg:gap-16 xl:gap-20">
           {/* Text Content */}

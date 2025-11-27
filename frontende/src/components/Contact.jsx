@@ -6,6 +6,7 @@ import data from '../i18n/de.json'
 
 const Contact = () => {
   const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState('')
   const [formData, setFormData] = useState({
     name: '',
     nachName: '',
@@ -24,23 +25,40 @@ const Contact = () => {
     setLoading(true)
 
     try {
-      const { data } = await axios.post(
-        'https://azizportfolio-production.up.railway.app/api/v1/contact/send',
-        formData,
-        { headers: { 'Content-Type': 'application/json' } }
+      // 1. FormData erstellen und access_key hinzufügen
+      const formData = new FormData(e.target)
+      formData.append('access_key', 'a8f7fd23-6c47-47be-ba36-1452f9e7ce5a')
+      formData.append("subject", "Neue Kontaktanfrage – Aziz-Portfoli");
+
+      // 2. axios korrekt verwenden: POST-Methode, URL und 'data' statt 'body'
+      // axios kümmert sich um das Parsen der JSON-Antwort
+      const response = await axios.post(
+        'https://api.web3forms.com/submit',
+        formData
       )
+
+      const data = response.data // Die Daten sind in response.data
+
+      if (data.success) {
+        setResult('Form Submitted Successfully')
+        e.target.reset()
+
+        setFormData({
+          name: '',
+          nachName: '',
+          email: '',
+          telefon: '',
+          nachricht: '',
+        })
+      } else {
+        setResult('Error: ' + data.message) // Besser: Nachricht aus der API anzeigen
+      }
 
       toast.success(data.message, {
         iconTheme: { primary: '#3b82f6', secondary: '#fff' },
       })
 
-      setFormData({
-        name: '',
-        nachName: '',
-        email: '',
-        telefon: '',
-        nachricht: '',
-      })
+      // ... setFormData zurücksetzen ...
     } catch (error) {
       const errorData = error.response?.data
       toast.error(errorData?.message || 'Ein Fehler ist aufgetreten')
@@ -54,24 +72,24 @@ const Contact = () => {
       id="contact"
       className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 py-16 md:py-24 lg:py-28"
     >
-      {/* Background Effects */}
-        {/* Background Effects */}
-      <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
-      <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
-      
-
+      {/* Background */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
+        <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
+      </div>
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-16 md:mb-20 text-center">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-linear-to-r from-sky-600 via-blue-600 to-cyan-600 animate-gradient-x">
-           Kontakt
+            Kontakt
           </h2>
           <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Ich freue mich darauf, in zukünftigen Projekten gemeinsam erfolgreich zu sein
+            Ich freue mich darauf, in zukünftigen Projekten gemeinsam
+            erfolgreich zu sein
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 dark:border dark:border-gray-600 p-4 rounded-2xl">
           {/* Contact Info & Video */}
           <div className="space-y-8">
             <div className="relative h-80 md:h-96 lg:h-full rounded-3xl overflow-hidden shadow-2xl group hover:shadow-3xl transition-all duration-500">
@@ -93,7 +111,10 @@ const Contact = () => {
               <div className="relative z-10 p-6 md:p-8 h-full flex flex-col justify-end">
                 <div className="space-y-6 bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-white/10">
                   {data.contactInfo.map((item) => (
-                    <div key={item.id} className="flex items-start space-x-4 group/item">
+                    <div
+                      key={item.id}
+                      className="flex items-start space-x-4 group/item"
+                    >
                       <div className="p-3 bg-sky-500/20 rounded-xl shadow-lg text-2xl group-hover/item:bg-sky-400/30 transition-all duration-300">
                         {item.icon}
                       </div>
