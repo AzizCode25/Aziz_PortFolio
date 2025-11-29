@@ -120,6 +120,61 @@
 
   "projects": [
     {
+      "id": 6,
+      "image": "/images/Kuchi's.png",
+      "name": "Dr Kuchi's Skin Clinic",
+      "description": "Eine Full-Stack medizinische Managementplattform, entwickelt mit einem React- und TypeScript-Frontend sowie einem Java-Spring-Boot-Microservices-Backend. Beinhaltet eine MySQL-Datenbank und separate Dashboards für Administratoren, Ärzte und Patienten.",
+      "tags": [
+        "Spring Boot",
+        "React",
+        "Java",
+        "TypeScript",
+        "Tailwind CSS",
+        "Microservice",
+        "Mantine Dev",
+        "MySQL"
+      ],
+      "demoUrl": "https://clinic-system-jet.vercel.app/",
+      "codeUrl": "https://github.com/AzizCode25/clinic-system",
+      "featured": true
+    },
+    {
+      "id": 7,
+      "image": "/images/azizMarket.png",
+      "name": "E-Commerce Application",
+      "description": "Eine Full-Stack E-Commerce Application, entwickelt mit einem React und TypeScript-Frontend sowie einem Java-Spring-Boot-Backend. Beinhaltet eine MySQL-Datenbank und separate Dashboards für Administratoren, Verkäufer und Kunden.",
+      "tags": [
+        "Spring Boot",
+        "React",
+        "Java",
+        "TypeScript",
+        "Tailwind CSS",
+        "Material UI",
+        "MySQL"
+      ],
+      "demoUrl": "",
+      "codeUrl": "https://github.com/AzizCode25/E-Commerce-React-TypeScript",
+      "featured": true
+    },
+
+    {
+      "id": 3,
+      "image": "/images/Radik.png",
+      "name": "Radik Renovierung & Innenausbau",
+      "description": "Eine moderne MERN-Webseite mit Firmenservices, responsivem Design, Nodemailer und optimiertem Backend.",
+      "tags": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Tailwind CSS",
+        "Nodemailer"
+      ],
+      "demoUrl": "https://radik-seevetal.de/",
+      "codeUrl": "https://github.com/AzizCode25/Radik_MERN",
+      "featured": true
+    },
+    {
       "id": 1,
       "image": "/images/azizKaffee.png",
       "name": "Aziz Kaffee Admin",
@@ -134,19 +189,16 @@
       "image": "/images/bakooRasturant.png",
       "name": "Bakoo Restaurant",
       "description": "Ein Restaurantsystem mit Reservierung, MERN-Stack und automatischen E-Mail-Bestätigungen über Nodemailer.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Nodemailer", "Tailwind CSS"],
+      "tags": [
+        "MongoDB",
+        "Express",
+        "React",
+        "Node.js",
+        "Nodemailer",
+        "Tailwind CSS"
+      ],
       "demoUrl": "https://restaurant-booking-system-mern.vercel.app/",
       "codeUrl": "https://github.com/PushUpDev/RestaurantBookingSystem_MERN",
-      "featured": true
-    },
-    {
-      "id": 3,
-      "image": "/images/Radik.png",
-      "name": "Radik Renovierung & Innenausbau",
-      "description": "Eine moderne MERN-Webseite mit Firmenservices, responsivem Design, Nodemailer und optimiertem Backend.",
-      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS", "Nodemailer"],
-      "demoUrl": "https://radik-seevetal.de/",
-      "codeUrl": "https://github.com/AzizCode25/Radik_MERN",
       "featured": true
     },
     {
@@ -191,7 +243,12 @@
   ],
 
   "contactInfo": [
-    { "id": 1, "icon": "📞", "title": "Telefon", "content": "+49 176 63319903" },
+    {
+      "id": 1,
+      "icon": "📞",
+      "title": "Telefon",
+      "content": "+49 176 63319903"
+    },
     {
       "id": 2,
       "icon": "📩",

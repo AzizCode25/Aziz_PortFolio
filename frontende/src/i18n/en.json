@@ -120,6 +120,7 @@
   ],
 
   "projects": [
+
     {
       "id": 1,
       "image": "/images/azizKaffee.png",
@@ -165,6 +166,16 @@
       "name": "Dance School Seat Reservation (Final Project)",
       "description": "A seat reservation system for a dance school allowing users to conveniently book dance classes online. Developed using the MERN stack.",
       "tags": ["MongoDB", "Express", "React", "Node.js"]
+    },
+    {
+      "id": 6,
+      "image": "/images/Kuchi's.png",
+      "name": "Aziz Coffee Admin",
+      "description": "A full-stack coffee shop web app featuring menu management, table reservations, and an admin dashboard built with the MERN stack and TailwindCSS.",
+      "tags": ["MongoDB", "Express", "React", "Node.js", "Tailwind CSS"],
+      "demoUrl": "https://kaffee-mern.vercel.app/",
+      "codeUrl": "https://github.com/PushUpDev/KAFFEE_MERN",
+      "featured": true
     }
   ],
 
