@@ -14,7 +14,7 @@ const Project = () => {
       id="projects"
       className="relative w-full overflow-hidden px-4 sm:px-6 lg:px-8 py-16 project-padding lg:pt-28 lg:pb-0"
     >
-        {/*  Background */}
+      {/*  Background */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-br from-sky-50 via-white to-cyan-500 dark:from-gray-900 dark:via-gray-800 dark:to-sky-900/20"></div>
         <div className="absolute inset-0 bg-linear-to-b from-transparent via-sky-200/20 to-cyan-200/10 dark:via-sky-900/10 dark:to-cyan-900/5"></div>
@@ -153,8 +153,9 @@ const Project = () => {
                   />
 
                   {/* Mobile Touch-friendly Overlay */}
-                  <div className="lg:absolute lg:inset-0 lg:bg-linear-to-t lg:from-black/70 lg:via-black/40 lg:to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 flex items-end p-4">
-                    <p className="text-white text-sm leading-relaxed lg:translate-y-4 lg:group-hover:translate-y-0 transition-transform duration-500 bg-black/60 backdrop-blur-md border border-white/20 rounded-xl p-3 w-full lg:w-auto">
+                  {/* Description: always visible on mobile */}
+                  <div className="p-4 md:p-6 lg:absolute lg:inset-0 lg:bg-linear-to-t lg:from-black/70 lg:via-black/40 lg:to-transparent lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-500 flex items-end">
+                    <p className="text-gray-800 dark:text-gray-200 text-sm md:text-base leading-relaxed lg:text-white lg:bg-black/60 lg:backdrop-blur-md border lg:border-white/20 rounded-2xl p-3 md:p-4 w-full lg:w-auto">
                       {project.description}
                     </p>
                   </div>
